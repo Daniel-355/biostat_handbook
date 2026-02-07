@@ -1,0 +1,210 @@
+---
+title: "Clinical Trial Statistics Handbook"
+author: "Daniel He"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: true
+    toc_depth: 3
+  pdf_document:
+    toc: true
+    toc_depth: 3
+  word_document:
+    toc: true
+    toc_depth: 3
+---
+
+# Chapter 11: Statistical Analysis Execution  
+*From Numbers to Evidence*
+
+Statistical analysis execution is the point at which a clinical trial transitions from **data readiness** to **scientific evidence**.  
+At this stage, the biostatistician is no longer preparing for analysis—the statistician is producing results that will be interpreted, challenged, and judged by regulators, clinicians, and decision-makers.
+
+The responsibility here extends beyond computational correctness to **analytical credibility, transparency, and interpretability**.
+
+---
+
+## 11.1 The Nature of Statistical Execution
+
+Statistical execution is often mistaken for:
+- Running predefined programs
+- Producing tables, figures, and listings
+- Checking whether p-values cross thresholds
+
+In reality, execution requires continuous professional judgment to answer:
+
+> **Do these results faithfully represent what the data can—and cannot—support?**
+
+---
+
+## 11.2 Generation of Primary Analysis Results
+
+### 11.2.1 Primary Analysis as the Anchor
+
+The primary analysis is the **center of gravity** for:
+- Regulatory conclusions
+- Labeling decisions
+- Scientific credibility
+
+All other analyses exist to support, contextualize, or stress-test this result.
+
+---
+
+### 11.2.2 Execution Discipline for the Primary Analysis
+
+Statisticians must ensure that the primary analysis:
+- Strictly follows the SAP finalized prior to database lock
+- Uses the correct analysis population
+- Implements the specified estimand, model, covariates, and handling of intercurrent events
+
+Key execution checks include:
+- Verification of population flags
+- Confirmation of endpoint derivations
+- Reproducibility across independent runs and environments
+
+A critical rule:
+> **If the primary result is unexpected, verify implementation before interpreting biology.**
+
+---
+
+## 11.3 Secondary and Sensitivity Analyses
+
+### 11.3.1 Role of Secondary Analyses
+
+Secondary analyses:
+- Address additional endpoints
+- Provide supportive context
+- Characterize treatment effects more broadly
+
+They are **not substitutes** for a weak or failed primary analysis.  
+Interpretation must reflect their inferential status and any multiplicity control.
+
+---
+
+### 11.3.2 Sensitivity Analyses as Stress Tests
+
+Sensitivity analyses answer one question:
+
+> **Do conclusions remain stable when assumptions change?**
+
+Common sensitivity dimensions include:
+- Missing data strategies (e.g., MMRM vs MI)
+- Alternative estimand strategies
+- Different analysis populations
+- Alternative visit windowing rules
+
+A strong primary result should be robust to reasonable sensitivities; a weak result cannot be rescued by them.
+
+---
+
+## 11.4 Subgroup Analyses
+
+### 11.4.1 Purpose and Limitations
+
+Subgroup analyses aim to:
+- Assess consistency of treatment effects
+- Explore potential effect modifiers
+- Inform future hypotheses and research
+
+Unless explicitly powered and controlled, subgroup analyses are **exploratory**.
+
+---
+
+### 11.4.2 Statistical Responsibilities in Subgroup Analysis
+
+Statisticians must:
+- Ensure subgroup definitions align with the SAP
+- Limit proliferation of post-hoc subgroups
+- Present estimates with appropriate uncertainty and caution
+
+A common pitfall:
+> **When subgroups disagree, the correct conclusion is uncertainty—not selective emphasis.**
+
+Forest plots should communicate patterns, not promises.
+
+---
+
+## 11.5 Supporting Interpretation of Unexpected Results
+
+### 11.5.1 Technical Validation First
+
+When results conflict with expectations, statisticians should first assess:
+- Data integrity and completeness
+- Model assumptions and convergence
+- Sensitivity to influential observations
+
+Only after technical validation should scientific interpretation begin.
+
+---
+
+### 11.5.2 Explaining Without Over-Explaining
+
+Statisticians support interpretation by:
+- Quantifying uncertainty
+- Clarifying what the data do and do not show
+- Preventing overinterpretation of chance findings
+
+A key discipline:
+> **Explanation should illuminate uncertainty, not conceal it.**
+
+---
+
+## 11.6 Joint Interpretation with Medical Experts
+
+### 11.6.1 Complementary Roles
+
+Medical experts contribute:
+- Clinical context and biological plausibility
+- Individual case insight
+- Risk–benefit interpretation
+
+Statisticians contribute:
+- Quantitative evidence and uncertainty characterization
+- Methodological boundaries
+- Guardrails against inferential overreach
+
+Neither role is sufficient alone.
+
+---
+
+### 11.6.2 Effective Statistical Communication
+
+Statisticians should:
+- Translate numerical outputs into clear, accurate statements
+- Distinguish pre-specified from exploratory findings
+- Challenge conclusions that exceed statistical support
+
+An experienced statistician knows when to say:
+> **“That conclusion goes beyond what the data can support.”**
+
+---
+
+## 11.7 Common Risks During Analysis Execution
+
+Experienced statisticians remain alert to:
+- Quiet deviations from the SAP
+- Selective emphasis on favorable findings
+- Overreliance on nominal p-values
+- Pressure to simplify or downplay uncertainty
+
+Once results are generated, **analytical shortcuts become credibility risks**.
+
+---
+
+## 11.8 Chapter Summary: Execution as Professional Judgment
+
+Statistical analysis execution is where:
+- Technical rigor meets scientific judgment
+- Numbers become evidence
+- Professional integrity becomes visible
+
+The statistician’s value in this phase lies in:
+- Faithful implementation of planned analyses
+- Honest representation of uncertainty
+- Constructive partnership with medical interpretation
+
+**Key takeaway:**
+
+> **Statistical execution is not about producing results—it is about producing results that deserve to be believed.**
+
+---

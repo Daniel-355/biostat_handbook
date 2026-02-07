@@ -1,0 +1,6 @@
+delete_merged_file: true
+
+book_filename: "Biostatistician’s Practical Handbook"
+language:
+  ui:
+    chapter_name: "Chapter "

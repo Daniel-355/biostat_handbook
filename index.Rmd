@@ -1,0 +1,71 @@
+--- 
+title: "Biostatistician’s Practical Handbook in Clinical Trials"
+author: "Daniel He"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib, packages.bib]
+# url: your book url like https://bookdown.org/yihui/bookdown
+# cover-image: path to the social sharing image like images/cover.jpg
+description: |
+  This is a minimal example of using the bookdown package to write a book.
+  The HTML output format for this example is bookdown::gitbook,
+  set in the _output.yml file.
+link-citations: yes
+github-repo: rstudio/bookdown-demo
+---
+
+# Preface
+
+In clinical trials, the role of the biostatistician is often misunderstood.
+
+Too frequently, statisticians are seen merely as the individuals responsible for calculations, tables, and figures. Those who have worked on real clinical studies, however, understand that the project biostatistician carries responsibility far beyond data analysis—they are ultimately accountable for the **scientific validity**, **regulatory compliance**, and **defensibility** of the trial conclusions.
+
+From a single assumption chosen during study design, to a rule finalized just before database lock;  
+from one sentence written in the Statistical Analysis Plan (SAP), to one number reported in the Clinical Study Report (CSR)—  
+each statistical decision may later be scrutinized during regulatory review, audits, inspections, or scientific publication.
+
+This *Biostatistician’s Practical Handbook in Clinical Trials* is **not** a textbook on statistical theory. It does not aim to explain formulas or promote methodological sophistication for its own sake. Instead, it focuses on a more practical and critical question:
+
+> **What does a biostatistician actually need to do, at each stage of a clinical trial, to ensure that the study results are scientifically sound, operationally consistent, and regulatorily defensible?**
+
+The content of this handbook is organized around the core lifecycle of a clinical trial, following the continuous line of:
+
+**Protocol → SAP → TFL → CSR**
+
+This line represents not only document progression, but also the evolution of statistical responsibility—from high-level design concepts to fully traceable and auditable study conclusions.
+
+The checklists presented here are not idealized workflows; they are distilled from real project experience, including protocol development, database lock preparation, audit responses, and regulatory inquiries.
+
+This handbook may be used as:
+
+- A practical onboarding guide for junior biostatisticians entering clinical trial work  
+- A self-check reference for project statisticians at critical milestones  
+- A training and alignment tool for cross-functional teams  
+- A decision traceability aid when preparing for audits or regulatory review  
+
+If you are working on clinical trials—or preparing to assume the role of a project biostatistician—this handbook is intended to help you:
+
+- Recognize when statistical principles must be firmly upheld  
+- Identify decisions that must be clearly documented, not implicitly assumed  
+- Avoid the common but costly mistake of defining rules after seeing results  
+
+The true value of a biostatistician is not reflected in how complex the model is, but in whether the study conclusions can withstand time, scrutiny, and regulatory examination.
+
+May this handbook serve as a reliable reference point—helping you navigate clinical trial projects with clarity, consistency, and professional confidence.
+
+---
+
+*Dedicated to all biostatisticians who quietly safeguard the integrity of clinical trial conclusions.*
+
+![“In God we Trust, all others bring data and a statistician who believes in God.”](.\harpers_ferry.jpeg)
+
+```{r include=FALSE}
+# automatically create a bib database for R packages
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'knitr', 'rmarkdown'
+), 'packages.bib')
+```
+
+
+

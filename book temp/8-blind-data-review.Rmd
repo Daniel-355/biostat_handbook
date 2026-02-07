@@ -1,0 +1,158 @@
+---
+title: "Clinical Trial Statistics Handbook"
+author: "Daniel He"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: true
+    toc_depth: 3
+  pdf_document:
+    toc: true
+    toc_depth: 3
+  word_document:
+    toc: true
+    toc_depth: 3
+---
+
+# Chapter 8: Blind Data Review (BDR)  
+*The Statistician’s Final Gate Before Database Lock*
+
+Blind Data Review (BDR) represents the **final and most critical checkpoint** before database lock (DBL).  
+It is the stage at which the biostatistician must answer a high-stakes question:
+
+> **Is the data, as currently collected and cleaned, fit for its intended statistical analysis?**
+
+This assessment must be made **under full blinding**, without access to treatment assignment, and based solely on data structure, completeness, consistency, and protocol adherence.
+
+---
+
+## 8.1 Why Blind Data Review Is Statistically Critical
+
+### 8.1.1 BDR Is Not a Routine Data Cleaning Step
+
+In many projects, BDR is treated as:
+- A procedural milestone
+- A Data Management–led checkpoint
+- A pre-DBL formality
+
+From a statistical perspective, this view is dangerously incomplete.
+
+BDR is the point where:
+- Analysis assumptions are confronted with real data
+- Protocol deviations become analytically meaningful
+- Risks to interpretability are either mitigated or locked in
+
+Once DBL occurs:
+- Structural data issues cannot be corrected
+- Analysis population definitions become frozen
+- Sensitivity analyses shift from planned to defensive
+
+For the biostatistician, **BDR is the last opportunity to influence analytical integrity without regulatory consequence**.
+
+---
+
+### 8.1.2 The Statistician’s Unique Responsibility in BDR
+
+Unlike Data Management or Clinical Operations, statisticians do not focus on:
+- How data were operationally collected
+- Why deviations occurred at sites
+
+Instead, statisticians assess:
+
+> **What are the analytical consequences of the data as they exist today?**
+
+---
+
+## 8.2 Statistical Support of the BDR Plan
+
+### 8.2.1 Objectives of a Robust BDR Plan
+
+A well-designed BDR Plan should:
+- Define the scope and timing of blinded review activities
+- Specify datasets, domains, and listings to be reviewed
+- Clarify cross-functional roles and responsibilities
+- Predefine outputs and decision criteria
+
+From a statistical standpoint, the plan must ensure that:
+- Blinding is strictly preserved
+- Outputs are analysis-relevant rather than operationally excessive
+- Decisions are traceable and defensible
+
+---
+
+### 8.2.2 Statistical Contributions to the BDR Plan
+
+Biostatisticians should actively shape:
+- Which summaries and listings are produced
+- Which metrics are considered critical for analysis readiness
+- Which thresholds trigger escalation or remediation
+
+A key mindset:
+
+> **BDR outputs are decision tools, not descriptive reports.**
+
+---
+
+## 8.3 Core Review Areas During Blind Data Review
+
+### 8.3.1 Data Completeness
+
+#### Statistical Review Focus
+
+Beyond simple missing value counts, statisticians should evaluate:
+- Completeness of primary and key secondary endpoints
+- Patterns of missingness across visits and time
+- Concentration of missing data at critical assessment points
+
+Key questions include:
+- Does missingness increase over time?
+- Are key visits systematically incomplete?
+- Are reasons for missing data adequately captured?
+
+---
+
+#### Implications for Analysis
+
+Incomplete data directly affect:
+- Effective sample size
+- Model stability and convergence
+- Justification of missing data assumptions (e.g., MAR vs MNAR)
+
+If missingness mechanisms cannot be reasonably argued, **the SAP’s missing data strategy is exposed to challenge**.
+
+---
+
+### 8.3.2 Outliers and Extreme Values
+
+#### Statistical Interpretation of Outliers
+
+During BDR, statisticians should:
+- Identify extreme values without attempting correction
+- Assess internal consistency with related variables
+- Confirm that extreme values were captured rather than suppressed
+
+A fundamental principle:
+
+> **Outliers are not errors by default; they are analytical signals.**
+
+---
+
+#### Common Pitfalls
+
+- Over-cleaning based on subjective plausibility
+- Removing values without documented rationale
+- Confusing data entry errors with true extreme observations
+
+BDR should emphasize:
+- Transparency over normalization
+- Documentation over silent exclusion
+
+---
+
+### 8.3.3 Visit Deviations
+
+#### Analytical Definition of Visit Deviations
+
+From an analysis perspective, visit deviations include:
+- Assessments outside protocol-defined windows
+- Missed

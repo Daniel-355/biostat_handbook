@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 2 Chapter 1 | A Minimal Book Example</title>
+  <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 2 Chapter 1 | A Minimal Book Example" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 2 Chapter 1 | A Minimal Book Example" />
+  
+  <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  
+
+<meta name="author" content="John Doe" />
+
+
+<meta name="date" content="2026-02-07" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="trial-design-and-statistical-strategy.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#usage"><i class="fa fa-check"></i><b>1.1</b> Usage</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#render-book"><i class="fa fa-check"></i><b>1.2</b> Render book</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#preview-book"><i class="fa fa-check"></i><b>1.3</b> Preview book</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="chapter-1.html"><a href="chapter-1.html"><i class="fa fa-check"></i><b>2</b> Chapter 1</a></li>
+<li class="chapter" data-level="3" data-path="trial-design-and-statistical-strategy.html"><a href="trial-design-and-statistical-strategy.html"><i class="fa fa-check"></i><b>3</b> Trial Design and Statistical Strategy</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="trial-design-and-statistical-strategy.html"><a href="trial-design-and-statistical-strategy.html#chapter-objectives"><i class="fa fa-check"></i><b>3.1</b> Chapter Objectives</a></li>
+<li class="chapter" data-level="3.2" data-path="trial-design-and-statistical-strategy.html"><a href="trial-design-and-statistical-strategy.html#participation-in-statistical-feasibility-discussions-of-study-objectives-and-hypotheses"><i class="fa fa-check"></i><b>3.2</b> 1.1 Participation in Statistical Feasibility Discussions of Study Objectives and Hypotheses</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="trial-design-and-statistical-strategy.html"><a href="trial-design-and-statistical-strategy.html#importance-of-statistical-feasibility-at-the-objective-level"><i class="fa fa-check"></i><b>3.2.1</b> 1.1.1 Importance of Statistical Feasibility at the Objective Level</a></li>
+<li class="chapter" data-level="3.2.2" data-path="trial-design-and-statistical-strategy.html"><a href="trial-design-and-statistical-strategy.html#characteristics-of-statistically-feasible-objectives"><i class="fa fa-check"></i><b>3.2.2</b> 1.1.2 Characteristics of Statistically Feasible Objectives</a></li>
+<li class="chapter" data-level="3.2.3" data-path="trial-design-and-statistical-strategy.html"><a href="trial-design-and-statistical-strategy.html#common-issues-in-early-objective-statements"><i class="fa fa-check"></i><b>3.2.3</b> 1.1.3 Common Issues in Early Objective Statements</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="trial-design-and-statistical-strategy.html"><a href="trial-design-and-statistical-strategy.html#selection-of-study-design"><i class="fa fa-check"></i><b>3.3</b> 1.2 Selection of Study Design</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="trial-design-and-statistical-strategy.html"><a href="trial-design-and-statistical-strategy.html#principles-guiding-study-design-selection"><i class="fa fa-check"></i><b>3.3.1</b> 1.2.1 Principles Guiding Study Design Selection</a></li>
+<li class="chapter" data-level="3.3.2" data-path="trial-design-and-statistical-strategy.html"><a href="trial-design-and-statistical-strategy.html#parallel-group-design"><i class="fa fa-check"></i><b>3.3.2</b> 1.2.2 Parallel-Group Design</a></li>
+<li class="chapter" data-level="3.3.3" data-path="trial-design-and-statistical-strategy.html"><a href="trial-design-and-statistical-strategy.html#crossover-design"><i class="fa fa-check"></i><b>3.3.3</b> 1.2.3 Crossover Design</a></li>
+<li class="chapter" data-level="3.3.4" data-path="trial-design-and-statistical-strategy.html"><a href="trial-design-and-statistical-strategy.html#randomized-withdrawal-design"><i class="fa fa-check"></i><b>3.3.4</b> 1.2.4 Randomized Withdrawal Design</a></li>
+<li class="chapter" data-level="3.3.5" data-path="trial-design-and-statistical-strategy.html"><a href="trial-design-and-statistical-strategy.html#adaptive-design-if-applicable"><i class="fa fa-check"></i><b>3.3.5</b> 1.2.5 Adaptive Design (If Applicable)</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="trial-design-and-statistical-strategy.html"><a href="trial-design-and-statistical-strategy.html#statistical-measurability-of-primary-and-secondary-endpoints"><i class="fa fa-check"></i><b>3.4</b> 1.3 Statistical Measurability of Primary and Secondary Endpoints</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="trial-design-and-statistical-strategy.html"><a href="trial-design-and-statistical-strategy.html#definition-of-statistical-measurability"><i class="fa fa-check"></i><b>3.4.1</b> 1.3.1 Definition of Statistical Measurability</a></li>
+<li class="chapter" data-level="3.4.2" data-path="trial-design-and-statistical-strategy.html"><a href="trial-design-and-statistical-strategy.html#primary-and-secondary-endpoints"><i class="fa fa-check"></i><b>3.4.2</b> 1.3.2 Primary and Secondary Endpoints</a></li>
+<li class="chapter" data-level="3.4.3" data-path="trial-design-and-statistical-strategy.html"><a href="trial-design-and-statistical-strategy.html#common-endpoint-related-issues"><i class="fa fa-check"></i><b>3.4.3</b> 1.3.3 Common Endpoint-Related Issues</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="trial-design-and-statistical-strategy.html"><a href="trial-design-and-statistical-strategy.html#endpoint-type-classification"><i class="fa fa-check"></i><b>3.5</b> 1.4 Endpoint Type Classification</a>
+<ul>
+<li class="chapter" data-level="3.5.1" data-path="trial-design-and-statistical-strategy.html"><a href="trial-design-and-statistical-strategy.html#continuous-endpoints"><i class="fa fa-check"></i><b>3.5.1</b> 1.4.1 Continuous Endpoints</a></li>
+<li class="chapter" data-level="3.5.2" data-path="trial-design-and-statistical-strategy.html"><a href="trial-design-and-statistical-strategy.html#binary-endpoints"><i class="fa fa-check"></i><b>3.5.2</b> 1.4.2 Binary Endpoints</a></li>
+<li class="chapter" data-level="3.5.3" data-path="trial-design-and-statistical-strategy.html"><a href="trial-design-and-statistical-strategy.html#time-to-event-endpoints"><i class="fa fa-check"></i><b>3.5.3</b> 1.4.3 Time-to-Event Endpoints</a></li>
+<li class="chapter" data-level="3.5.4" data-path="trial-design-and-statistical-strategy.html"><a href="trial-design-and-statistical-strategy.html#repeated-measures-endpoints"><i class="fa fa-check"></i><b>3.5.4</b> 1.4.4 Repeated Measures Endpoints</a></li>
+<li class="chapter" data-level="3.5.5" data-path="trial-design-and-statistical-strategy.html"><a href="trial-design-and-statistical-strategy.html#count-endpoints"><i class="fa fa-check"></i><b>3.5.5</b> 1.4.5 Count Endpoints</a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="trial-design-and-statistical-strategy.html"><a href="trial-design-and-statistical-strategy.html#definition-of-statistical-hypotheses-h0-and-h1"><i class="fa fa-check"></i><b>3.6</b> 1.5 Definition of Statistical Hypotheses (H0 and H1)</a>
+<ul>
+<li class="chapter" data-level="3.6.1" data-path="trial-design-and-statistical-strategy.html"><a href="trial-design-and-statistical-strategy.html#role-of-hypotheses-in-study-design"><i class="fa fa-check"></i><b>3.6.1</b> 1.5.1 Role of Hypotheses in Study Design</a></li>
+<li class="chapter" data-level="3.6.2" data-path="trial-design-and-statistical-strategy.html"><a href="trial-design-and-statistical-strategy.html#common-hypothesis-frameworks"><i class="fa fa-check"></i><b>3.6.2</b> 1.5.2 Common Hypothesis Frameworks</a></li>
+<li class="chapter" data-level="3.6.3" data-path="trial-design-and-statistical-strategy.html"><a href="trial-design-and-statistical-strategy.html#common-pitfalls"><i class="fa fa-check"></i><b>3.6.3</b> 1.5.3 Common Pitfalls</a></li>
+</ul></li>
+<li class="chapter" data-level="3.7" data-path="trial-design-and-statistical-strategy.html"><a href="trial-design-and-statistical-strategy.html#significance-level-%CE%B1-and-testing-strategy"><i class="fa fa-check"></i><b>3.7</b> 1.6 Significance Level (α) and Testing Strategy</a>
+<ul>
+<li class="chapter" data-level="3.7.1" data-path="trial-design-and-statistical-strategy.html"><a href="trial-design-and-statistical-strategy.html#selection-of-significance-level"><i class="fa fa-check"></i><b>3.7.1</b> 1.6.1 Selection of Significance Level</a></li>
+<li class="chapter" data-level="3.7.2" data-path="trial-design-and-statistical-strategy.html"><a href="trial-design-and-statistical-strategy.html#testing-strategy-and-multiplicity"><i class="fa fa-check"></i><b>3.7.2</b> 1.6.2 Testing Strategy and Multiplicity</a></li>
+<li class="chapter" data-level="3.7.3" data-path="trial-design-and-statistical-strategy.html"><a href="trial-design-and-statistical-strategy.html#interpretability-of-results"><i class="fa fa-check"></i><b>3.7.3</b> 1.6.3 Interpretability of Results</a></li>
+</ul></li>
+<li class="chapter" data-level="3.8" data-path="trial-design-and-statistical-strategy.html"><a href="trial-design-and-statistical-strategy.html#chapter-summary"><i class="fa fa-check"></i><b>3.8</b> Chapter Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="chapter-2.html"><a href="chapter-2.html"><i class="fa fa-check"></i><b>4</b> Chapter 2</a></li>
+<li class="chapter" data-level="5" data-path="sample-size-determination.html"><a href="sample-size-determination.html"><i class="fa fa-check"></i><b>5</b> Sample Size Determination</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="sample-size-determination.html"><a href="sample-size-determination.html#chapter-objectives-1"><i class="fa fa-check"></i><b>5.1</b> Chapter Objectives</a></li>
+<li class="chapter" data-level="5.2" data-path="sample-size-determination.html"><a href="sample-size-determination.html#the-role-of-sample-size-in-clinical-trial-design"><i class="fa fa-check"></i><b>5.2</b> 2.1 The Role of Sample Size in Clinical Trial Design</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="sample-size-determination.html"><a href="sample-size-determination.html#sample-size-is-designed-not-calculated"><i class="fa fa-check"></i><b>5.2.1</b> 2.1.1 Sample Size Is Designed, Not Calculated</a></li>
+<li class="chapter" data-level="5.2.2" data-path="sample-size-determination.html"><a href="sample-size-determination.html#two-dangerous-extremes"><i class="fa fa-check"></i><b>5.2.2</b> 2.1.2 Two Dangerous Extremes</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="sample-size-determination.html"><a href="sample-size-determination.html#sample-size-calculation-framework"><i class="fa fa-check"></i><b>5.3</b> 2.2 Sample Size Calculation Framework</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="sample-size-determination.html"><a href="sample-size-determination.html#core-components"><i class="fa fa-check"></i><b>5.3.1</b> 2.2.1 Core Components</a></li>
+<li class="chapter" data-level="5.3.2" data-path="sample-size-determination.html"><a href="sample-size-determination.html#endpoint-specific-considerations"><i class="fa fa-check"></i><b>5.3.2</b> 2.2.2 Endpoint-Specific Considerations</a></li>
+<li class="chapter" data-level="5.3.3" data-path="sample-size-determination.html"><a href="sample-size-determination.html#transparency-of-assumptions"><i class="fa fa-check"></i><b>5.3.3</b> 2.2.3 Transparency of Assumptions</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="sample-size-determination.html"><a href="sample-size-determination.html#effect-size-justification"><i class="fa fa-check"></i><b>5.4</b> 2.3 Effect Size Justification</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="sample-size-determination.html"><a href="sample-size-determination.html#why-effect-size-is-the-highest-risk-assumption"><i class="fa fa-check"></i><b>5.4.1</b> 2.3.1 Why Effect Size Is the Highest-Risk Assumption</a></li>
+<li class="chapter" data-level="5.4.2" data-path="sample-size-determination.html"><a href="sample-size-determination.html#common-sources-of-effect-size-assumptions"><i class="fa fa-check"></i><b>5.4.2</b> 2.3.2 Common Sources of Effect Size Assumptions</a></li>
+<li class="chapter" data-level="5.4.3" data-path="sample-size-determination.html"><a href="sample-size-determination.html#reality-checks-by-the-statistician"><i class="fa fa-check"></i><b>5.4.3</b> 2.3.3 Reality Checks by the Statistician</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="sample-size-determination.html"><a href="sample-size-determination.html#dropout-and-attrition-assumptions"><i class="fa fa-check"></i><b>5.5</b> 2.4 Dropout and Attrition Assumptions</a>
+<ul>
+<li class="chapter" data-level="5.5.1" data-path="sample-size-determination.html"><a href="sample-size-determination.html#why-dropout-matters"><i class="fa fa-check"></i><b>5.5.1</b> 2.4.1 Why Dropout Matters</a></li>
+<li class="chapter" data-level="5.5.2" data-path="sample-size-determination.html"><a href="sample-size-determination.html#sources-of-dropout-assumptions"><i class="fa fa-check"></i><b>5.5.2</b> 2.4.2 Sources of Dropout Assumptions</a></li>
+<li class="chapter" data-level="5.5.3" data-path="sample-size-determination.html"><a href="sample-size-determination.html#common-mistakes"><i class="fa fa-check"></i><b>5.5.3</b> 2.4.3 Common Mistakes</a></li>
+</ul></li>
+<li class="chapter" data-level="5.6" data-path="sample-size-determination.html"><a href="sample-size-determination.html#impact-of-multiplicity-on-sample-size"><i class="fa fa-check"></i><b>5.6</b> 2.5 Impact of Multiplicity on Sample Size</a>
+<ul>
+<li class="chapter" data-level="5.6.1" data-path="sample-size-determination.html"><a href="sample-size-determination.html#multiplicity-is-not-only-an-analysis-issue"><i class="fa fa-check"></i><b>5.6.1</b> 2.5.1 Multiplicity Is Not Only an Analysis Issue</a></li>
+<li class="chapter" data-level="5.6.2" data-path="sample-size-determination.html"><a href="sample-size-determination.html#common-strategies"><i class="fa fa-check"></i><b>5.6.2</b> 2.5.2 Common Strategies</a></li>
+<li class="chapter" data-level="5.6.3" data-path="sample-size-determination.html"><a href="sample-size-determination.html#key-message-to-study-teams"><i class="fa fa-check"></i><b>5.6.3</b> 2.5.3 Key Message to Study Teams</a></li>
+</ul></li>
+<li class="chapter" data-level="5.7" data-path="sample-size-determination.html"><a href="sample-size-determination.html#deliverable-1-sample-size-calculation-memo"><i class="fa fa-check"></i><b>5.7</b> 2.6 Deliverable 1: Sample Size Calculation Memo</a>
+<ul>
+<li class="chapter" data-level="5.7.1" data-path="sample-size-determination.html"><a href="sample-size-determination.html#purpose-of-the-memo"><i class="fa fa-check"></i><b>5.7.1</b> 2.6.1 Purpose of the Memo</a></li>
+<li class="chapter" data-level="5.7.2" data-path="sample-size-determination.html"><a href="sample-size-determination.html#recommended-structure"><i class="fa fa-check"></i><b>5.7.2</b> 2.6.2 Recommended Structure</a></li>
+</ul></li>
+<li class="chapter" data-level="5.8" data-path="sample-size-determination.html"><a href="sample-size-determination.html#deliverable-2-sample-size-section-in-protocol-and-sap"><i class="fa fa-check"></i><b>5.8</b> 2.7 Deliverable 2: Sample Size Section in Protocol and SAP</a>
+<ul>
+<li class="chapter" data-level="5.8.1" data-path="sample-size-determination.html"><a href="sample-size-determination.html#protocol-writing-principles"><i class="fa fa-check"></i><b>5.8.1</b> 2.7.1 Protocol Writing Principles</a></li>
+<li class="chapter" data-level="5.8.2" data-path="sample-size-determination.html"><a href="sample-size-determination.html#sap-level-details"><i class="fa fa-check"></i><b>5.8.2</b> 2.7.2 SAP-Level Details</a></li>
+</ul></li>
+<li class="chapter" data-level="5.9" data-path="sample-size-determination.html"><a href="sample-size-determination.html#statisticians-pre-finalization-checklist"><i class="fa fa-check"></i><b>5.9</b> 2.8 Statistician’s Pre-Finalization Checklist</a></li>
+<li class="chapter" data-level="5.10" data-path="sample-size-determination.html"><a href="sample-size-determination.html#chapter-summary-1"><i class="fa fa-check"></i><b>5.10</b> Chapter Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="chapter-3.html"><a href="chapter-3.html"><i class="fa fa-check"></i><b>6</b> Chapter 3</a></li>
+<li class="chapter" data-level="7" data-path="randomization-and-stratification-design.html"><a href="randomization-and-stratification-design.html"><i class="fa fa-check"></i><b>7</b> Randomization and Stratification Design</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="randomization-and-stratification-design.html"><a href="randomization-and-stratification-design.html#chapter-objectives-2"><i class="fa fa-check"></i><b>7.1</b> Chapter Objectives</a></li>
+<li class="chapter" data-level="7.2" data-path="randomization-and-stratification-design.html"><a href="randomization-and-stratification-design.html#purpose-of-randomization-in-clinical-trials"><i class="fa fa-check"></i><b>7.2</b> 3.1 Purpose of Randomization in Clinical Trials</a></li>
+<li class="chapter" data-level="7.3" data-path="randomization-and-stratification-design.html"><a href="randomization-and-stratification-design.html#determination-of-the-randomization-scheme"><i class="fa fa-check"></i><b>7.3</b> 3.2 Determination of the Randomization Scheme</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="randomization-and-stratification-design.html"><a href="randomization-and-stratification-design.html#simple-randomization"><i class="fa fa-check"></i><b>7.3.1</b> 3.2.1 Simple Randomization</a></li>
+<li class="chapter" data-level="7.3.2" data-path="randomization-and-stratification-design.html"><a href="randomization-and-stratification-design.html#block-randomization"><i class="fa fa-check"></i><b>7.3.2</b> 3.2.2 Block Randomization</a></li>
+<li class="chapter" data-level="7.3.3" data-path="randomization-and-stratification-design.html"><a href="randomization-and-stratification-design.html#stratified-randomization"><i class="fa fa-check"></i><b>7.3.3</b> 3.2.3 Stratified Randomization</a></li>
+<li class="chapter" data-level="7.3.4" data-path="randomization-and-stratification-design.html"><a href="randomization-and-stratification-design.html#dynamic-randomization-minimization"><i class="fa fa-check"></i><b>7.3.4</b> 3.2.4 Dynamic Randomization (Minimization)</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="randomization-and-stratification-design.html"><a href="randomization-and-stratification-design.html#selection-of-stratification-factors"><i class="fa fa-check"></i><b>7.4</b> 3.3 Selection of Stratification Factors</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="randomization-and-stratification-design.html"><a href="randomization-and-stratification-design.html#principles-for-choosing-stratification-factors"><i class="fa fa-check"></i><b>7.4.1</b> 3.3.1 Principles for Choosing Stratification Factors</a></li>
+<li class="chapter" data-level="7.4.2" data-path="randomization-and-stratification-design.html"><a href="randomization-and-stratification-design.html#common-stratification-factors"><i class="fa fa-check"></i><b>7.4.2</b> 3.3.2 Common Stratification Factors</a></li>
+<li class="chapter" data-level="7.4.3" data-path="randomization-and-stratification-design.html"><a href="randomization-and-stratification-design.html#alignment-with-the-analysis-plan"><i class="fa fa-check"></i><b>7.4.3</b> 3.3.3 Alignment With the Analysis Plan</a></li>
+</ul></li>
+<li class="chapter" data-level="7.5" data-path="randomization-and-stratification-design.html"><a href="randomization-and-stratification-design.html#coordination-with-iwrs-rtsm-and-blinding-teams"><i class="fa fa-check"></i><b>7.5</b> 3.4 Coordination With IWRS / RTSM and Blinding Teams</a>
+<ul>
+<li class="chapter" data-level="7.5.1" data-path="randomization-and-stratification-design.html"><a href="randomization-and-stratification-design.html#role-of-iwrs-rtsm"><i class="fa fa-check"></i><b>7.5.1</b> 3.4.1 Role of IWRS / RTSM</a></li>
+<li class="chapter" data-level="7.5.2" data-path="randomization-and-stratification-design.html"><a href="randomization-and-stratification-design.html#key-collaboration-considerations"><i class="fa fa-check"></i><b>7.5.2</b> 3.4.2 Key Collaboration Considerations</a></li>
+<li class="chapter" data-level="7.5.3" data-path="randomization-and-stratification-design.html"><a href="randomization-and-stratification-design.html#blinding-considerations"><i class="fa fa-check"></i><b>7.5.3</b> 3.4.3 Blinding Considerations</a></li>
+</ul></li>
+<li class="chapter" data-level="7.6" data-path="randomization-and-stratification-design.html"><a href="randomization-and-stratification-design.html#review-of-the-randomization-specification"><i class="fa fa-check"></i><b>7.6</b> 3.5 Review of the Randomization Specification</a>
+<ul>
+<li class="chapter" data-level="7.6.1" data-path="randomization-and-stratification-design.html"><a href="randomization-and-stratification-design.html#purpose-of-the-randomization-specification"><i class="fa fa-check"></i><b>7.6.1</b> 3.5.1 Purpose of the Randomization Specification</a></li>
+<li class="chapter" data-level="7.6.2" data-path="randomization-and-stratification-design.html"><a href="randomization-and-stratification-design.html#statisticians-review-responsibilities"><i class="fa fa-check"></i><b>7.6.2</b> 3.5.2 Statistician’s Review Responsibilities</a></li>
+</ul></li>
+<li class="chapter" data-level="7.7" data-path="randomization-and-stratification-design.html"><a href="randomization-and-stratification-design.html#generation-of-the-randomization-list-roles-and-governance"><i class="fa fa-check"></i><b>7.7</b> 3.6 Generation of the Randomization List: Roles and Governance</a>
+<ul>
+<li class="chapter" data-level="7.7.1" data-path="randomization-and-stratification-design.html"><a href="randomization-and-stratification-design.html#determining-responsibility-for-randomization-list-generation"><i class="fa fa-check"></i><b>7.7.1</b> 3.6.1 Determining Responsibility for Randomization List Generation</a></li>
+<li class="chapter" data-level="7.7.2" data-path="randomization-and-stratification-design.html"><a href="randomization-and-stratification-design.html#firewalls-and-independence"><i class="fa fa-check"></i><b>7.7.2</b> 3.6.2 Firewalls and Independence</a></li>
+<li class="chapter" data-level="7.7.3" data-path="randomization-and-stratification-design.html"><a href="randomization-and-stratification-design.html#documentation-and-traceability"><i class="fa fa-check"></i><b>7.7.3</b> 3.6.3 Documentation and Traceability</a></li>
+</ul></li>
+<li class="chapter" data-level="7.8" data-path="randomization-and-stratification-design.html"><a href="randomization-and-stratification-design.html#chapter-summary-2"><i class="fa fa-check"></i><b>7.8</b> Chapter Summary</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">A Minimal Book Example</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="chapter-1" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">Chapter 2</span> Chapter 1<a href="chapter-1.html#chapter-1" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="trial-design-and-statistical-strategy.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": "https://github.com/USERNAME/REPO/edit/BRANCH/1-study-design.Rmd",
+    "text": "Edit"
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["_main.pdf", "_main.epub"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

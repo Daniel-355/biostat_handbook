@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 11 Chapter 10 Pre-Database Lock Activities | Biostatistician’s Practical Handbook in Clinical Trials</title>
+  <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 11 Chapter 10 Pre-Database Lock Activities | Biostatistician’s Practical Handbook in Clinical Trials" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 11 Chapter 10 Pre-Database Lock Activities | Biostatistician’s Practical Handbook in Clinical Trials" />
+  
+  <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  
+
+<meta name="author" content="Daniel He" />
+
+
+<meta name="date" content="2026-02-07" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="chapter-9-interim-analysis-and-safety-monitoring.html"/>
+<link rel="next" href="chapter-11-statistical-analysis-execution.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Biostatistician’s Practical Handbook</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Preface</a></li>
+<li class="chapter" data-level="2" data-path="chapter-1-trial-design-and-statistical-strategy.html"><a href="chapter-1-trial-design-and-statistical-strategy.html"><i class="fa fa-check"></i><b>2</b> Chapter 1 Trial Design and Statistical Strategy</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="chapter-1-trial-design-and-statistical-strategy.html"><a href="chapter-1-trial-design-and-statistical-strategy.html#chapter-objectives"><i class="fa fa-check"></i><b>2.1</b> Chapter Objectives</a></li>
+<li class="chapter" data-level="2.2" data-path="chapter-1-trial-design-and-statistical-strategy.html"><a href="chapter-1-trial-design-and-statistical-strategy.html#participation-in-statistical-feasibility-discussions-of-study-objectives-and-hypotheses"><i class="fa fa-check"></i><b>2.2</b> 1.1 Participation in Statistical Feasibility Discussions of Study Objectives and Hypotheses</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="chapter-1-trial-design-and-statistical-strategy.html"><a href="chapter-1-trial-design-and-statistical-strategy.html#importance-of-statistical-feasibility-at-the-objective-level"><i class="fa fa-check"></i><b>2.2.1</b> 1.1.1 Importance of Statistical Feasibility at the Objective Level</a></li>
+<li class="chapter" data-level="2.2.2" data-path="chapter-1-trial-design-and-statistical-strategy.html"><a href="chapter-1-trial-design-and-statistical-strategy.html#characteristics-of-statistically-feasible-objectives"><i class="fa fa-check"></i><b>2.2.2</b> 1.1.2 Characteristics of Statistically Feasible Objectives</a></li>
+<li class="chapter" data-level="2.2.3" data-path="chapter-1-trial-design-and-statistical-strategy.html"><a href="chapter-1-trial-design-and-statistical-strategy.html#common-issues-in-early-objective-statements"><i class="fa fa-check"></i><b>2.2.3</b> 1.1.3 Common Issues in Early Objective Statements</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="chapter-1-trial-design-and-statistical-strategy.html"><a href="chapter-1-trial-design-and-statistical-strategy.html#selection-of-study-design"><i class="fa fa-check"></i><b>2.3</b> 1.2 Selection of Study Design</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="chapter-1-trial-design-and-statistical-strategy.html"><a href="chapter-1-trial-design-and-statistical-strategy.html#principles-guiding-study-design-selection"><i class="fa fa-check"></i><b>2.3.1</b> 1.2.1 Principles Guiding Study Design Selection</a></li>
+<li class="chapter" data-level="2.3.2" data-path="chapter-1-trial-design-and-statistical-strategy.html"><a href="chapter-1-trial-design-and-statistical-strategy.html#parallel-group-design"><i class="fa fa-check"></i><b>2.3.2</b> 1.2.2 Parallel-Group Design</a></li>
+<li class="chapter" data-level="2.3.3" data-path="chapter-1-trial-design-and-statistical-strategy.html"><a href="chapter-1-trial-design-and-statistical-strategy.html#crossover-design"><i class="fa fa-check"></i><b>2.3.3</b> 1.2.3 Crossover Design</a></li>
+<li class="chapter" data-level="2.3.4" data-path="chapter-1-trial-design-and-statistical-strategy.html"><a href="chapter-1-trial-design-and-statistical-strategy.html#randomized-withdrawal-design"><i class="fa fa-check"></i><b>2.3.4</b> 1.2.4 Randomized Withdrawal Design</a></li>
+<li class="chapter" data-level="2.3.5" data-path="chapter-1-trial-design-and-statistical-strategy.html"><a href="chapter-1-trial-design-and-statistical-strategy.html#adaptive-design-if-applicable"><i class="fa fa-check"></i><b>2.3.5</b> 1.2.5 Adaptive Design (If Applicable)</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="chapter-1-trial-design-and-statistical-strategy.html"><a href="chapter-1-trial-design-and-statistical-strategy.html#statistical-measurability-of-primary-and-secondary-endpoints"><i class="fa fa-check"></i><b>2.4</b> 1.3 Statistical Measurability of Primary and Secondary Endpoints</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="chapter-1-trial-design-and-statistical-strategy.html"><a href="chapter-1-trial-design-and-statistical-strategy.html#definition-of-statistical-measurability"><i class="fa fa-check"></i><b>2.4.1</b> 1.3.1 Definition of Statistical Measurability</a></li>
+<li class="chapter" data-level="2.4.2" data-path="chapter-1-trial-design-and-statistical-strategy.html"><a href="chapter-1-trial-design-and-statistical-strategy.html#primary-and-secondary-endpoints"><i class="fa fa-check"></i><b>2.4.2</b> 1.3.2 Primary and Secondary Endpoints</a></li>
+<li class="chapter" data-level="2.4.3" data-path="chapter-1-trial-design-and-statistical-strategy.html"><a href="chapter-1-trial-design-and-statistical-strategy.html#common-endpoint-related-issues"><i class="fa fa-check"></i><b>2.4.3</b> 1.3.3 Common Endpoint-Related Issues</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="chapter-1-trial-design-and-statistical-strategy.html"><a href="chapter-1-trial-design-and-statistical-strategy.html#endpoint-type-classification"><i class="fa fa-check"></i><b>2.5</b> 1.4 Endpoint Type Classification</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="chapter-1-trial-design-and-statistical-strategy.html"><a href="chapter-1-trial-design-and-statistical-strategy.html#continuous-endpoints"><i class="fa fa-check"></i><b>2.5.1</b> 1.4.1 Continuous Endpoints</a></li>
+<li class="chapter" data-level="2.5.2" data-path="chapter-1-trial-design-and-statistical-strategy.html"><a href="chapter-1-trial-design-and-statistical-strategy.html#binary-endpoints"><i class="fa fa-check"></i><b>2.5.2</b> 1.4.2 Binary Endpoints</a></li>
+<li class="chapter" data-level="2.5.3" data-path="chapter-1-trial-design-and-statistical-strategy.html"><a href="chapter-1-trial-design-and-statistical-strategy.html#time-to-event-endpoints"><i class="fa fa-check"></i><b>2.5.3</b> 1.4.3 Time-to-Event Endpoints</a></li>
+<li class="chapter" data-level="2.5.4" data-path="chapter-1-trial-design-and-statistical-strategy.html"><a href="chapter-1-trial-design-and-statistical-strategy.html#repeated-measures-endpoints"><i class="fa fa-check"></i><b>2.5.4</b> 1.4.4 Repeated Measures Endpoints</a></li>
+<li class="chapter" data-level="2.5.5" data-path="chapter-1-trial-design-and-statistical-strategy.html"><a href="chapter-1-trial-design-and-statistical-strategy.html#count-endpoints"><i class="fa fa-check"></i><b>2.5.5</b> 1.4.5 Count Endpoints</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="chapter-1-trial-design-and-statistical-strategy.html"><a href="chapter-1-trial-design-and-statistical-strategy.html#definition-of-statistical-hypotheses-h0-and-h1"><i class="fa fa-check"></i><b>2.6</b> 1.5 Definition of Statistical Hypotheses (H0 and H1)</a>
+<ul>
+<li class="chapter" data-level="2.6.1" data-path="chapter-1-trial-design-and-statistical-strategy.html"><a href="chapter-1-trial-design-and-statistical-strategy.html#role-of-hypotheses-in-study-design"><i class="fa fa-check"></i><b>2.6.1</b> 1.5.1 Role of Hypotheses in Study Design</a></li>
+<li class="chapter" data-level="2.6.2" data-path="chapter-1-trial-design-and-statistical-strategy.html"><a href="chapter-1-trial-design-and-statistical-strategy.html#common-hypothesis-frameworks"><i class="fa fa-check"></i><b>2.6.2</b> 1.5.2 Common Hypothesis Frameworks</a></li>
+<li class="chapter" data-level="2.6.3" data-path="chapter-1-trial-design-and-statistical-strategy.html"><a href="chapter-1-trial-design-and-statistical-strategy.html#common-pitfalls"><i class="fa fa-check"></i><b>2.6.3</b> 1.5.3 Common Pitfalls</a></li>
+</ul></li>
+<li class="chapter" data-level="2.7" data-path="chapter-1-trial-design-and-statistical-strategy.html"><a href="chapter-1-trial-design-and-statistical-strategy.html#significance-level-%CE%B1-and-testing-strategy"><i class="fa fa-check"></i><b>2.7</b> 1.6 Significance Level (α) and Testing Strategy</a>
+<ul>
+<li class="chapter" data-level="2.7.1" data-path="chapter-1-trial-design-and-statistical-strategy.html"><a href="chapter-1-trial-design-and-statistical-strategy.html#selection-of-significance-level"><i class="fa fa-check"></i><b>2.7.1</b> 1.6.1 Selection of Significance Level</a></li>
+<li class="chapter" data-level="2.7.2" data-path="chapter-1-trial-design-and-statistical-strategy.html"><a href="chapter-1-trial-design-and-statistical-strategy.html#testing-strategy-and-multiplicity"><i class="fa fa-check"></i><b>2.7.2</b> 1.6.2 Testing Strategy and Multiplicity</a></li>
+<li class="chapter" data-level="2.7.3" data-path="chapter-1-trial-design-and-statistical-strategy.html"><a href="chapter-1-trial-design-and-statistical-strategy.html#interpretability-of-results"><i class="fa fa-check"></i><b>2.7.3</b> 1.6.3 Interpretability of Results</a></li>
+</ul></li>
+<li class="chapter" data-level="2.8" data-path="chapter-1-trial-design-and-statistical-strategy.html"><a href="chapter-1-trial-design-and-statistical-strategy.html#chapter-summary"><i class="fa fa-check"></i><b>2.8</b> Chapter Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="chapter-2-sample-size-determination.html"><a href="chapter-2-sample-size-determination.html"><i class="fa fa-check"></i><b>3</b> Chapter 2 Sample Size Determination</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="chapter-2-sample-size-determination.html"><a href="chapter-2-sample-size-determination.html#chapter-objectives-1"><i class="fa fa-check"></i><b>3.1</b> Chapter Objectives</a></li>
+<li class="chapter" data-level="3.2" data-path="chapter-2-sample-size-determination.html"><a href="chapter-2-sample-size-determination.html#the-role-of-sample-size-in-clinical-trial-design"><i class="fa fa-check"></i><b>3.2</b> 2.1 The Role of Sample Size in Clinical Trial Design</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="chapter-2-sample-size-determination.html"><a href="chapter-2-sample-size-determination.html#sample-size-is-designed-not-calculated"><i class="fa fa-check"></i><b>3.2.1</b> 2.1.1 Sample Size Is Designed, Not Calculated</a></li>
+<li class="chapter" data-level="3.2.2" data-path="chapter-2-sample-size-determination.html"><a href="chapter-2-sample-size-determination.html#two-dangerous-extremes"><i class="fa fa-check"></i><b>3.2.2</b> 2.1.2 Two Dangerous Extremes</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="chapter-2-sample-size-determination.html"><a href="chapter-2-sample-size-determination.html#sample-size-calculation-framework"><i class="fa fa-check"></i><b>3.3</b> 2.2 Sample Size Calculation Framework</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="chapter-2-sample-size-determination.html"><a href="chapter-2-sample-size-determination.html#core-components"><i class="fa fa-check"></i><b>3.3.1</b> 2.2.1 Core Components</a></li>
+<li class="chapter" data-level="3.3.2" data-path="chapter-2-sample-size-determination.html"><a href="chapter-2-sample-size-determination.html#endpoint-specific-considerations"><i class="fa fa-check"></i><b>3.3.2</b> 2.2.2 Endpoint-Specific Considerations</a></li>
+<li class="chapter" data-level="3.3.3" data-path="chapter-2-sample-size-determination.html"><a href="chapter-2-sample-size-determination.html#transparency-of-assumptions"><i class="fa fa-check"></i><b>3.3.3</b> 2.2.3 Transparency of Assumptions</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="chapter-2-sample-size-determination.html"><a href="chapter-2-sample-size-determination.html#effect-size-justification"><i class="fa fa-check"></i><b>3.4</b> 2.3 Effect Size Justification</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="chapter-2-sample-size-determination.html"><a href="chapter-2-sample-size-determination.html#why-effect-size-is-the-highest-risk-assumption"><i class="fa fa-check"></i><b>3.4.1</b> 2.3.1 Why Effect Size Is the Highest-Risk Assumption</a></li>
+<li class="chapter" data-level="3.4.2" data-path="chapter-2-sample-size-determination.html"><a href="chapter-2-sample-size-determination.html#common-sources-of-effect-size-assumptions"><i class="fa fa-check"></i><b>3.4.2</b> 2.3.2 Common Sources of Effect Size Assumptions</a></li>
+<li class="chapter" data-level="3.4.3" data-path="chapter-2-sample-size-determination.html"><a href="chapter-2-sample-size-determination.html#reality-checks-by-the-statistician"><i class="fa fa-check"></i><b>3.4.3</b> 2.3.3 Reality Checks by the Statistician</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="chapter-2-sample-size-determination.html"><a href="chapter-2-sample-size-determination.html#dropout-and-attrition-assumptions"><i class="fa fa-check"></i><b>3.5</b> 2.4 Dropout and Attrition Assumptions</a>
+<ul>
+<li class="chapter" data-level="3.5.1" data-path="chapter-2-sample-size-determination.html"><a href="chapter-2-sample-size-determination.html#why-dropout-matters"><i class="fa fa-check"></i><b>3.5.1</b> 2.4.1 Why Dropout Matters</a></li>
+<li class="chapter" data-level="3.5.2" data-path="chapter-2-sample-size-determination.html"><a href="chapter-2-sample-size-determination.html#sources-of-dropout-assumptions"><i class="fa fa-check"></i><b>3.5.2</b> 2.4.2 Sources of Dropout Assumptions</a></li>
+<li class="chapter" data-level="3.5.3" data-path="chapter-2-sample-size-determination.html"><a href="chapter-2-sample-size-determination.html#common-mistakes"><i class="fa fa-check"></i><b>3.5.3</b> 2.4.3 Common Mistakes</a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="chapter-2-sample-size-determination.html"><a href="chapter-2-sample-size-determination.html#impact-of-multiplicity-on-sample-size"><i class="fa fa-check"></i><b>3.6</b> 2.5 Impact of Multiplicity on Sample Size</a>
+<ul>
+<li class="chapter" data-level="3.6.1" data-path="chapter-2-sample-size-determination.html"><a href="chapter-2-sample-size-determination.html#multiplicity-is-not-only-an-analysis-issue"><i class="fa fa-check"></i><b>3.6.1</b> 2.5.1 Multiplicity Is Not Only an Analysis Issue</a></li>
+<li class="chapter" data-level="3.6.2" data-path="chapter-2-sample-size-determination.html"><a href="chapter-2-sample-size-determination.html#common-strategies"><i class="fa fa-check"></i><b>3.6.2</b> 2.5.2 Common Strategies</a></li>
+<li class="chapter" data-level="3.6.3" data-path="chapter-2-sample-size-determination.html"><a href="chapter-2-sample-size-determination.html#key-message-to-study-teams"><i class="fa fa-check"></i><b>3.6.3</b> 2.5.3 Key Message to Study Teams</a></li>
+</ul></li>
+<li class="chapter" data-level="3.7" data-path="chapter-2-sample-size-determination.html"><a href="chapter-2-sample-size-determination.html#deliverable-1-sample-size-calculation-memo"><i class="fa fa-check"></i><b>3.7</b> 2.6 Deliverable 1: Sample Size Calculation Memo</a>
+<ul>
+<li class="chapter" data-level="3.7.1" data-path="chapter-2-sample-size-determination.html"><a href="chapter-2-sample-size-determination.html#purpose-of-the-memo"><i class="fa fa-check"></i><b>3.7.1</b> 2.6.1 Purpose of the Memo</a></li>
+<li class="chapter" data-level="3.7.2" data-path="chapter-2-sample-size-determination.html"><a href="chapter-2-sample-size-determination.html#recommended-structure"><i class="fa fa-check"></i><b>3.7.2</b> 2.6.2 Recommended Structure</a></li>
+</ul></li>
+<li class="chapter" data-level="3.8" data-path="chapter-2-sample-size-determination.html"><a href="chapter-2-sample-size-determination.html#deliverable-2-sample-size-section-in-protocol-and-sap"><i class="fa fa-check"></i><b>3.8</b> 2.7 Deliverable 2: Sample Size Section in Protocol and SAP</a>
+<ul>
+<li class="chapter" data-level="3.8.1" data-path="chapter-2-sample-size-determination.html"><a href="chapter-2-sample-size-determination.html#protocol-writing-principles"><i class="fa fa-check"></i><b>3.8.1</b> 2.7.1 Protocol Writing Principles</a></li>
+<li class="chapter" data-level="3.8.2" data-path="chapter-2-sample-size-determination.html"><a href="chapter-2-sample-size-determination.html#sap-level-details"><i class="fa fa-check"></i><b>3.8.2</b> 2.7.2 SAP-Level Details</a></li>
+</ul></li>
+<li class="chapter" data-level="3.9" data-path="chapter-2-sample-size-determination.html"><a href="chapter-2-sample-size-determination.html#statisticians-pre-finalization-checklist"><i class="fa fa-check"></i><b>3.9</b> 2.8 Statistician’s Pre-Finalization Checklist</a></li>
+<li class="chapter" data-level="3.10" data-path="chapter-2-sample-size-determination.html"><a href="chapter-2-sample-size-determination.html#chapter-summary-1"><i class="fa fa-check"></i><b>3.10</b> Chapter Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="chapter-3-randomization-and-stratification-design.html"><a href="chapter-3-randomization-and-stratification-design.html"><i class="fa fa-check"></i><b>4</b> Chapter 3 Randomization and Stratification Design</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="chapter-3-randomization-and-stratification-design.html"><a href="chapter-3-randomization-and-stratification-design.html#chapter-objectives-2"><i class="fa fa-check"></i><b>4.1</b> Chapter Objectives</a></li>
+<li class="chapter" data-level="4.2" data-path="chapter-3-randomization-and-stratification-design.html"><a href="chapter-3-randomization-and-stratification-design.html#purpose-of-randomization-in-clinical-trials"><i class="fa fa-check"></i><b>4.2</b> 3.1 Purpose of Randomization in Clinical Trials</a></li>
+<li class="chapter" data-level="4.3" data-path="chapter-3-randomization-and-stratification-design.html"><a href="chapter-3-randomization-and-stratification-design.html#determination-of-the-randomization-scheme"><i class="fa fa-check"></i><b>4.3</b> 3.2 Determination of the Randomization Scheme</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="chapter-3-randomization-and-stratification-design.html"><a href="chapter-3-randomization-and-stratification-design.html#simple-randomization"><i class="fa fa-check"></i><b>4.3.1</b> 3.2.1 Simple Randomization</a></li>
+<li class="chapter" data-level="4.3.2" data-path="chapter-3-randomization-and-stratification-design.html"><a href="chapter-3-randomization-and-stratification-design.html#block-randomization"><i class="fa fa-check"></i><b>4.3.2</b> 3.2.2 Block Randomization</a></li>
+<li class="chapter" data-level="4.3.3" data-path="chapter-3-randomization-and-stratification-design.html"><a href="chapter-3-randomization-and-stratification-design.html#stratified-randomization"><i class="fa fa-check"></i><b>4.3.3</b> 3.2.3 Stratified Randomization</a></li>
+<li class="chapter" data-level="4.3.4" data-path="chapter-3-randomization-and-stratification-design.html"><a href="chapter-3-randomization-and-stratification-design.html#dynamic-randomization-minimization"><i class="fa fa-check"></i><b>4.3.4</b> 3.2.4 Dynamic Randomization (Minimization)</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="chapter-3-randomization-and-stratification-design.html"><a href="chapter-3-randomization-and-stratification-design.html#selection-of-stratification-factors"><i class="fa fa-check"></i><b>4.4</b> 3.3 Selection of Stratification Factors</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="chapter-3-randomization-and-stratification-design.html"><a href="chapter-3-randomization-and-stratification-design.html#principles-for-choosing-stratification-factors"><i class="fa fa-check"></i><b>4.4.1</b> 3.3.1 Principles for Choosing Stratification Factors</a></li>
+<li class="chapter" data-level="4.4.2" data-path="chapter-3-randomization-and-stratification-design.html"><a href="chapter-3-randomization-and-stratification-design.html#common-stratification-factors"><i class="fa fa-check"></i><b>4.4.2</b> 3.3.2 Common Stratification Factors</a></li>
+<li class="chapter" data-level="4.4.3" data-path="chapter-3-randomization-and-stratification-design.html"><a href="chapter-3-randomization-and-stratification-design.html#alignment-with-the-analysis-plan"><i class="fa fa-check"></i><b>4.4.3</b> 3.3.3 Alignment With the Analysis Plan</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="chapter-3-randomization-and-stratification-design.html"><a href="chapter-3-randomization-and-stratification-design.html#coordination-with-iwrs-rtsm-and-blinding-teams"><i class="fa fa-check"></i><b>4.5</b> 3.4 Coordination With IWRS / RTSM and Blinding Teams</a>
+<ul>
+<li class="chapter" data-level="4.5.1" data-path="chapter-3-randomization-and-stratification-design.html"><a href="chapter-3-randomization-and-stratification-design.html#role-of-iwrs-rtsm"><i class="fa fa-check"></i><b>4.5.1</b> 3.4.1 Role of IWRS / RTSM</a></li>
+<li class="chapter" data-level="4.5.2" data-path="chapter-3-randomization-and-stratification-design.html"><a href="chapter-3-randomization-and-stratification-design.html#key-collaboration-considerations"><i class="fa fa-check"></i><b>4.5.2</b> 3.4.2 Key Collaboration Considerations</a></li>
+<li class="chapter" data-level="4.5.3" data-path="chapter-3-randomization-and-stratification-design.html"><a href="chapter-3-randomization-and-stratification-design.html#blinding-considerations"><i class="fa fa-check"></i><b>4.5.3</b> 3.4.3 Blinding Considerations</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="chapter-3-randomization-and-stratification-design.html"><a href="chapter-3-randomization-and-stratification-design.html#review-of-the-randomization-specification"><i class="fa fa-check"></i><b>4.6</b> 3.5 Review of the Randomization Specification</a>
+<ul>
+<li class="chapter" data-level="4.6.1" data-path="chapter-3-randomization-and-stratification-design.html"><a href="chapter-3-randomization-and-stratification-design.html#purpose-of-the-randomization-specification"><i class="fa fa-check"></i><b>4.6.1</b> 3.5.1 Purpose of the Randomization Specification</a></li>
+<li class="chapter" data-level="4.6.2" data-path="chapter-3-randomization-and-stratification-design.html"><a href="chapter-3-randomization-and-stratification-design.html#statisticians-review-responsibilities"><i class="fa fa-check"></i><b>4.6.2</b> 3.5.2 Statistician’s Review Responsibilities</a></li>
+</ul></li>
+<li class="chapter" data-level="4.7" data-path="chapter-3-randomization-and-stratification-design.html"><a href="chapter-3-randomization-and-stratification-design.html#generation-of-the-randomization-list-roles-and-governance"><i class="fa fa-check"></i><b>4.7</b> 3.6 Generation of the Randomization List: Roles and Governance</a>
+<ul>
+<li class="chapter" data-level="4.7.1" data-path="chapter-3-randomization-and-stratification-design.html"><a href="chapter-3-randomization-and-stratification-design.html#determining-responsibility-for-randomization-list-generation"><i class="fa fa-check"></i><b>4.7.1</b> 3.6.1 Determining Responsibility for Randomization List Generation</a></li>
+<li class="chapter" data-level="4.7.2" data-path="chapter-3-randomization-and-stratification-design.html"><a href="chapter-3-randomization-and-stratification-design.html#firewalls-and-independence"><i class="fa fa-check"></i><b>4.7.2</b> 3.6.2 Firewalls and Independence</a></li>
+<li class="chapter" data-level="4.7.3" data-path="chapter-3-randomization-and-stratification-design.html"><a href="chapter-3-randomization-and-stratification-design.html#documentation-and-traceability"><i class="fa fa-check"></i><b>4.7.3</b> 3.6.3 Documentation and Traceability</a></li>
+</ul></li>
+<li class="chapter" data-level="4.8" data-path="chapter-3-randomization-and-stratification-design.html"><a href="chapter-3-randomization-and-stratification-design.html#chapter-summary-2"><i class="fa fa-check"></i><b>4.8</b> Chapter Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="chapter-4-statistical-support-for-the-protocol.html"><a href="chapter-4-statistical-support-for-the-protocol.html"><i class="fa fa-check"></i><b>5</b> Chapter 4 Statistical Support for the Protocol</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="chapter-4-statistical-support-for-the-protocol.html"><a href="chapter-4-statistical-support-for-the-protocol.html#chapter-objectives-3"><i class="fa fa-check"></i><b>5.1</b> Chapter Objectives</a></li>
+<li class="chapter" data-level="5.2" data-path="chapter-4-statistical-support-for-the-protocol.html"><a href="chapter-4-statistical-support-for-the-protocol.html#role-of-statistics-in-the-protocol"><i class="fa fa-check"></i><b>5.2</b> 4.1 Role of Statistics in the Protocol</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="chapter-4-statistical-support-for-the-protocol.html"><a href="chapter-4-statistical-support-for-the-protocol.html#why-the-protocol-matters-statistically"><i class="fa fa-check"></i><b>5.2.1</b> 4.1.1 Why the Protocol Matters Statistically</a></li>
+<li class="chapter" data-level="5.2.2" data-path="chapter-4-statistical-support-for-the-protocol.html"><a href="chapter-4-statistical-support-for-the-protocol.html#scope-of-statistical-support"><i class="fa fa-check"></i><b>5.2.2</b> 4.1.2 Scope of Statistical Support</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="chapter-4-statistical-support-for-the-protocol.html"><a href="chapter-4-statistical-support-for-the-protocol.html#statistical-hypotheses-in-the-protocol"><i class="fa fa-check"></i><b>5.3</b> 4.2 Statistical Hypotheses in the Protocol</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="chapter-4-statistical-support-for-the-protocol.html"><a href="chapter-4-statistical-support-for-the-protocol.html#purpose-of-statistical-hypotheses"><i class="fa fa-check"></i><b>5.3.1</b> 4.2.1 Purpose of Statistical Hypotheses</a></li>
+<li class="chapter" data-level="5.3.2" data-path="chapter-4-statistical-support-for-the-protocol.html"><a href="chapter-4-statistical-support-for-the-protocol.html#key-review-and-drafting-considerations"><i class="fa fa-check"></i><b>5.3.2</b> 4.2.2 Key Review and Drafting Considerations</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="chapter-4-statistical-support-for-the-protocol.html"><a href="chapter-4-statistical-support-for-the-protocol.html#endpoint-definitions"><i class="fa fa-check"></i><b>5.4</b> 4.3 Endpoint Definitions</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="chapter-4-statistical-support-for-the-protocol.html"><a href="chapter-4-statistical-support-for-the-protocol.html#importance-of-precise-endpoint-definitions"><i class="fa fa-check"></i><b>5.4.1</b> 4.3.1 Importance of Precise Endpoint Definitions</a></li>
+<li class="chapter" data-level="5.4.2" data-path="chapter-4-statistical-support-for-the-protocol.html"><a href="chapter-4-statistical-support-for-the-protocol.html#primary-and-secondary-endpoints-1"><i class="fa fa-check"></i><b>5.4.2</b> 4.3.2 Primary and Secondary Endpoints</a></li>
+<li class="chapter" data-level="5.4.3" data-path="chapter-4-statistical-support-for-the-protocol.html"><a href="chapter-4-statistical-support-for-the-protocol.html#common-endpoint-issues-to-resolve-early"><i class="fa fa-check"></i><b>5.4.3</b> 4.3.3 Common Endpoint Issues to Resolve Early</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="chapter-4-statistical-support-for-the-protocol.html"><a href="chapter-4-statistical-support-for-the-protocol.html#sample-size-description"><i class="fa fa-check"></i><b>5.5</b> 4.4 Sample Size Description</a>
+<ul>
+<li class="chapter" data-level="5.5.1" data-path="chapter-4-statistical-support-for-the-protocol.html"><a href="chapter-4-statistical-support-for-the-protocol.html#purpose-of-sample-size-in-the-protocol"><i class="fa fa-check"></i><b>5.5.1</b> 4.4.1 Purpose of Sample Size in the Protocol</a></li>
+<li class="chapter" data-level="5.5.2" data-path="chapter-4-statistical-support-for-the-protocol.html"><a href="chapter-4-statistical-support-for-the-protocol.html#appropriate-level-of-detail"><i class="fa fa-check"></i><b>5.5.2</b> 4.4.2 Appropriate Level of Detail</a></li>
+</ul></li>
+<li class="chapter" data-level="5.6" data-path="chapter-4-statistical-support-for-the-protocol.html"><a href="chapter-4-statistical-support-for-the-protocol.html#analysis-populations"><i class="fa fa-check"></i><b>5.6</b> 4.5 Analysis Populations</a>
+<ul>
+<li class="chapter" data-level="5.6.1" data-path="chapter-4-statistical-support-for-the-protocol.html"><a href="chapter-4-statistical-support-for-the-protocol.html#purpose-of-defining-analysis-sets"><i class="fa fa-check"></i><b>5.6.1</b> 4.5.1 Purpose of Defining Analysis Sets</a></li>
+<li class="chapter" data-level="5.6.2" data-path="chapter-4-statistical-support-for-the-protocol.html"><a href="chapter-4-statistical-support-for-the-protocol.html#key-considerations-for-common-populations"><i class="fa fa-check"></i><b>5.6.2</b> 4.5.2 Key Considerations for Common Populations</a></li>
+<li class="chapter" data-level="5.6.3" data-path="chapter-4-statistical-support-for-the-protocol.html"><a href="chapter-4-statistical-support-for-the-protocol.html#alignment-with-study-objectives"><i class="fa fa-check"></i><b>5.6.3</b> 4.5.3 Alignment With Study Objectives</a></li>
+</ul></li>
+<li class="chapter" data-level="5.7" data-path="chapter-4-statistical-support-for-the-protocol.html"><a href="chapter-4-statistical-support-for-the-protocol.html#interim-analyses-if-applicable"><i class="fa fa-check"></i><b>5.7</b> 4.6 Interim Analyses (If Applicable)</a>
+<ul>
+<li class="chapter" data-level="5.7.1" data-path="chapter-4-statistical-support-for-the-protocol.html"><a href="chapter-4-statistical-support-for-the-protocol.html#purpose-of-interim-analyses"><i class="fa fa-check"></i><b>5.7.1</b> 4.6.1 Purpose of Interim Analyses</a></li>
+<li class="chapter" data-level="5.7.2" data-path="chapter-4-statistical-support-for-the-protocol.html"><a href="chapter-4-statistical-support-for-the-protocol.html#required-protocol-elements"><i class="fa fa-check"></i><b>5.7.2</b> 4.6.2 Required Protocol Elements</a></li>
+<li class="chapter" data-level="5.7.3" data-path="chapter-4-statistical-support-for-the-protocol.html"><a href="chapter-4-statistical-support-for-the-protocol.html#relationship-to-the-sap"><i class="fa fa-check"></i><b>5.7.3</b> 4.6.3 Relationship to the SAP</a></li>
+</ul></li>
+<li class="chapter" data-level="5.8" data-path="chapter-4-statistical-support-for-the-protocol.html"><a href="chapter-4-statistical-support-for-the-protocol.html#responding-to-statistical-questions-from-stakeholders"><i class="fa fa-check"></i><b>5.8</b> 4.7 Responding to Statistical Questions From Stakeholders</a>
+<ul>
+<li class="chapter" data-level="5.8.1" data-path="chapter-4-statistical-support-for-the-protocol.html"><a href="chapter-4-statistical-support-for-the-protocol.html#common-sources-of-statistical-questions"><i class="fa fa-check"></i><b>5.8.1</b> 4.7.1 Common Sources of Statistical Questions</a></li>
+<li class="chapter" data-level="5.8.2" data-path="chapter-4-statistical-support-for-the-protocol.html"><a href="chapter-4-statistical-support-for-the-protocol.html#principles-for-effective-responses"><i class="fa fa-check"></i><b>5.8.2</b> 4.7.2 Principles for Effective Responses</a></li>
+</ul></li>
+<li class="chapter" data-level="5.9" data-path="chapter-4-statistical-support-for-the-protocol.html"><a href="chapter-4-statistical-support-for-the-protocol.html#ensuring-protocol-descriptions-are-implementable"><i class="fa fa-check"></i><b>5.9</b> 4.8 Ensuring Protocol Descriptions Are Implementable</a>
+<ul>
+<li class="chapter" data-level="5.9.1" data-path="chapter-4-statistical-support-for-the-protocol.html"><a href="chapter-4-statistical-support-for-the-protocol.html#protocol-to-sap-translation"><i class="fa fa-check"></i><b>5.9.1</b> 4.8.1 Protocol to SAP Translation</a></li>
+<li class="chapter" data-level="5.9.2" data-path="chapter-4-statistical-support-for-the-protocol.html"><a href="chapter-4-statistical-support-for-the-protocol.html#common-implementation-gaps"><i class="fa fa-check"></i><b>5.9.2</b> 4.8.2 Common Implementation Gaps</a></li>
+</ul></li>
+<li class="chapter" data-level="5.10" data-path="chapter-4-statistical-support-for-the-protocol.html"><a href="chapter-4-statistical-support-for-the-protocol.html#practical-review-checklist"><i class="fa fa-check"></i><b>5.10</b> 4.9 Practical Review Checklist</a></li>
+<li class="chapter" data-level="5.11" data-path="chapter-4-statistical-support-for-the-protocol.html"><a href="chapter-4-statistical-support-for-the-protocol.html#chapter-summary-3"><i class="fa fa-check"></i><b>5.11</b> Chapter Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="chapter-5-statistical-analysis-plan-sap-development.html"><a href="chapter-5-statistical-analysis-plan-sap-development.html"><i class="fa fa-check"></i><b>6</b> Chapter 5 Statistical Analysis Plan (SAP) Development</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="chapter-5-statistical-analysis-plan-sap-development.html"><a href="chapter-5-statistical-analysis-plan-sap-development.html#core-statistical-work"><i class="fa fa-check"></i><b>6.1</b> Core Statistical Work</a></li>
+<li class="chapter" data-level="6.2" data-path="chapter-5-statistical-analysis-plan-sap-development.html"><a href="chapter-5-statistical-analysis-plan-sap-development.html#chapter-objectives-4"><i class="fa fa-check"></i><b>6.2</b> Chapter Objectives</a></li>
+<li class="chapter" data-level="6.3" data-path="chapter-5-statistical-analysis-plan-sap-development.html"><a href="chapter-5-statistical-analysis-plan-sap-development.html#role-of-the-sap-in-clinical-trials"><i class="fa fa-check"></i><b>6.3</b> 5.1 Role of the SAP in Clinical Trials</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="chapter-5-statistical-analysis-plan-sap-development.html"><a href="chapter-5-statistical-analysis-plan-sap-development.html#why-the-sap-is-a-critical-document"><i class="fa fa-check"></i><b>6.3.1</b> 5.1.1 Why the SAP Is a Critical Document</a></li>
+<li class="chapter" data-level="6.3.2" data-path="chapter-5-statistical-analysis-plan-sap-development.html"><a href="chapter-5-statistical-analysis-plan-sap-development.html#relationship-between-the-protocol-and-the-sap"><i class="fa fa-check"></i><b>6.3.2</b> 5.1.2 Relationship Between the Protocol and the SAP</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="chapter-5-statistical-analysis-plan-sap-development.html"><a href="chapter-5-statistical-analysis-plan-sap-development.html#definition-of-the-primary-analysis-method"><i class="fa fa-check"></i><b>6.4</b> 5.2 Definition of the Primary Analysis Method</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="chapter-5-statistical-analysis-plan-sap-development.html"><a href="chapter-5-statistical-analysis-plan-sap-development.html#purpose-of-the-primary-analysis"><i class="fa fa-check"></i><b>6.4.1</b> 5.2.1 Purpose of the Primary Analysis</a></li>
+<li class="chapter" data-level="6.4.2" data-path="chapter-5-statistical-analysis-plan-sap-development.html"><a href="chapter-5-statistical-analysis-plan-sap-development.html#model-type-specification"><i class="fa fa-check"></i><b>6.4.2</b> 5.2.2 Model Type Specification</a></li>
+<li class="chapter" data-level="6.4.3" data-path="chapter-5-statistical-analysis-plan-sap-development.html"><a href="chapter-5-statistical-analysis-plan-sap-development.html#covariate-specification"><i class="fa fa-check"></i><b>6.4.3</b> 5.2.3 Covariate Specification</a></li>
+<li class="chapter" data-level="6.4.4" data-path="chapter-5-statistical-analysis-plan-sap-development.html"><a href="chapter-5-statistical-analysis-plan-sap-development.html#handling-of-stratification-factors"><i class="fa fa-check"></i><b>6.4.4</b> 5.2.4 Handling of Stratification Factors</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="chapter-5-statistical-analysis-plan-sap-development.html"><a href="chapter-5-statistical-analysis-plan-sap-development.html#secondary-and-exploratory-analyses"><i class="fa fa-check"></i><b>6.5</b> 5.3 Secondary and Exploratory Analyses</a>
+<ul>
+<li class="chapter" data-level="6.5.1" data-path="chapter-5-statistical-analysis-plan-sap-development.html"><a href="chapter-5-statistical-analysis-plan-sap-development.html#secondary-analyses"><i class="fa fa-check"></i><b>6.5.1</b> 5.3.1 Secondary Analyses</a></li>
+<li class="chapter" data-level="6.5.2" data-path="chapter-5-statistical-analysis-plan-sap-development.html"><a href="chapter-5-statistical-analysis-plan-sap-development.html#exploratory-analyses"><i class="fa fa-check"></i><b>6.5.2</b> 5.3.2 Exploratory Analyses</a></li>
+</ul></li>
+<li class="chapter" data-level="6.6" data-path="chapter-5-statistical-analysis-plan-sap-development.html"><a href="chapter-5-statistical-analysis-plan-sap-development.html#multiplicity-control-strategy"><i class="fa fa-check"></i><b>6.6</b> 5.4 Multiplicity Control Strategy</a>
+<ul>
+<li class="chapter" data-level="6.6.1" data-path="chapter-5-statistical-analysis-plan-sap-development.html"><a href="chapter-5-statistical-analysis-plan-sap-development.html#importance-of-multiplicity-control"><i class="fa fa-check"></i><b>6.6.1</b> 5.4.1 Importance of Multiplicity Control</a></li>
+<li class="chapter" data-level="6.6.2" data-path="chapter-5-statistical-analysis-plan-sap-development.html"><a href="chapter-5-statistical-analysis-plan-sap-development.html#common-multiplicity-approaches"><i class="fa fa-check"></i><b>6.6.2</b> 5.4.2 Common Multiplicity Approaches</a></li>
+</ul></li>
+<li class="chapter" data-level="6.7" data-path="chapter-5-statistical-analysis-plan-sap-development.html"><a href="chapter-5-statistical-analysis-plan-sap-development.html#missing-data-handling-strategies"><i class="fa fa-check"></i><b>6.7</b> 5.5 Missing Data Handling Strategies</a>
+<ul>
+<li class="chapter" data-level="6.7.1" data-path="chapter-5-statistical-analysis-plan-sap-development.html"><a href="chapter-5-statistical-analysis-plan-sap-development.html#importance-of-pre-specifying-missing-data-methods"><i class="fa fa-check"></i><b>6.7.1</b> 5.5.1 Importance of Pre-Specifying Missing Data Methods</a></li>
+<li class="chapter" data-level="6.7.2" data-path="chapter-5-statistical-analysis-plan-sap-development.html"><a href="chapter-5-statistical-analysis-plan-sap-development.html#commonly-used-methods"><i class="fa fa-check"></i><b>6.7.2</b> 5.5.2 Commonly Used Methods</a></li>
+<li class="chapter" data-level="6.7.3" data-path="chapter-5-statistical-analysis-plan-sap-development.html"><a href="chapter-5-statistical-analysis-plan-sap-development.html#alignment-with-estimands"><i class="fa fa-check"></i><b>6.7.3</b> 5.5.3 Alignment With Estimands</a></li>
+</ul></li>
+<li class="chapter" data-level="6.8" data-path="chapter-5-statistical-analysis-plan-sap-development.html"><a href="chapter-5-statistical-analysis-plan-sap-development.html#definition-of-repeat-assessments-and-visit-window-rules"><i class="fa fa-check"></i><b>6.8</b> 5.6 Definition of Repeat Assessments and Visit Window Rules</a>
+<ul>
+<li class="chapter" data-level="6.8.1" data-path="chapter-5-statistical-analysis-plan-sap-development.html"><a href="chapter-5-statistical-analysis-plan-sap-development.html#purpose-of-visit-window-rules"><i class="fa fa-check"></i><b>6.8.1</b> 5.6.1 Purpose of Visit Window Rules</a></li>
+<li class="chapter" data-level="6.8.2" data-path="chapter-5-statistical-analysis-plan-sap-development.html"><a href="chapter-5-statistical-analysis-plan-sap-development.html#statistical-rules-for-repeat-or-follow-up-measurements"><i class="fa fa-check"></i><b>6.8.2</b> 5.6.2 Statistical Rules for Repeat or Follow-Up Measurements</a></li>
+</ul></li>
+<li class="chapter" data-level="6.9" data-path="chapter-5-statistical-analysis-plan-sap-development.html"><a href="chapter-5-statistical-analysis-plan-sap-development.html#sensitivity-analysis-plan"><i class="fa fa-check"></i><b>6.9</b> 5.7 Sensitivity Analysis Plan</a>
+<ul>
+<li class="chapter" data-level="6.9.1" data-path="chapter-5-statistical-analysis-plan-sap-development.html"><a href="chapter-5-statistical-analysis-plan-sap-development.html#purpose-of-sensitivity-analyses"><i class="fa fa-check"></i><b>6.9.1</b> 5.7.1 Purpose of Sensitivity Analyses</a></li>
+<li class="chapter" data-level="6.9.2" data-path="chapter-5-statistical-analysis-plan-sap-development.html"><a href="chapter-5-statistical-analysis-plan-sap-development.html#common-sensitivity-analyses"><i class="fa fa-check"></i><b>6.9.2</b> 5.7.2 Common Sensitivity Analyses</a></li>
+</ul></li>
+<li class="chapter" data-level="6.10" data-path="chapter-5-statistical-analysis-plan-sap-development.html"><a href="chapter-5-statistical-analysis-plan-sap-development.html#subgroup-analysis-definition"><i class="fa fa-check"></i><b>6.10</b> 5.8 Subgroup Analysis Definition</a>
+<ul>
+<li class="chapter" data-level="6.10.1" data-path="chapter-5-statistical-analysis-plan-sap-development.html"><a href="chapter-5-statistical-analysis-plan-sap-development.html#purpose-of-subgroup-analyses"><i class="fa fa-check"></i><b>6.10.1</b> 5.8.1 Purpose of Subgroup Analyses</a></li>
+<li class="chapter" data-level="6.10.2" data-path="chapter-5-statistical-analysis-plan-sap-development.html"><a href="chapter-5-statistical-analysis-plan-sap-development.html#pre-specification-requirements"><i class="fa fa-check"></i><b>6.10.2</b> 5.8.2 Pre-Specification Requirements</a></li>
+</ul></li>
+<li class="chapter" data-level="6.11" data-path="chapter-5-statistical-analysis-plan-sap-development.html"><a href="chapter-5-statistical-analysis-plan-sap-development.html#interim-analysis-and-dmc-support-if-applicable"><i class="fa fa-check"></i><b>6.11</b> 5.9 Interim Analysis and DMC Support (If Applicable)</a>
+<ul>
+<li class="chapter" data-level="6.11.1" data-path="chapter-5-statistical-analysis-plan-sap-development.html"><a href="chapter-5-statistical-analysis-plan-sap-development.html#interim-analysis-specifications"><i class="fa fa-check"></i><b>6.11.1</b> 5.9.1 Interim Analysis Specifications</a></li>
+<li class="chapter" data-level="6.11.2" data-path="chapter-5-statistical-analysis-plan-sap-development.html"><a href="chapter-5-statistical-analysis-plan-sap-development.html#dmc-support"><i class="fa fa-check"></i><b>6.11.2</b> 5.9.2 DMC Support</a></li>
+</ul></li>
+<li class="chapter" data-level="6.12" data-path="chapter-5-statistical-analysis-plan-sap-development.html"><a href="chapter-5-statistical-analysis-plan-sap-development.html#sap-quality-and-implementation-checklist"><i class="fa fa-check"></i><b>6.12</b> 5.10 SAP Quality and Implementation Checklist</a></li>
+<li class="chapter" data-level="6.13" data-path="chapter-5-statistical-analysis-plan-sap-development.html"><a href="chapter-5-statistical-analysis-plan-sap-development.html#chapter-summary-4"><i class="fa fa-check"></i><b>6.13</b> Chapter Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="chapter-6-sap-review-finalization-and-governance.html"><a href="chapter-6-sap-review-finalization-and-governance.html"><i class="fa fa-check"></i><b>7</b> Chapter 6 SAP Review, Finalization, and Governance</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="chapter-6-sap-review-finalization-and-governance.html"><a href="chapter-6-sap-review-finalization-and-governance.html#chapter-objectives-5"><i class="fa fa-check"></i><b>7.1</b> Chapter Objectives</a></li>
+<li class="chapter" data-level="7.2" data-path="chapter-6-sap-review-finalization-and-governance.html"><a href="chapter-6-sap-review-finalization-and-governance.html#purpose-of-sap-review-and-finalization"><i class="fa fa-check"></i><b>7.2</b> 6.1 Purpose of SAP Review and Finalization</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="chapter-6-sap-review-finalization-and-governance.html"><a href="chapter-6-sap-review-finalization-and-governance.html#why-sap-review-is-a-high-risk-step"><i class="fa fa-check"></i><b>7.2.1</b> 6.1.1 Why SAP Review Is a High-Risk Step</a></li>
+<li class="chapter" data-level="7.2.2" data-path="chapter-6-sap-review-finalization-and-governance.html"><a href="chapter-6-sap-review-finalization-and-governance.html#what-sap-final-truly-means"><i class="fa fa-check"></i><b>7.2.2</b> 6.1.2 What “SAP Final” Truly Means</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="chapter-6-sap-review-finalization-and-governance.html"><a href="chapter-6-sap-review-finalization-and-governance.html#internal-qc-and-peer-review"><i class="fa fa-check"></i><b>7.3</b> 6.2 Internal QC and Peer Review</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="chapter-6-sap-review-finalization-and-governance.html"><a href="chapter-6-sap-review-finalization-and-governance.html#objectives-of-internal-qc"><i class="fa fa-check"></i><b>7.3.1</b> 6.2.1 Objectives of Internal QC</a></li>
+<li class="chapter" data-level="7.3.2" data-path="chapter-6-sap-review-finalization-and-governance.html"><a href="chapter-6-sap-review-finalization-and-governance.html#key-areas-for-qc-review"><i class="fa fa-check"></i><b>7.3.2</b> 6.2.2 Key Areas for QC Review</a></li>
+<li class="chapter" data-level="7.3.3" data-path="chapter-6-sap-review-finalization-and-governance.html"><a href="chapter-6-sap-review-finalization-and-governance.html#role-of-peer-review"><i class="fa fa-check"></i><b>7.3.3</b> 6.2.3 Role of Peer Review</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="chapter-6-sap-review-finalization-and-governance.html"><a href="chapter-6-sap-review-finalization-and-governance.html#responding-to-sponsor-medical-and-regulatory-comments"><i class="fa fa-check"></i><b>7.4</b> 6.3 Responding to Sponsor, Medical, and Regulatory Comments</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="chapter-6-sap-review-finalization-and-governance.html"><a href="chapter-6-sap-review-finalization-and-governance.html#types-of-comments-commonly-received"><i class="fa fa-check"></i><b>7.4.1</b> 6.3.1 Types of Comments Commonly Received</a></li>
+<li class="chapter" data-level="7.4.2" data-path="chapter-6-sap-review-finalization-and-governance.html"><a href="chapter-6-sap-review-finalization-and-governance.html#principles-for-effective-responses-1"><i class="fa fa-check"></i><b>7.4.2</b> 6.3.2 Principles for Effective Responses</a></li>
+<li class="chapter" data-level="7.4.3" data-path="chapter-6-sap-review-finalization-and-governance.html"><a href="chapter-6-sap-review-finalization-and-governance.html#managing-disagreement"><i class="fa fa-check"></i><b>7.4.3</b> 6.3.3 Managing Disagreement</a></li>
+</ul></li>
+<li class="chapter" data-level="7.5" data-path="chapter-6-sap-review-finalization-and-governance.html"><a href="chapter-6-sap-review-finalization-and-governance.html#version-control-and-archiving"><i class="fa fa-check"></i><b>7.5</b> 6.4 Version Control and Archiving</a>
+<ul>
+<li class="chapter" data-level="7.5.1" data-path="chapter-6-sap-review-finalization-and-governance.html"><a href="chapter-6-sap-review-finalization-and-governance.html#importance-of-version-control"><i class="fa fa-check"></i><b>7.5.1</b> 6.4.1 Importance of Version Control</a></li>
+<li class="chapter" data-level="7.5.2" data-path="chapter-6-sap-review-finalization-and-governance.html"><a href="chapter-6-sap-review-finalization-and-governance.html#versioning-best-practices"><i class="fa fa-check"></i><b>7.5.2</b> 6.4.2 Versioning Best Practices</a></li>
+<li class="chapter" data-level="7.5.3" data-path="chapter-6-sap-review-finalization-and-governance.html"><a href="chapter-6-sap-review-finalization-and-governance.html#archiving-requirements"><i class="fa fa-check"></i><b>7.5.3</b> 6.4.3 Archiving Requirements</a></li>
+</ul></li>
+<li class="chapter" data-level="7.6" data-path="chapter-6-sap-review-finalization-and-governance.html"><a href="chapter-6-sap-review-finalization-and-governance.html#ensuring-sap-finalization-prior-to-database-lock"><i class="fa fa-check"></i><b>7.6</b> 6.5 Ensuring SAP Finalization Prior to Database Lock</a>
+<ul>
+<li class="chapter" data-level="7.6.1" data-path="chapter-6-sap-review-finalization-and-governance.html"><a href="chapter-6-sap-review-finalization-and-governance.html#why-timing-is-critical"><i class="fa fa-check"></i><b>7.6.1</b> 6.5.1 Why Timing Is Critical</a></li>
+<li class="chapter" data-level="7.6.2" data-path="chapter-6-sap-review-finalization-and-governance.html"><a href="chapter-6-sap-review-finalization-and-governance.html#practical-safeguards"><i class="fa fa-check"></i><b>7.6.2</b> 6.5.2 Practical Safeguards</a></li>
+<li class="chapter" data-level="7.6.3" data-path="chapter-6-sap-review-finalization-and-governance.html"><a href="chapter-6-sap-review-finalization-and-governance.html#handling-late-or-exceptional-changes"><i class="fa fa-check"></i><b>7.6.3</b> 6.5.3 Handling Late or Exceptional Changes</a></li>
+</ul></li>
+<li class="chapter" data-level="7.7" data-path="chapter-6-sap-review-finalization-and-governance.html"><a href="chapter-6-sap-review-finalization-and-governance.html#common-risks-and-mitigation-strategies"><i class="fa fa-check"></i><b>7.7</b> 6.6 Common Risks and Mitigation Strategies</a></li>
+<li class="chapter" data-level="7.8" data-path="chapter-6-sap-review-finalization-and-governance.html"><a href="chapter-6-sap-review-finalization-and-governance.html#sap-review-and-finalization-checklist"><i class="fa fa-check"></i><b>7.8</b> 6.7 SAP Review and Finalization Checklist</a></li>
+<li class="chapter" data-level="7.9" data-path="chapter-6-sap-review-finalization-and-governance.html"><a href="chapter-6-sap-review-finalization-and-governance.html#chapter-summary-5"><i class="fa fa-check"></i><b>7.9</b> Chapter Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="chapter-7-data-standards-and-analysis-readiness.html"><a href="chapter-7-data-standards-and-analysis-readiness.html"><i class="fa fa-check"></i><b>8</b> Chapter 7 Data Standards and Analysis Readiness</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="chapter-7-data-standards-and-analysis-readiness.html"><a href="chapter-7-data-standards-and-analysis-readiness.html#why-must-biostatisticians-participate-in-crf-design-review"><i class="fa fa-check"></i><b>8.1</b> 7.1 Why Must Biostatisticians Participate in CRF Design Review?</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="chapter-7-data-standards-and-analysis-readiness.html"><a href="chapter-7-data-standards-and-analysis-readiness.html#a-hard-industry-truth"><i class="fa fa-check"></i><b>8.1.1</b> 7.1.1 A Hard Industry Truth</a></li>
+<li class="chapter" data-level="8.1.2" data-path="chapter-7-data-standards-and-analysis-readiness.html"><a href="chapter-7-data-standards-and-analysis-readiness.html#the-statisticians-role-in-crf-review"><i class="fa fa-check"></i><b>8.1.2</b> 7.1.2 The Statistician’s Role in CRF Review</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="chapter-7-data-standards-and-analysis-readiness.html"><a href="chapter-7-data-standards-and-analysis-readiness.html#four-core-dimensions-of-analyzability-in-crf-review"><i class="fa fa-check"></i><b>8.2</b> 7.2 Four Core Dimensions of “Analyzability” in CRF Review</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="chapter-7-data-standards-and-analysis-readiness.html"><a href="chapter-7-data-standards-and-analysis-readiness.html#data-collection-frequency-does-it-support-the-planned-model"><i class="fa fa-check"></i><b>8.2.1</b> 7.2.1 Data Collection Frequency: Does It Support the Planned Model?</a></li>
+<li class="chapter" data-level="8.2.2" data-path="chapter-7-data-standards-and-analysis-readiness.html"><a href="chapter-7-data-standards-and-analysis-readiness.html#units-ranges-and-logical-validity"><i class="fa fa-check"></i><b>8.2.2</b> 7.2.2 Units, Ranges, and Logical Validity</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="chapter-7-data-standards-and-analysis-readiness.html"><a href="chapter-7-data-standards-and-analysis-readiness.html#confirming-the-cdisc-strategy-sdtm-and-adam"><i class="fa fa-check"></i><b>8.3</b> 7.3 Confirming the CDISC Strategy (SDTM and ADaM)</a>
+<ul>
+<li class="chapter" data-level="8.3.1" data-path="chapter-7-data-standards-and-analysis-readiness.html"><a href="chapter-7-data-standards-and-analysis-readiness.html#the-statistician-as-a-standards-gatekeeper"><i class="fa fa-check"></i><b>8.3.1</b> 7.3.1 The Statistician as a Standards Gatekeeper</a></li>
+<li class="chapter" data-level="8.3.2" data-path="chapter-7-data-standards-and-analysis-readiness.html"><a href="chapter-7-data-standards-and-analysis-readiness.html#key-sdtm-considerations-from-a-statistical-perspective"><i class="fa fa-check"></i><b>8.3.2</b> 7.3.2 Key SDTM Considerations from a Statistical Perspective</a></li>
+<li class="chapter" data-level="8.3.3" data-path="chapter-7-data-standards-and-analysis-readiness.html"><a href="chapter-7-data-standards-and-analysis-readiness.html#early-adam-thinking"><i class="fa fa-check"></i><b>8.3.3</b> 7.3.3 Early ADaM Thinking</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="chapter-7-data-standards-and-analysis-readiness.html"><a href="chapter-7-data-standards-and-analysis-readiness.html#alignment-with-data-management-collaboration-not-handoff"><i class="fa fa-check"></i><b>8.4</b> 7.4 Alignment with Data Management: Collaboration, Not Handoff</a>
+<ul>
+<li class="chapter" data-level="8.4.1" data-path="chapter-7-data-standards-and-analysis-readiness.html"><a href="chapter-7-data-standards-and-analysis-readiness.html#key-topics-for-statisticiandm-alignment"><i class="fa fa-check"></i><b>8.4.1</b> 7.4.1 Key Topics for Statistician–DM Alignment</a></li>
+<li class="chapter" data-level="8.4.2" data-path="chapter-7-data-standards-and-analysis-readiness.html"><a href="chapter-7-data-standards-and-analysis-readiness.html#a-sign-of-a-mature-project-team"><i class="fa fa-check"></i><b>8.4.2</b> 7.4.2 A Sign of a Mature Project Team</a></li>
+</ul></li>
+<li class="chapter" data-level="8.5" data-path="chapter-7-data-standards-and-analysis-readiness.html"><a href="chapter-7-data-standards-and-analysis-readiness.html#chapter-summary-the-statisticians-true-value-at-this-stage"><i class="fa fa-check"></i><b>8.5</b> 7.5 Chapter Summary: The Statistician’s True Value at This Stage</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="chapter-8-blind-data-review-bdr.html"><a href="chapter-8-blind-data-review-bdr.html"><i class="fa fa-check"></i><b>9</b> Chapter 8 Blind Data Review (BDR)</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="chapter-8-blind-data-review-bdr.html"><a href="chapter-8-blind-data-review-bdr.html#why-blind-data-review-is-statistically-critical"><i class="fa fa-check"></i><b>9.1</b> 8.1 Why Blind Data Review Is Statistically Critical</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="chapter-8-blind-data-review-bdr.html"><a href="chapter-8-blind-data-review-bdr.html#bdr-is-not-a-routine-data-cleaning-step"><i class="fa fa-check"></i><b>9.1.1</b> 8.1.1 BDR Is Not a Routine Data Cleaning Step</a></li>
+<li class="chapter" data-level="9.1.2" data-path="chapter-8-blind-data-review-bdr.html"><a href="chapter-8-blind-data-review-bdr.html#the-statisticians-unique-responsibility-in-bdr"><i class="fa fa-check"></i><b>9.1.2</b> 8.1.2 The Statistician’s Unique Responsibility in BDR</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="chapter-8-blind-data-review-bdr.html"><a href="chapter-8-blind-data-review-bdr.html#statistical-support-of-the-bdr-plan"><i class="fa fa-check"></i><b>9.2</b> 8.2 Statistical Support of the BDR Plan</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="chapter-8-blind-data-review-bdr.html"><a href="chapter-8-blind-data-review-bdr.html#objectives-of-a-robust-bdr-plan"><i class="fa fa-check"></i><b>9.2.1</b> 8.2.1 Objectives of a Robust BDR Plan</a></li>
+<li class="chapter" data-level="9.2.2" data-path="chapter-8-blind-data-review-bdr.html"><a href="chapter-8-blind-data-review-bdr.html#statistical-contributions-to-the-bdr-plan"><i class="fa fa-check"></i><b>9.2.2</b> 8.2.2 Statistical Contributions to the BDR Plan</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="chapter-8-blind-data-review-bdr.html"><a href="chapter-8-blind-data-review-bdr.html#core-review-areas-during-blind-data-review"><i class="fa fa-check"></i><b>9.3</b> 8.3 Core Review Areas During Blind Data Review</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="chapter-8-blind-data-review-bdr.html"><a href="chapter-8-blind-data-review-bdr.html#data-completeness"><i class="fa fa-check"></i><b>9.3.1</b> 8.3.1 Data Completeness</a></li>
+<li class="chapter" data-level="9.3.2" data-path="chapter-8-blind-data-review-bdr.html"><a href="chapter-8-blind-data-review-bdr.html#outliers-and-extreme-values"><i class="fa fa-check"></i><b>9.3.2</b> 8.3.2 Outliers and Extreme Values</a></li>
+<li class="chapter" data-level="9.3.3" data-path="chapter-8-blind-data-review-bdr.html"><a href="chapter-8-blind-data-review-bdr.html#visit-deviations"><i class="fa fa-check"></i><b>9.3.3</b> 8.3.3 Visit Deviations</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="chapter-9-interim-analysis-and-safety-monitoring.html"><a href="chapter-9-interim-analysis-and-safety-monitoring.html"><i class="fa fa-check"></i><b>10</b> Chapter 9 Interim Analysis and Safety Monitoring</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="chapter-9-interim-analysis-and-safety-monitoring.html"><a href="chapter-9-interim-analysis-and-safety-monitoring.html#when-interim-analysis-and-safety-monitoring-apply"><i class="fa fa-check"></i><b>10.1</b> 9.1 When Interim Analysis and Safety Monitoring Apply</a></li>
+<li class="chapter" data-level="10.2" data-path="chapter-9-interim-analysis-and-safety-monitoring.html"><a href="chapter-9-interim-analysis-and-safety-monitoring.html#supporting-data-monitoring-committees-dmc-idmc"><i class="fa fa-check"></i><b>10.2</b> 9.2 Supporting Data Monitoring Committees (DMC / IDMC)</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="chapter-9-interim-analysis-and-safety-monitoring.html"><a href="chapter-9-interim-analysis-and-safety-monitoring.html#purpose-of-the-dmc-idmc"><i class="fa fa-check"></i><b>10.2.1</b> 9.2.1 Purpose of the DMC / IDMC</a></li>
+<li class="chapter" data-level="10.2.2" data-path="chapter-9-interim-analysis-and-safety-monitoring.html"><a href="chapter-9-interim-analysis-and-safety-monitoring.html#the-statisticians-role-in-committee-support"><i class="fa fa-check"></i><b>10.2.2</b> 9.2.2 The Statistician’s Role in Committee Support</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="chapter-9-interim-analysis-and-safety-monitoring.html"><a href="chapter-9-interim-analysis-and-safety-monitoring.html#blinded-and-unblinded-statistical-outputs"><i class="fa fa-check"></i><b>10.3</b> 9.3 Blinded and Unblinded Statistical Outputs</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="chapter-9-interim-analysis-and-safety-monitoring.html"><a href="chapter-9-interim-analysis-and-safety-monitoring.html#blinded-outputs"><i class="fa fa-check"></i><b>10.3.1</b> 9.3.1 Blinded Outputs</a></li>
+<li class="chapter" data-level="10.3.2" data-path="chapter-9-interim-analysis-and-safety-monitoring.html"><a href="chapter-9-interim-analysis-and-safety-monitoring.html#unblinded-outputs"><i class="fa fa-check"></i><b>10.3.2</b> 9.3.2 Unblinded Outputs</a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="chapter-9-interim-analysis-and-safety-monitoring.html"><a href="chapter-9-interim-analysis-and-safety-monitoring.html#ensuring-compliance-of-the-unblinding-process"><i class="fa fa-check"></i><b>10.4</b> 9.4 Ensuring Compliance of the Unblinding Process</a>
+<ul>
+<li class="chapter" data-level="10.4.1" data-path="chapter-9-interim-analysis-and-safety-monitoring.html"><a href="chapter-9-interim-analysis-and-safety-monitoring.html#unblinding-as-a-critical-risk-point"><i class="fa fa-check"></i><b>10.4.1</b> 9.4.1 Unblinding as a Critical Risk Point</a></li>
+<li class="chapter" data-level="10.4.2" data-path="chapter-9-interim-analysis-and-safety-monitoring.html"><a href="chapter-9-interim-analysis-and-safety-monitoring.html#statistical-safeguards-for-unblinding"><i class="fa fa-check"></i><b>10.4.2</b> 9.4.2 Statistical Safeguards for Unblinding</a></li>
+</ul></li>
+<li class="chapter" data-level="10.5" data-path="chapter-9-interim-analysis-and-safety-monitoring.html"><a href="chapter-9-interim-analysis-and-safety-monitoring.html#interim-analysis-key-statistical-considerations"><i class="fa fa-check"></i><b>10.5</b> 9.5 Interim Analysis: Key Statistical Considerations</a>
+<ul>
+<li class="chapter" data-level="10.5.1" data-path="chapter-9-interim-analysis-and-safety-monitoring.html"><a href="chapter-9-interim-analysis-and-safety-monitoring.html#alignment-with-protocol-and-sap"><i class="fa fa-check"></i><b>10.5.1</b> 9.5.1 Alignment with Protocol and SAP</a></li>
+<li class="chapter" data-level="10.5.2" data-path="chapter-9-interim-analysis-and-safety-monitoring.html"><a href="chapter-9-interim-analysis-and-safety-monitoring.html#multiplicity-and-type-i-error-control"><i class="fa fa-check"></i><b>10.5.2</b> 9.5.2 Multiplicity and Type I Error Control</a></li>
+</ul></li>
+<li class="chapter" data-level="10.6" data-path="chapter-9-interim-analysis-and-safety-monitoring.html"><a href="chapter-9-interim-analysis-and-safety-monitoring.html#collaboration-with-medical-monitoring"><i class="fa fa-check"></i><b>10.6</b> 9.6 Collaboration with Medical Monitoring</a>
+<ul>
+<li class="chapter" data-level="10.6.1" data-path="chapter-9-interim-analysis-and-safety-monitoring.html"><a href="chapter-9-interim-analysis-and-safety-monitoring.html#complementary-responsibilities"><i class="fa fa-check"></i><b>10.6.1</b> 9.6.1 Complementary Responsibilities</a></li>
+<li class="chapter" data-level="10.6.2" data-path="chapter-9-interim-analysis-and-safety-monitoring.html"><a href="chapter-9-interim-analysis-and-safety-monitoring.html#statistical-support-to-medical-monitoring"><i class="fa fa-check"></i><b>10.6.2</b> 9.6.2 Statistical Support to Medical Monitoring</a></li>
+</ul></li>
+<li class="chapter" data-level="10.7" data-path="chapter-9-interim-analysis-and-safety-monitoring.html"><a href="chapter-9-interim-analysis-and-safety-monitoring.html#documentation-and-traceability-1"><i class="fa fa-check"></i><b>10.7</b> 9.7 Documentation and Traceability</a></li>
+<li class="chapter" data-level="10.8" data-path="chapter-9-interim-analysis-and-safety-monitoring.html"><a href="chapter-9-interim-analysis-and-safety-monitoring.html#chapter-summary-the-statistician-as-a-guardian-of-trial-integrity"><i class="fa fa-check"></i><b>10.8</b> 9.8 Chapter Summary: The Statistician as a Guardian of Trial Integrity</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="chapter-10-pre-database-lock-activities.html"><a href="chapter-10-pre-database-lock-activities.html"><i class="fa fa-check"></i><b>11</b> Chapter 10 Pre-Database Lock Activities</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="chapter-10-pre-database-lock-activities.html"><a href="chapter-10-pre-database-lock-activities.html#why-the-pre-lock-phase-is-statistically-critical"><i class="fa fa-check"></i><b>11.1</b> 10.1 Why the Pre-Lock Phase Is Statistically Critical</a></li>
+<li class="chapter" data-level="11.2" data-path="chapter-10-pre-database-lock-activities.html"><a href="chapter-10-pre-database-lock-activities.html#final-review-of-tfl-shells"><i class="fa fa-check"></i><b>11.2</b> 10.2 Final Review of TFL Shells</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="chapter-10-pre-database-lock-activities.html"><a href="chapter-10-pre-database-lock-activities.html#why-tfl-shells-must-be-finalized-before-lock"><i class="fa fa-check"></i><b>11.2.1</b> 10.2.1 Why TFL Shells Must Be Finalized Before Lock</a></li>
+<li class="chapter" data-level="11.2.2" data-path="chapter-10-pre-database-lock-activities.html"><a href="chapter-10-pre-database-lock-activities.html#statistical-verification-of-tfl-shells"><i class="fa fa-check"></i><b>11.2.2</b> 10.2.2 Statistical Verification of TFL Shells</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="chapter-10-pre-database-lock-activities.html"><a href="chapter-10-pre-database-lock-activities.html#confirming-consistency-between-sap-and-actual-data"><i class="fa fa-check"></i><b>11.3</b> 10.3 Confirming Consistency Between SAP and Actual Data</a>
+<ul>
+<li class="chapter" data-level="11.3.1" data-path="chapter-10-pre-database-lock-activities.html"><a href="chapter-10-pre-database-lock-activities.html#the-required-reality-check"><i class="fa fa-check"></i><b>11.3.1</b> 10.3.1 The Required Reality Check</a></li>
+<li class="chapter" data-level="11.3.2" data-path="chapter-10-pre-database-lock-activities.html"><a href="chapter-10-pre-database-lock-activities.html#common-sources-of-misalignment"><i class="fa fa-check"></i><b>11.3.2</b> 10.3.2 Common Sources of Misalignment</a></li>
+</ul></li>
+<li class="chapter" data-level="11.4" data-path="chapter-10-pre-database-lock-activities.html"><a href="chapter-10-pre-database-lock-activities.html#confirmation-of-analysis-dataset-definitions"><i class="fa fa-check"></i><b>11.4</b> 10.4 Confirmation of Analysis Dataset Definitions</a>
+<ul>
+<li class="chapter" data-level="11.4.1" data-path="chapter-10-pre-database-lock-activities.html"><a href="chapter-10-pre-database-lock-activities.html#transition-to-lock-ready-analysis-datasets"><i class="fa fa-check"></i><b>11.4.1</b> 10.4.1 Transition to Lock-Ready Analysis Datasets</a></li>
+<li class="chapter" data-level="11.4.2" data-path="chapter-10-pre-database-lock-activities.html"><a href="chapter-10-pre-database-lock-activities.html#statistical-confirmation-responsibilities"><i class="fa fa-check"></i><b>11.4.2</b> 10.4.2 Statistical Confirmation Responsibilities</a></li>
+</ul></li>
+<li class="chapter" data-level="11.5" data-path="chapter-10-pre-database-lock-activities.html"><a href="chapter-10-pre-database-lock-activities.html#statistical-sign-off-prior-to-database-lock"><i class="fa fa-check"></i><b>11.5</b> 10.5 Statistical Sign-Off Prior to Database Lock</a>
+<ul>
+<li class="chapter" data-level="11.5.1" data-path="chapter-10-pre-database-lock-activities.html"><a href="chapter-10-pre-database-lock-activities.html#meaning-of-statistical-sign-off"><i class="fa fa-check"></i><b>11.5.1</b> 10.5.1 Meaning of Statistical Sign-Off</a></li>
+<li class="chapter" data-level="11.5.2" data-path="chapter-10-pre-database-lock-activities.html"><a href="chapter-10-pre-database-lock-activities.html#scope-of-statistical-accountability"><i class="fa fa-check"></i><b>11.5.2</b> 10.5.2 Scope of Statistical Accountability</a></li>
+</ul></li>
+<li class="chapter" data-level="11.6" data-path="chapter-10-pre-database-lock-activities.html"><a href="chapter-10-pre-database-lock-activities.html#common-pitfalls-in-the-pre-lock-phase"><i class="fa fa-check"></i><b>11.6</b> 10.6 Common Pitfalls in the Pre-Lock Phase</a></li>
+<li class="chapter" data-level="11.7" data-path="chapter-10-pre-database-lock-activities.html"><a href="chapter-10-pre-database-lock-activities.html#chapter-summary-database-lock-as-a-line-of-no-return"><i class="fa fa-check"></i><b>11.7</b> 10.7 Chapter Summary: Database Lock as a Line of No Return</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="chapter-11-statistical-analysis-execution.html"><a href="chapter-11-statistical-analysis-execution.html"><i class="fa fa-check"></i><b>12</b> Chapter 11 Statistical Analysis Execution</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="chapter-11-statistical-analysis-execution.html"><a href="chapter-11-statistical-analysis-execution.html#the-nature-of-statistical-execution"><i class="fa fa-check"></i><b>12.1</b> 11.1 The Nature of Statistical Execution</a></li>
+<li class="chapter" data-level="12.2" data-path="chapter-11-statistical-analysis-execution.html"><a href="chapter-11-statistical-analysis-execution.html#generation-of-primary-analysis-results"><i class="fa fa-check"></i><b>12.2</b> 11.2 Generation of Primary Analysis Results</a>
+<ul>
+<li class="chapter" data-level="12.2.1" data-path="chapter-11-statistical-analysis-execution.html"><a href="chapter-11-statistical-analysis-execution.html#primary-analysis-as-the-anchor"><i class="fa fa-check"></i><b>12.2.1</b> 11.2.1 Primary Analysis as the Anchor</a></li>
+<li class="chapter" data-level="12.2.2" data-path="chapter-11-statistical-analysis-execution.html"><a href="chapter-11-statistical-analysis-execution.html#execution-discipline-for-the-primary-analysis"><i class="fa fa-check"></i><b>12.2.2</b> 11.2.2 Execution Discipline for the Primary Analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="12.3" data-path="chapter-11-statistical-analysis-execution.html"><a href="chapter-11-statistical-analysis-execution.html#secondary-and-sensitivity-analyses"><i class="fa fa-check"></i><b>12.3</b> 11.3 Secondary and Sensitivity Analyses</a>
+<ul>
+<li class="chapter" data-level="12.3.1" data-path="chapter-11-statistical-analysis-execution.html"><a href="chapter-11-statistical-analysis-execution.html#role-of-secondary-analyses"><i class="fa fa-check"></i><b>12.3.1</b> 11.3.1 Role of Secondary Analyses</a></li>
+<li class="chapter" data-level="12.3.2" data-path="chapter-11-statistical-analysis-execution.html"><a href="chapter-11-statistical-analysis-execution.html#sensitivity-analyses-as-stress-tests"><i class="fa fa-check"></i><b>12.3.2</b> 11.3.2 Sensitivity Analyses as Stress Tests</a></li>
+</ul></li>
+<li class="chapter" data-level="12.4" data-path="chapter-11-statistical-analysis-execution.html"><a href="chapter-11-statistical-analysis-execution.html#subgroup-analyses"><i class="fa fa-check"></i><b>12.4</b> 11.4 Subgroup Analyses</a>
+<ul>
+<li class="chapter" data-level="12.4.1" data-path="chapter-11-statistical-analysis-execution.html"><a href="chapter-11-statistical-analysis-execution.html#purpose-and-limitations"><i class="fa fa-check"></i><b>12.4.1</b> 11.4.1 Purpose and Limitations</a></li>
+<li class="chapter" data-level="12.4.2" data-path="chapter-11-statistical-analysis-execution.html"><a href="chapter-11-statistical-analysis-execution.html#statistical-responsibilities-in-subgroup-analysis"><i class="fa fa-check"></i><b>12.4.2</b> 11.4.2 Statistical Responsibilities in Subgroup Analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="12.5" data-path="chapter-11-statistical-analysis-execution.html"><a href="chapter-11-statistical-analysis-execution.html#supporting-interpretation-of-unexpected-results"><i class="fa fa-check"></i><b>12.5</b> 11.5 Supporting Interpretation of Unexpected Results</a>
+<ul>
+<li class="chapter" data-level="12.5.1" data-path="chapter-11-statistical-analysis-execution.html"><a href="chapter-11-statistical-analysis-execution.html#technical-validation-first"><i class="fa fa-check"></i><b>12.5.1</b> 11.5.1 Technical Validation First</a></li>
+<li class="chapter" data-level="12.5.2" data-path="chapter-11-statistical-analysis-execution.html"><a href="chapter-11-statistical-analysis-execution.html#explaining-without-over-explaining"><i class="fa fa-check"></i><b>12.5.2</b> 11.5.2 Explaining Without Over-Explaining</a></li>
+</ul></li>
+<li class="chapter" data-level="12.6" data-path="chapter-11-statistical-analysis-execution.html"><a href="chapter-11-statistical-analysis-execution.html#joint-interpretation-with-medical-experts"><i class="fa fa-check"></i><b>12.6</b> 11.6 Joint Interpretation with Medical Experts</a>
+<ul>
+<li class="chapter" data-level="12.6.1" data-path="chapter-11-statistical-analysis-execution.html"><a href="chapter-11-statistical-analysis-execution.html#complementary-roles"><i class="fa fa-check"></i><b>12.6.1</b> 11.6.1 Complementary Roles</a></li>
+<li class="chapter" data-level="12.6.2" data-path="chapter-11-statistical-analysis-execution.html"><a href="chapter-11-statistical-analysis-execution.html#effective-statistical-communication"><i class="fa fa-check"></i><b>12.6.2</b> 11.6.2 Effective Statistical Communication</a></li>
+</ul></li>
+<li class="chapter" data-level="12.7" data-path="chapter-11-statistical-analysis-execution.html"><a href="chapter-11-statistical-analysis-execution.html#common-risks-during-analysis-execution"><i class="fa fa-check"></i><b>12.7</b> 11.7 Common Risks During Analysis Execution</a></li>
+<li class="chapter" data-level="12.8" data-path="chapter-11-statistical-analysis-execution.html"><a href="chapter-11-statistical-analysis-execution.html#chapter-summary-execution-as-professional-judgment"><i class="fa fa-check"></i><b>12.8</b> 11.8 Chapter Summary: Execution as Professional Judgment</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="chapter-12-tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html"><a href="chapter-12-tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html"><i class="fa fa-check"></i><b>13</b> Chapter 12 TFL Delivery — Tables, Figures, Listings, Statistical QC, Consistency Checks, and Version Control</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="chapter-12-tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html"><a href="chapter-12-tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html#why-tfl-delivery-is-not-just-the-final-step"><i class="fa fa-check"></i><b>13.1</b> 12.1 Why TFL Delivery Is Not “Just the Final Step”</a></li>
+<li class="chapter" data-level="13.2" data-path="chapter-12-tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html"><a href="chapter-12-tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html#the-project-biostatisticians-role-in-the-tfl-stage"><i class="fa fa-check"></i><b>13.2</b> 12.2 The Project Biostatistician’s Role in the TFL Stage</a></li>
+<li class="chapter" data-level="13.3" data-path="chapter-12-tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html"><a href="chapter-12-tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html#tables-where-statistical-definitions-become-regulatory-evidence"><i class="fa fa-check"></i><b>13.3</b> 12.3 Tables: Where Statistical Definitions Become Regulatory Evidence</a>
+<ul>
+<li class="chapter" data-level="13.3.1" data-path="chapter-12-tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html"><a href="chapter-12-tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html#what-a-table-must-represent"><i class="fa fa-check"></i><b>13.3.1</b> 12.3.1 What a Table Must Represent</a></li>
+<li class="chapter" data-level="13.3.2" data-path="chapter-12-tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html"><a href="chapter-12-tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html#practical-statistical-review-checklist-for-tables"><i class="fa fa-check"></i><b>13.3.2</b> 12.3.2 Practical Statistical Review Checklist for Tables</a></li>
+<li class="chapter" data-level="13.3.3" data-path="chapter-12-tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html"><a href="chapter-12-tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html#high-risk-table-types-that-require-extra-oversight"><i class="fa fa-check"></i><b>13.3.3</b> 12.3.3 High-Risk Table Types That Require Extra Oversight</a></li>
+</ul></li>
+<li class="chapter" data-level="13.4" data-path="chapter-12-tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html"><a href="chapter-12-tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html#figures-interpretability-and-transparency-over-aesthetics"><i class="fa fa-check"></i><b>13.4</b> 12.4 Figures: Interpretability and Transparency Over Aesthetics</a>
+<ul>
+<li class="chapter" data-level="13.4.1" data-path="chapter-12-tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html"><a href="chapter-12-tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html#a-figures-purpose-in-regulatory-review"><i class="fa fa-check"></i><b>13.4.1</b> 12.4.1 A Figure’s Purpose in Regulatory Review</a></li>
+<li class="chapter" data-level="13.4.2" data-path="chapter-12-tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html"><a href="chapter-12-tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html#key-checks-for-survival-and-longitudinal-figures"><i class="fa fa-check"></i><b>13.4.2</b> 12.4.2 Key Checks for Survival and Longitudinal Figures</a></li>
+</ul></li>
+<li class="chapter" data-level="13.5" data-path="chapter-12-tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html"><a href="chapter-12-tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html#listings-not-an-appendix-but-a-gateway-for-questions"><i class="fa fa-check"></i><b>13.5</b> 12.5 Listings: Not an Appendix, but a Gateway for Questions</a>
+<ul>
+<li class="chapter" data-level="13.5.1" data-path="chapter-12-tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html"><a href="chapter-12-tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html#how-listings-are-used"><i class="fa fa-check"></i><b>13.5.1</b> 12.5.1 How Listings Are Used</a></li>
+<li class="chapter" data-level="13.5.2" data-path="chapter-12-tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html"><a href="chapter-12-tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html#listings-that-are-most-likely-to-be-challenged"><i class="fa fa-check"></i><b>13.5.2</b> 12.5.2 Listings That Are Most Likely to Be Challenged</a></li>
+</ul></li>
+<li class="chapter" data-level="13.6" data-path="chapter-12-tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html"><a href="chapter-12-tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html#statistical-quality-control-qc-a-second-independent-brain"><i class="fa fa-check"></i><b>13.6</b> 12.6 Statistical Quality Control (QC): A Second Independent Brain</a>
+<ul>
+<li class="chapter" data-level="13.6.1" data-path="chapter-12-tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html"><a href="chapter-12-tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html#what-effective-statistical-qc-means"><i class="fa fa-check"></i><b>13.6.1</b> 12.6.1 What Effective Statistical QC Means</a></li>
+<li class="chapter" data-level="13.6.2" data-path="chapter-12-tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html"><a href="chapter-12-tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html#core-qc-principles"><i class="fa fa-check"></i><b>13.6.2</b> 12.6.2 Core QC Principles</a></li>
+</ul></li>
+<li class="chapter" data-level="13.7" data-path="chapter-12-tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html"><a href="chapter-12-tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html#cross-output-consistency-verification"><i class="fa fa-check"></i><b>13.7</b> 12.7 Cross-Output Consistency Verification</a>
+<ul>
+<li class="chapter" data-level="13.7.1" data-path="chapter-12-tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html"><a href="chapter-12-tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html#the-three-consistency-lines-you-must-verify"><i class="fa fa-check"></i><b>13.7.1</b> 12.7.1 The Three Consistency Lines You Must Verify</a></li>
+<li class="chapter" data-level="13.7.2" data-path="chapter-12-tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html"><a href="chapter-12-tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html#common-high-risk-inconsistencies"><i class="fa fa-check"></i><b>13.7.2</b> 12.7.2 Common High-Risk Inconsistencies</a></li>
+</ul></li>
+<li class="chapter" data-level="13.8" data-path="chapter-12-tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html"><a href="chapter-12-tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html#version-control-the-lifeline-in-late-stage-deliverables"><i class="fa fa-check"></i><b>13.8</b> 12.8 Version Control: The Lifeline in Late-Stage Deliverables</a>
+<ul>
+<li class="chapter" data-level="13.8.1" data-path="chapter-12-tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html"><a href="chapter-12-tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html#why-version-control-is-critical"><i class="fa fa-check"></i><b>13.8.1</b> 12.8.1 Why Version Control Is Critical</a></li>
+<li class="chapter" data-level="13.8.2" data-path="chapter-12-tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html"><a href="chapter-12-tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html#minimum-practical-version-control-standards"><i class="fa fa-check"></i><b>13.8.2</b> 12.8.2 Minimum Practical Version Control Standards</a></li>
+</ul></li>
+<li class="chapter" data-level="13.9" data-path="chapter-12-tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html"><a href="chapter-12-tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html#key-takeaways"><i class="fa fa-check"></i><b>13.9</b> 12.9 Key Takeaways</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="chapter-13-csr-support-statistical-writing-review-and-regulatory-interaction.html"><a href="chapter-13-csr-support-statistical-writing-review-and-regulatory-interaction.html"><i class="fa fa-check"></i><b>14</b> Chapter 13 CSR Support — Statistical Writing, Review, and Regulatory Interaction</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="chapter-13-csr-support-statistical-writing-review-and-regulatory-interaction.html"><a href="chapter-13-csr-support-statistical-writing-review-and-regulatory-interaction.html#csr-support-as-a-critical-transition-point"><i class="fa fa-check"></i><b>14.1</b> 13.1 CSR Support as a Critical Transition Point</a></li>
+<li class="chapter" data-level="14.2" data-path="chapter-13-csr-support-statistical-writing-review-and-regulatory-interaction.html"><a href="chapter-13-csr-support-statistical-writing-review-and-regulatory-interaction.html#the-role-of-statistics-within-the-csr"><i class="fa fa-check"></i><b>14.2</b> 13.2 The Role of Statistics Within the CSR</a>
+<ul>
+<li class="chapter" data-level="14.2.1" data-path="chapter-13-csr-support-statistical-writing-review-and-regulatory-interaction.html"><a href="chapter-13-csr-support-statistical-writing-review-and-regulatory-interaction.html#statistics-is-not-an-appendix"><i class="fa fa-check"></i><b>14.2.1</b> 13.2.1 Statistics Is Not an Appendix</a></li>
+<li class="chapter" data-level="14.2.2" data-path="chapter-13-csr-support-statistical-writing-review-and-regulatory-interaction.html"><a href="chapter-13-csr-support-statistical-writing-review-and-regulatory-interaction.html#responsibilities-of-the-project-biostatistician"><i class="fa fa-check"></i><b>14.2.2</b> 13.2.2 Responsibilities of the Project Biostatistician</a></li>
+</ul></li>
+<li class="chapter" data-level="14.3" data-path="chapter-13-csr-support-statistical-writing-review-and-regulatory-interaction.html"><a href="chapter-13-csr-support-statistical-writing-review-and-regulatory-interaction.html#writing-and-reviewing-the-statistical-methods-section"><i class="fa fa-check"></i><b>14.3</b> 13.3 Writing and Reviewing the Statistical Methods Section</a>
+<ul>
+<li class="chapter" data-level="14.3.1" data-path="chapter-13-csr-support-statistical-writing-review-and-regulatory-interaction.html"><a href="chapter-13-csr-support-statistical-writing-review-and-regulatory-interaction.html#purpose-of-the-methods-section"><i class="fa fa-check"></i><b>14.3.1</b> 13.3.1 Purpose of the Methods Section</a></li>
+<li class="chapter" data-level="14.3.2" data-path="chapter-13-csr-support-statistical-writing-review-and-regulatory-interaction.html"><a href="chapter-13-csr-support-statistical-writing-review-and-regulatory-interaction.html#core-elements-that-must-be-covered"><i class="fa fa-check"></i><b>14.3.2</b> 13.3.2 Core Elements That Must Be Covered</a></li>
+<li class="chapter" data-level="14.3.3" data-path="chapter-13-csr-support-statistical-writing-review-and-regulatory-interaction.html"><a href="chapter-13-csr-support-statistical-writing-review-and-regulatory-interaction.html#common-high-risk-writing-issues"><i class="fa fa-check"></i><b>14.3.3</b> 13.3.3 Common High-Risk Writing Issues</a></li>
+</ul></li>
+<li class="chapter" data-level="14.4" data-path="chapter-13-csr-support-statistical-writing-review-and-regulatory-interaction.html"><a href="chapter-13-csr-support-statistical-writing-review-and-regulatory-interaction.html#reviewing-the-results-sections"><i class="fa fa-check"></i><b>14.4</b> 13.4 Reviewing the Results Sections</a>
+<ul>
+<li class="chapter" data-level="14.4.1" data-path="chapter-13-csr-support-statistical-writing-review-and-regulatory-interaction.html"><a href="chapter-13-csr-support-statistical-writing-review-and-regulatory-interaction.html#role-of-the-statistical-reviewer"><i class="fa fa-check"></i><b>14.4.1</b> 13.4.1 Role of the Statistical Reviewer</a></li>
+<li class="chapter" data-level="14.4.2" data-path="chapter-13-csr-support-statistical-writing-review-and-regulatory-interaction.html"><a href="chapter-13-csr-support-statistical-writing-review-and-regulatory-interaction.html#key-review-checks-for-results-text"><i class="fa fa-check"></i><b>14.4.2</b> 13.4.2 Key Review Checks for Results Text</a></li>
+</ul></li>
+<li class="chapter" data-level="14.5" data-path="chapter-13-csr-support-statistical-writing-review-and-regulatory-interaction.html"><a href="chapter-13-csr-support-statistical-writing-review-and-regulatory-interaction.html#ensuring-consistency-between-methods-and-results"><i class="fa fa-check"></i><b>14.5</b> 13.5 Ensuring Consistency Between Methods and Results</a>
+<ul>
+<li class="chapter" data-level="14.5.1" data-path="chapter-13-csr-support-statistical-writing-review-and-regulatory-interaction.html"><a href="chapter-13-csr-support-statistical-writing-review-and-regulatory-interaction.html#three-critical-consistency-pathways"><i class="fa fa-check"></i><b>14.5.1</b> 13.5.1 Three Critical Consistency Pathways</a></li>
+<li class="chapter" data-level="14.5.2" data-path="chapter-13-csr-support-statistical-writing-review-and-regulatory-interaction.html"><a href="chapter-13-csr-support-statistical-writing-review-and-regulatory-interaction.html#common-high-risk-inconsistencies-1"><i class="fa fa-check"></i><b>14.5.2</b> 13.5.2 Common High-Risk Inconsistencies</a></li>
+</ul></li>
+<li class="chapter" data-level="14.6" data-path="chapter-13-csr-support-statistical-writing-review-and-regulatory-interaction.html"><a href="chapter-13-csr-support-statistical-writing-review-and-regulatory-interaction.html#responding-to-qa-and-internal-review-questions"><i class="fa fa-check"></i><b>14.6</b> 13.6 Responding to QA and Internal Review Questions</a>
+<ul>
+<li class="chapter" data-level="14.6.1" data-path="chapter-13-csr-support-statistical-writing-review-and-regulatory-interaction.html"><a href="chapter-13-csr-support-statistical-writing-review-and-regulatory-interaction.html#sources-of-qa-questions"><i class="fa fa-check"></i><b>14.6.1</b> 13.6.1 Sources of QA Questions</a></li>
+<li class="chapter" data-level="14.6.2" data-path="chapter-13-csr-support-statistical-writing-review-and-regulatory-interaction.html"><a href="chapter-13-csr-support-statistical-writing-review-and-regulatory-interaction.html#principles-for-effective-qa-responses"><i class="fa fa-check"></i><b>14.6.2</b> 13.6.2 Principles for Effective QA Responses</a></li>
+</ul></li>
+<li class="chapter" data-level="14.7" data-path="chapter-13-csr-support-statistical-writing-review-and-regulatory-interaction.html"><a href="chapter-13-csr-support-statistical-writing-review-and-regulatory-interaction.html#supporting-regulatory-inquiries-fda-ema-nmpa"><i class="fa fa-check"></i><b>14.7</b> 13.7 Supporting Regulatory Inquiries (FDA, EMA, NMPA)</a>
+<ul>
+<li class="chapter" data-level="14.7.1" data-path="chapter-13-csr-support-statistical-writing-review-and-regulatory-interaction.html"><a href="chapter-13-csr-support-statistical-writing-review-and-regulatory-interaction.html#the-biostatisticians-role-in-regulatory-interactions"><i class="fa fa-check"></i><b>14.7.1</b> 13.7.1 The Biostatistician’s Role in Regulatory Interactions</a></li>
+<li class="chapter" data-level="14.7.2" data-path="chapter-13-csr-support-statistical-writing-review-and-regulatory-interaction.html"><a href="chapter-13-csr-support-statistical-writing-review-and-regulatory-interaction.html#common-types-of-regulatory-statistical-questions"><i class="fa fa-check"></i><b>14.7.2</b> 13.7.2 Common Types of Regulatory Statistical Questions</a></li>
+<li class="chapter" data-level="14.7.3" data-path="chapter-13-csr-support-statistical-writing-review-and-regulatory-interaction.html"><a href="chapter-13-csr-support-statistical-writing-review-and-regulatory-interaction.html#practical-guidance-for-regulatory-responses"><i class="fa fa-check"></i><b>14.7.3</b> 13.7.3 Practical Guidance for Regulatory Responses</a></li>
+</ul></li>
+<li class="chapter" data-level="14.8" data-path="chapter-13-csr-support-statistical-writing-review-and-regulatory-interaction.html"><a href="chapter-13-csr-support-statistical-writing-review-and-regulatory-interaction.html#key-takeaways-for-project-biostatisticians"><i class="fa fa-check"></i><b>14.8</b> 13.8 Key Takeaways for Project Biostatisticians</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="chapter-14-public-registration-and-publication-support.html"><a href="chapter-14-public-registration-and-publication-support.html"><i class="fa fa-check"></i><b>15</b> Chapter 14 Public Registration and Publication Support</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="chapter-14-public-registration-and-publication-support.html"><a href="chapter-14-public-registration-and-publication-support.html#why-this-stage-matters-from-compliance-to-public-scrutiny"><i class="fa fa-check"></i><b>15.1</b> 14.1 Why This Stage Matters: From Compliance to Public Scrutiny</a></li>
+<li class="chapter" data-level="15.2" data-path="chapter-14-public-registration-and-publication-support.html"><a href="chapter-14-public-registration-and-publication-support.html#statistical-support-for-clinicaltrials.gov-results-reporting"><i class="fa fa-check"></i><b>15.2</b> 14.2 Statistical Support for ClinicalTrials.gov Results Reporting</a>
+<ul>
+<li class="chapter" data-level="15.2.1" data-path="chapter-14-public-registration-and-publication-support.html"><a href="chapter-14-public-registration-and-publication-support.html#how-clinicaltrials.gov-reporting-differs-from-csr"><i class="fa fa-check"></i><b>15.2.1</b> 14.2.1 How ClinicalTrials.gov Reporting Differs From CSR</a></li>
+<li class="chapter" data-level="15.2.2" data-path="chapter-14-public-registration-and-publication-support.html"><a href="chapter-14-public-registration-and-publication-support.html#core-statistical-responsibilities"><i class="fa fa-check"></i><b>15.2.2</b> 14.2.2 Core Statistical Responsibilities</a></li>
+<li class="chapter" data-level="15.2.3" data-path="chapter-14-public-registration-and-publication-support.html"><a href="chapter-14-public-registration-and-publication-support.html#common-high-risk-issues-practical-pitfalls"><i class="fa fa-check"></i><b>15.2.3</b> 14.2.3 Common High-Risk Issues (Practical Pitfalls)</a></li>
+</ul></li>
+<li class="chapter" data-level="15.3" data-path="chapter-14-public-registration-and-publication-support.html"><a href="chapter-14-public-registration-and-publication-support.html#statistical-methods-support-for-medical-publications"><i class="fa fa-check"></i><b>15.3</b> 14.3 Statistical Methods Support for Medical Publications</a>
+<ul>
+<li class="chapter" data-level="15.3.1" data-path="chapter-14-public-registration-and-publication-support.html"><a href="chapter-14-public-registration-and-publication-support.html#how-journal-reporting-differs-from-csr"><i class="fa fa-check"></i><b>15.3.1</b> 14.3.1 How Journal Reporting Differs From CSR</a></li>
+<li class="chapter" data-level="15.3.2" data-path="chapter-14-public-registration-and-publication-support.html"><a href="chapter-14-public-registration-and-publication-support.html#what-the-biostatistician-must-ensure"><i class="fa fa-check"></i><b>15.3.2</b> 14.3.2 What the Biostatistician Must Ensure</a></li>
+<li class="chapter" data-level="15.3.3" data-path="chapter-14-public-registration-and-publication-support.html"><a href="chapter-14-public-registration-and-publication-support.html#common-statistical-writing-problems-in-manuscripts"><i class="fa fa-check"></i><b>15.3.3</b> 14.3.3 Common Statistical Writing Problems in Manuscripts</a></li>
+</ul></li>
+<li class="chapter" data-level="15.4" data-path="chapter-14-public-registration-and-publication-support.html"><a href="chapter-14-public-registration-and-publication-support.html#responding-to-reviewer-statistical-comments"><i class="fa fa-check"></i><b>15.4</b> 14.4 Responding to Reviewer Statistical Comments</a>
+<ul>
+<li class="chapter" data-level="15.4.1" data-path="chapter-14-public-registration-and-publication-support.html"><a href="chapter-14-public-registration-and-publication-support.html#common-types-of-reviewer-questions"><i class="fa fa-check"></i><b>15.4.1</b> 14.4.1 Common Types of Reviewer Questions</a></li>
+<li class="chapter" data-level="15.4.2" data-path="chapter-14-public-registration-and-publication-support.html"><a href="chapter-14-public-registration-and-publication-support.html#the-biostatisticians-role-in-the-response-process"><i class="fa fa-check"></i><b>15.4.2</b> 14.4.2 The Biostatistician’s Role in the Response Process</a></li>
+<li class="chapter" data-level="15.4.3" data-path="chapter-14-public-registration-and-publication-support.html"><a href="chapter-14-public-registration-and-publication-support.html#practical-principles-for-effective-responses"><i class="fa fa-check"></i><b>15.4.3</b> 14.4.3 Practical Principles for Effective Responses</a></li>
+</ul></li>
+<li class="chapter" data-level="15.5" data-path="chapter-14-public-registration-and-publication-support.html"><a href="chapter-14-public-registration-and-publication-support.html#decision-boundaries-for-additional-analyses"><i class="fa fa-check"></i><b>15.5</b> 14.5 Decision Boundaries for Additional Analyses</a>
+<ul>
+<li class="chapter" data-level="15.5.1" data-path="chapter-14-public-registration-and-publication-support.html"><a href="chapter-14-public-registration-and-publication-support.html#when-additional-analyses-are-appropriate"><i class="fa fa-check"></i><b>15.5.1</b> 14.5.1 When Additional Analyses Are Appropriate</a></li>
+<li class="chapter" data-level="15.5.2" data-path="chapter-14-public-registration-and-publication-support.html"><a href="chapter-14-public-registration-and-publication-support.html#when-additional-analyses-should-be-avoided"><i class="fa fa-check"></i><b>15.5.2</b> 14.5.2 When Additional Analyses Should Be Avoided</a></li>
+</ul></li>
+<li class="chapter" data-level="15.6" data-path="chapter-14-public-registration-and-publication-support.html"><a href="chapter-14-public-registration-and-publication-support.html#key-takeaways-for-project-biostatisticians-1"><i class="fa fa-check"></i><b>15.6</b> 14.6 Key Takeaways for Project Biostatisticians</a></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="chapter-15-project-communication.html"><a href="chapter-15-project-communication.html"><i class="fa fa-check"></i><b>16</b> Chapter 15 Project Communication</a>
+<ul>
+<li class="chapter" data-level="16.1" data-path="chapter-15-project-communication.html"><a href="chapter-15-project-communication.html#communication-as-a-core-biostatistics-competency"><i class="fa fa-check"></i><b>16.1</b> 15.1 Communication as a Core Biostatistics Competency</a></li>
+<li class="chapter" data-level="16.2" data-path="chapter-15-project-communication.html"><a href="chapter-15-project-communication.html#participation-in-project-team-meetings"><i class="fa fa-check"></i><b>16.2</b> 15.2 Participation in Project Team Meetings</a>
+<ul>
+<li class="chapter" data-level="16.2.1" data-path="chapter-15-project-communication.html"><a href="chapter-15-project-communication.html#objectives-in-regular-project-meetings"><i class="fa fa-check"></i><b>16.2.1</b> 15.2.1 Objectives in Regular Project Meetings</a></li>
+<li class="chapter" data-level="16.2.2" data-path="chapter-15-project-communication.html"><a href="chapter-15-project-communication.html#what-to-bring-to-every-meeting-practical-checklist"><i class="fa fa-check"></i><b>16.2.2</b> 15.2.2 What to Bring to Every Meeting (Practical Checklist)</a></li>
+<li class="chapter" data-level="16.2.3" data-path="chapter-15-project-communication.html"><a href="chapter-15-project-communication.html#common-communication-pitfalls"><i class="fa fa-check"></i><b>16.2.3</b> 15.2.3 Common Communication Pitfalls</a></li>
+</ul></li>
+<li class="chapter" data-level="16.3" data-path="chapter-15-project-communication.html"><a href="chapter-15-project-communication.html#participation-in-medical-discussions"><i class="fa fa-check"></i><b>16.3</b> 15.3 Participation in Medical Discussions</a>
+<ul>
+<li class="chapter" data-level="16.3.1" data-path="chapter-15-project-communication.html"><a href="chapter-15-project-communication.html#bridging-statistical-evidence-and-clinical-meaning"><i class="fa fa-check"></i><b>16.3.1</b> 15.3.1 Bridging Statistical Evidence and Clinical Meaning</a></li>
+<li class="chapter" data-level="16.3.2" data-path="chapter-15-project-communication.html"><a href="chapter-15-project-communication.html#handling-disagreement-respectfully"><i class="fa fa-check"></i><b>16.3.2</b> 15.3.2 Handling Disagreement Respectfully</a></li>
+</ul></li>
+<li class="chapter" data-level="16.4" data-path="chapter-15-project-communication.html"><a href="chapter-15-project-communication.html#participation-in-regulatory-communication-meetings"><i class="fa fa-check"></i><b>16.4</b> 15.4 Participation in Regulatory Communication Meetings</a>
+<ul>
+<li class="chapter" data-level="16.4.1" data-path="chapter-15-project-communication.html"><a href="chapter-15-project-communication.html#what-regulators-expect-from-statisticians"><i class="fa fa-check"></i><b>16.4.1</b> 15.4.1 What Regulators Expect From Statisticians</a></li>
+<li class="chapter" data-level="16.4.2" data-path="chapter-15-project-communication.html"><a href="chapter-15-project-communication.html#practical-communication-principles-in-regulatory-settings"><i class="fa fa-check"></i><b>16.4.2</b> 15.4.2 Practical Communication Principles in Regulatory Settings</a></li>
+</ul></li>
+<li class="chapter" data-level="16.5" data-path="chapter-15-project-communication.html"><a href="chapter-15-project-communication.html#explaining-statistical-concepts-in-non-statistical-language"><i class="fa fa-check"></i><b>16.5</b> 15.5 Explaining Statistical Concepts in Non-Statistical Language</a>
+<ul>
+<li class="chapter" data-level="16.5.1" data-path="chapter-15-project-communication.html"><a href="chapter-15-project-communication.html#the-translation-responsibility"><i class="fa fa-check"></i><b>16.5.1</b> 15.5.1 The Translation Responsibility</a></li>
+<li class="chapter" data-level="16.5.2" data-path="chapter-15-project-communication.html"><a href="chapter-15-project-communication.html#practical-tips-for-clear-statistical-explanations"><i class="fa fa-check"></i><b>16.5.2</b> 15.5.2 Practical Tips for Clear Statistical Explanations</a></li>
+</ul></li>
+<li class="chapter" data-level="16.6" data-path="chapter-15-project-communication.html"><a href="chapter-15-project-communication.html#communicating-risk-to-sponsors-without-creating-panic"><i class="fa fa-check"></i><b>16.6</b> 15.6 Communicating Risk to Sponsors Without Creating Panic</a>
+<ul>
+<li class="chapter" data-level="16.6.1" data-path="chapter-15-project-communication.html"><a href="chapter-15-project-communication.html#balanced-risk-communication"><i class="fa fa-check"></i><b>16.6.1</b> 15.6.1 Balanced Risk Communication</a></li>
+<li class="chapter" data-level="16.6.2" data-path="chapter-15-project-communication.html"><a href="chapter-15-project-communication.html#avoiding-common-sponsor-communication-mistakes"><i class="fa fa-check"></i><b>16.6.2</b> 15.6.2 Avoiding Common Sponsor Communication Mistakes</a></li>
+</ul></li>
+<li class="chapter" data-level="16.7" data-path="chapter-15-project-communication.html"><a href="chapter-15-project-communication.html#building-trust-the-statistician-as-a-project-advisor"><i class="fa fa-check"></i><b>16.7</b> 15.7 Building Trust: The Statistician as a Project Advisor</a></li>
+<li class="chapter" data-level="16.8" data-path="chapter-15-project-communication.html"><a href="chapter-15-project-communication.html#key-takeaways-1"><i class="fa fa-check"></i><b>16.8</b> 15.8 Key Takeaways</a></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="chapter-16-quality-and-compliance.html"><a href="chapter-16-quality-and-compliance.html"><i class="fa fa-check"></i><b>17</b> Chapter 16 Quality and Compliance</a>
+<ul>
+<li class="chapter" data-level="17.1" data-path="chapter-16-quality-and-compliance.html"><a href="chapter-16-quality-and-compliance.html#the-invisible-backbone-of-statistical-credibility"><i class="fa fa-check"></i><b>17.1</b> 16.1 The Invisible Backbone of Statistical Credibility</a></li>
+<li class="chapter" data-level="17.2" data-path="chapter-16-quality-and-compliance.html"><a href="chapter-16-quality-and-compliance.html#why-quality-and-compliance-matter-for-statistics"><i class="fa fa-check"></i><b>17.2</b> 16.2 Why Quality and Compliance Matter for Statistics</a>
+<ul>
+<li class="chapter" data-level="17.2.1" data-path="chapter-16-quality-and-compliance.html"><a href="chapter-16-quality-and-compliance.html#statistics-is-a-regulated-discipline"><i class="fa fa-check"></i><b>17.2.1</b> 16.2.1 Statistics Is a Regulated Discipline</a></li>
+<li class="chapter" data-level="17.2.2" data-path="chapter-16-quality-and-compliance.html"><a href="chapter-16-quality-and-compliance.html#the-statisticians-accountability"><i class="fa fa-check"></i><b>17.2.2</b> 16.2.2 The Statistician’s Accountability</a></li>
+</ul></li>
+<li class="chapter" data-level="17.3" data-path="chapter-16-quality-and-compliance.html"><a href="chapter-16-quality-and-compliance.html#core-frameworks-sops-ich-e9-and-ich-e3"><i class="fa fa-check"></i><b>17.3</b> 16.3 Core Frameworks: SOPs, ICH E9, and ICH E3</a>
+<ul>
+<li class="chapter" data-level="17.3.1" data-path="chapter-16-quality-and-compliance.html"><a href="chapter-16-quality-and-compliance.html#sop-compliance-the-first-line-of-defense"><i class="fa fa-check"></i><b>17.3.1</b> 16.3.1 SOP Compliance: The First Line of Defense</a></li>
+<li class="chapter" data-level="17.3.2" data-path="chapter-16-quality-and-compliance.html"><a href="chapter-16-quality-and-compliance.html#ich-e9-statistical-principles-for-clinical-trials"><i class="fa fa-check"></i><b>17.3.2</b> 16.3.2 ICH E9: Statistical Principles for Clinical Trials</a></li>
+<li class="chapter" data-level="17.3.3" data-path="chapter-16-quality-and-compliance.html"><a href="chapter-16-quality-and-compliance.html#ich-e3-clinical-study-reports"><i class="fa fa-check"></i><b>17.3.3</b> 16.3.3 ICH E3: Clinical Study Reports</a></li>
+</ul></li>
+<li class="chapter" data-level="17.4" data-path="chapter-16-quality-and-compliance.html"><a href="chapter-16-quality-and-compliance.html#statistical-documentation-and-archiving"><i class="fa fa-check"></i><b>17.4</b> 16.4 Statistical Documentation and Archiving</a>
+<ul>
+<li class="chapter" data-level="17.4.1" data-path="chapter-16-quality-and-compliance.html"><a href="chapter-16-quality-and-compliance.html#why-archiving-is-a-statistical-responsibility"><i class="fa fa-check"></i><b>17.4.1</b> 16.4.1 Why Archiving Is a Statistical Responsibility</a></li>
+<li class="chapter" data-level="17.4.2" data-path="chapter-16-quality-and-compliance.html"><a href="chapter-16-quality-and-compliance.html#what-should-be-archived-practical-list"><i class="fa fa-check"></i><b>17.4.2</b> 16.4.2 What Should Be Archived (Practical List)</a></li>
+<li class="chapter" data-level="17.4.3" data-path="chapter-16-quality-and-compliance.html"><a href="chapter-16-quality-and-compliance.html#practical-archiving-best-practices"><i class="fa fa-check"></i><b>17.4.3</b> 16.4.3 Practical Archiving Best Practices</a></li>
+</ul></li>
+<li class="chapter" data-level="17.5" data-path="chapter-16-quality-and-compliance.html"><a href="chapter-16-quality-and-compliance.html#audit-and-inspection-support"><i class="fa fa-check"></i><b>17.5</b> 16.5 Audit and Inspection Support</a>
+<ul>
+<li class="chapter" data-level="17.5.1" data-path="chapter-16-quality-and-compliance.html"><a href="chapter-16-quality-and-compliance.html#audits-vs.-inspections-operational-differences"><i class="fa fa-check"></i><b>17.5.1</b> 16.5.1 Audits vs. Inspections (Operational Differences)</a></li>
+<li class="chapter" data-level="17.5.2" data-path="chapter-16-quality-and-compliance.html"><a href="chapter-16-quality-and-compliance.html#the-statisticians-role-during-auditinspection"><i class="fa fa-check"></i><b>17.5.2</b> 16.5.2 The Statistician’s Role During Audit/Inspection</a></li>
+<li class="chapter" data-level="17.5.3" data-path="chapter-16-quality-and-compliance.html"><a href="chapter-16-quality-and-compliance.html#common-statistical-auditinspection-questions"><i class="fa fa-check"></i><b>17.5.3</b> 16.5.3 Common Statistical Audit/Inspection Questions</a></li>
+</ul></li>
+<li class="chapter" data-level="17.6" data-path="chapter-16-quality-and-compliance.html"><a href="chapter-16-quality-and-compliance.html#practical-guidance-for-inspection-readiness"><i class="fa fa-check"></i><b>17.6</b> 16.6 Practical Guidance for Inspection Readiness</a>
+<ul>
+<li class="chapter" data-level="17.6.1" data-path="chapter-16-quality-and-compliance.html"><a href="chapter-16-quality-and-compliance.html#preparation-before-an-auditinspection"><i class="fa fa-check"></i><b>17.6.1</b> 16.6.1 Preparation Before an Audit/Inspection</a></li>
+<li class="chapter" data-level="17.6.2" data-path="chapter-16-quality-and-compliance.html"><a href="chapter-16-quality-and-compliance.html#behavior-during-auditinspection"><i class="fa fa-check"></i><b>17.6.2</b> 16.6.2 Behavior During Audit/Inspection</a></li>
+<li class="chapter" data-level="17.6.3" data-path="chapter-16-quality-and-compliance.html"><a href="chapter-16-quality-and-compliance.html#after-an-auditinspection-capa-and-continuous-improvement"><i class="fa fa-check"></i><b>17.6.3</b> 16.6.3 After an Audit/Inspection: CAPA and Continuous Improvement</a></li>
+</ul></li>
+<li class="chapter" data-level="17.7" data-path="chapter-16-quality-and-compliance.html"><a href="chapter-16-quality-and-compliance.html#key-takeaways-2"><i class="fa fa-check"></i><b>17.7</b> 16.7 Key Takeaways</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Biostatistician’s Practical Handbook in Clinical Trials</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="chapter-10-pre-database-lock-activities" class="section level1 hasAnchor" number="11">
+<h1><span class="header-section-number">Chapter 11</span> Chapter 10 Pre-Database Lock Activities<a href="chapter-10-pre-database-lock-activities.html#chapter-10-pre-database-lock-activities" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><em>The Statistician’s Final Accountability Before Results Are Frozen</em></p>
+<p>The period immediately preceding database lock represents the <strong>final opportunity for statistical judgment to materially influence the integrity, interpretability, and regulatory defensibility of trial results</strong>.</p>
+<p>At this stage, no new analyses are being invented.<br />
+Instead, the statistician’s responsibility is to <strong>confirm alignment</strong>—between plans and reality, definitions and data, and analytical intent and execution.</p>
+<p>Once the database is locked, unresolved issues become explanation problems rather than fixable problems.</p>
+<hr />
+<div id="why-the-pre-lock-phase-is-statistically-critical" class="section level2 hasAnchor" number="11.1">
+<h2><span class="header-section-number">11.1</span> 10.1 Why the Pre-Lock Phase Is Statistically Critical<a href="chapter-10-pre-database-lock-activities.html#why-the-pre-lock-phase-is-statistically-critical" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The pre-lock phase is often misinterpreted as an administrative checkpoint.<br />
+From a statistical perspective, it is a <strong>decision boundary</strong>.</p>
+<p>Before database lock:
+- SAP assumptions are confronted with real data
+- Analysis datasets transition from conceptual definitions to fixed objects
+- TFL shells become binding deliverables</p>
+<p>After database lock:
+- Analysis definitions are frozen
+- Population flags are no longer negotiable
+- Deviations must be justified rather than corrected</p>
+<p>For the biostatistician, this is the <strong>last point at which technical authority can prevent downstream analytical risk</strong>.</p>
+<hr />
+</div>
+<div id="final-review-of-tfl-shells" class="section level2 hasAnchor" number="11.2">
+<h2><span class="header-section-number">11.2</span> 10.2 Final Review of TFL Shells<a href="chapter-10-pre-database-lock-activities.html#final-review-of-tfl-shells" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="why-tfl-shells-must-be-finalized-before-lock" class="section level3 hasAnchor" number="11.2.1">
+<h3><span class="header-section-number">11.2.1</span> 10.2.1 Why TFL Shells Must Be Finalized Before Lock<a href="chapter-10-pre-database-lock-activities.html#why-tfl-shells-must-be-finalized-before-lock" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>TFL shells are not formatting artifacts.<br />
+They formally define:
+- What endpoints will be summarized
+- Which populations will be analyzed
+- How data will be stratified or grouped
+- What comparisons will be reported</p>
+<p>If a shell cannot be populated cleanly using existing analysis datasets, the issue lies upstream—in definitions, not presentation.</p>
+<hr />
+</div>
+<div id="statistical-verification-of-tfl-shells" class="section level3 hasAnchor" number="11.2.2">
+<h3><span class="header-section-number">11.2.2</span> 10.2.2 Statistical Verification of TFL Shells<a href="chapter-10-pre-database-lock-activities.html#statistical-verification-of-tfl-shells" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>During final TFL shell review, statisticians must confirm that:
+- Titles, footnotes, and population labels align with the SAP
+- Endpoint definitions match available ADaM variables
+- Planned stratifications and subgroup analyses are derivable
+- No post-hoc endpoints or populations are implicitly introduced</p>
+<p>A practical rule:
+&gt; <strong>If a shell requires interpretive explanation to understand how it will be filled, it is not ready for database lock.</strong></p>
+<hr />
+</div>
+</div>
+<div id="confirming-consistency-between-sap-and-actual-data" class="section level2 hasAnchor" number="11.3">
+<h2><span class="header-section-number">11.3</span> 10.3 Confirming Consistency Between SAP and Actual Data<a href="chapter-10-pre-database-lock-activities.html#confirming-consistency-between-sap-and-actual-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="the-required-reality-check" class="section level3 hasAnchor" number="11.3.1">
+<h3><span class="header-section-number">11.3.1</span> 10.3.1 The Required Reality Check<a href="chapter-10-pre-database-lock-activities.html#the-required-reality-check" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The SAP defines an idealized analytical framework.<br />
+The collected data reflect operational reality.</p>
+<p>Before database lock, statisticians must explicitly assess:
+- Existence of all SAP-defined variables
+- Adequacy of data granularity for planned analyses
+- Continued defensibility of SAP assumptions</p>
+<p>This assessment focuses on <strong>material consistency</strong>, not perfection.</p>
+<hr />
+</div>
+<div id="common-sources-of-misalignment" class="section level3 hasAnchor" number="11.3.2">
+<h3><span class="header-section-number">11.3.2</span> 10.3.2 Common Sources of Misalignment<a href="chapter-10-pre-database-lock-activities.html#common-sources-of-misalignment" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Frequent discrepancies include:
+- Planned visits that rarely occurred
+- Endpoints with higher-than-anticipated missingness
+- Covariates inconsistently collected across subjects
+- Time windows misaligned with actual visit timing</p>
+<p>When misalignment is identified, statisticians must determine whether:
+- The SAP can be applied as written
+- A justified SAP amendment is required before lock
+- The issue can be addressed through pre-specified sensitivity analyses</p>
+<p>Silence at this stage constitutes implicit endorsement.</p>
+<hr />
+</div>
+</div>
+<div id="confirmation-of-analysis-dataset-definitions" class="section level2 hasAnchor" number="11.4">
+<h2><span class="header-section-number">11.4</span> 10.4 Confirmation of Analysis Dataset Definitions<a href="chapter-10-pre-database-lock-activities.html#confirmation-of-analysis-dataset-definitions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="transition-to-lock-ready-analysis-datasets" class="section level3 hasAnchor" number="11.4.1">
+<h3><span class="header-section-number">11.4.1</span> 10.4.1 Transition to Lock-Ready Analysis Datasets<a href="chapter-10-pre-database-lock-activities.html#transition-to-lock-ready-analysis-datasets" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>By the pre-lock phase, analysis datasets (typically ADaM) must be:
+- Fully specified
+- Deterministically derivable
+- Consistent with the SAP</p>
+<p>This includes finalization of:
+- Dataset structures
+- Variable derivations
+- Population flags
+- Parameter-level metadata</p>
+<hr />
+</div>
+<div id="statistical-confirmation-responsibilities" class="section level3 hasAnchor" number="11.4.2">
+<h3><span class="header-section-number">11.4.2</span> 10.4.2 Statistical Confirmation Responsibilities<a href="chapter-10-pre-database-lock-activities.html#statistical-confirmation-responsibilities" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Statisticians should explicitly verify that:
+- Each analysis dataset aligns with SAP specifications
+- Key variables are uniquely and reproducibly derived
+- Population flags are deterministic and traceable to source data
+- No analysis-critical derivation depends on post-lock decisions</p>
+<p>A guiding principle:
+&gt; <strong>If a derivation still depends on judgment calls, it is not ready for database lock.</strong></p>
+<hr />
+</div>
+</div>
+<div id="statistical-sign-off-prior-to-database-lock" class="section level2 hasAnchor" number="11.5">
+<h2><span class="header-section-number">11.5</span> 10.5 Statistical Sign-Off Prior to Database Lock<a href="chapter-10-pre-database-lock-activities.html#statistical-sign-off-prior-to-database-lock" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="meaning-of-statistical-sign-off" class="section level3 hasAnchor" number="11.5.1">
+<h3><span class="header-section-number">11.5.1</span> 10.5.1 Meaning of Statistical Sign-Off<a href="chapter-10-pre-database-lock-activities.html#meaning-of-statistical-sign-off" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Statistical sign-off is not a procedural formality.<br />
+It represents a professional assertion:</p>
+<blockquote>
+<p><strong>Based on statistical review, the data and definitions are sufficient to support the planned analyses as specified.</strong></p>
+</blockquote>
+<p>It does not imply:
+- Data perfection
+- Guaranteed favorable results
+- Absence of sensitivity analyses</p>
+<p>It confirms that analyses will be:
+- Reproducible
+- Interpretable
+- Defensible to regulators and auditors</p>
+<hr />
+</div>
+<div id="scope-of-statistical-accountability" class="section level3 hasAnchor" number="11.5.2">
+<h3><span class="header-section-number">11.5.2</span> 10.5.2 Scope of Statistical Accountability<a href="chapter-10-pre-database-lock-activities.html#scope-of-statistical-accountability" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>By providing sign-off, the statistician confirms that:
+- TFL shells are executable and SAP-consistent
+- SAP assumptions remain materially valid
+- Analysis dataset definitions are finalized
+- Outstanding issues are documented and accepted</p>
+<p>Concerns not documented before lock will be assumed <strong>not to exist</strong>.</p>
+<hr />
+</div>
+</div>
+<div id="common-pitfalls-in-the-pre-lock-phase" class="section level2 hasAnchor" number="11.6">
+<h2><span class="header-section-number">11.6</span> 10.6 Common Pitfalls in the Pre-Lock Phase<a href="chapter-10-pre-database-lock-activities.html#common-pitfalls-in-the-pre-lock-phase" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Experienced statisticians remain alert to:
+- Deferring issues with “we will explain it in the CSR”
+- Last-minute shell changes without SAP updates
+- Ambiguous population definitions left unresolved
+- Pressure to sign off without sufficient review time</p>
+<p>A critical lesson:
+&gt; <strong>Schedule pressure does not diminish statistical responsibility.</strong></p>
+<hr />
+</div>
+<div id="chapter-summary-database-lock-as-a-line-of-no-return" class="section level2 hasAnchor" number="11.7">
+<h2><span class="header-section-number">11.7</span> 10.7 Chapter Summary: Database Lock as a Line of No Return<a href="chapter-10-pre-database-lock-activities.html#chapter-summary-database-lock-as-a-line-of-no-return" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Database lock marks a definitive boundary.<br />
+Before it, statisticians can prevent analytical failure.<br />
+After it, they can only manage interpretive risk.</p>
+<p>The statistician’s value at this stage lies in:
+- Enforcing clarity before commitment
+- Challenging misalignment before irreversibility
+- Protecting analytical credibility under time pressure</p>
+<p><strong>Key takeaway:</strong></p>
+<blockquote>
+<p><strong>Database lock freezes not only the data, but every statistical decision left unchallenged.</strong></p>
+</blockquote>
+<hr />
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="chapter-9-interim-analysis-and-safety-monitoring.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="chapter-11-statistical-analysis-execution.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": "https://github.com/USERNAME/REPO/edit/BRANCH/10-Pre-Database-Lock.Rmd",
+    "text": "Edit"
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["Biostatistician’s Practical Handbook.pdf", "Biostatistician’s Practical Handbook.epub"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,251 @@
+---
+title: "Clinical Trial Statistics Handbook"
+author: "Daniel He"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: true
+    toc_depth: 3
+  pdf_document:
+    toc: true
+    toc_depth: 3
+  word_document:
+    toc: true
+    toc_depth: 3
+---
+
+# Chapter 16: Quality and Compliance
+
+## 16.1 The Invisible Backbone of Statistical Credibility
+
+In clinical trials, quality and compliance are rarely highlighted when everything runs smoothly—but they become immediately visible when something goes wrong. For Project Biostatisticians, quality is not an abstract regulatory topic; it is a set of daily operational practices that determine whether statistical work is defensible under audit and inspection.
+
+This chapter focuses on practical actions that help statisticians ensure their work withstands internal audits, sponsor scrutiny, and regulatory inspections.
+
+---
+
+## 16.2 Why Quality and Compliance Matter for Statistics
+
+### 16.2.1 Statistics Is a Regulated Discipline
+
+Clinical trial statistics operates under explicit regulatory expectations. Statistical outputs are not only scientific results—they are regulated deliverables. Regulators and auditors expect that:
+
+- Analyses follow predefined plans (Protocol and SAP)
+- Deviations are controlled, justified, and documented
+- Results are reproducible from archived artifacts
+- Key decisions are traceable and reviewable
+
+Quality failures are often not about incorrect calculations, but about **lack of process control** and insufficient documentation.
+
+---
+
+### 16.2.2 The Statistician’s Accountability
+
+For Project Biostatisticians, quality and compliance responsibilities include:
+
+- Following applicable SOPs for statistical work
+- Aligning methods and reporting with international guidelines (ICH E9 and ICH E3)
+- Maintaining complete, traceable statistical documentation
+- Supporting audit and inspection readiness with confidence and clarity
+
+A useful mindset is:
+
+> If you cannot explain and reproduce your analysis under inspection, it does not meet regulatory quality standards.
+
+---
+
+## 16.3 Core Frameworks: SOPs, ICH E9, and ICH E3
+
+### 16.3.1 SOP Compliance: The First Line of Defense
+
+Standard Operating Procedures (SOPs) define how statistical activities must be conducted within an organization. For biostatistics, SOPs commonly cover:
+
+- Protocol and SAP development and approval
+- Statistical programming and validation expectations
+- QC and peer review processes
+- Data handling, access control, and security
+- Document management and archiving rules
+
+The statistician’s practical responsibility is to:
+- Know which SOPs apply to each deliverable
+- Follow them consistently
+- Document any justified deviations (with rationale and approvals)
+
+Unrecorded deviations are generally far riskier than justified and documented ones.
+
+---
+
+### 16.3.2 ICH E9: Statistical Principles for Clinical Trials
+
+ICH E9 establishes expectations for statistical credibility, including:
+
+- Clear objectives (and, in modern practice, estimand clarity)
+- Appropriate selection and justification of statistical methods
+- Proper handling and interpretation of missing data
+- Control of multiplicity for confirmatory claims
+- Transparent interpretation of results and limitations
+
+From a compliance perspective, ICH E9 alignment means that the analysis must address the intended clinical question and should not be reframed post hoc to fit the observed data.
+
+---
+
+### 16.3.3 ICH E3: Clinical Study Reports
+
+ICH E3 governs how results are documented in the CSR, including:
+
+- A clear description of statistical methods
+- Transparent, coherent reporting of results
+- Consistency between methods, results, and conclusions
+- Adequate explanation and documentation of deviations from the plan
+
+Statistical inconsistencies between SAP, TFLs, and CSR narratives are common triggers for audit findings.
+
+---
+
+## 16.4 Statistical Documentation and Archiving
+
+### 16.4.1 Why Archiving Is a Statistical Responsibility
+
+Archiving is sometimes seen as an administrative task, but for statisticians it is a core quality activity. Archived materials must enable an independent reviewer to:
+
+- Understand what was planned
+- See what was executed
+- Reproduce key results
+- Trace decisions, changes, and approvals
+
+Poor archiving effectively equals undocumented analysis.
+
+---
+
+### 16.4.2 What Should Be Archived (Practical List)
+
+A typical inspection-ready statistical archive should include:
+
+- Protocol and all amendments
+- SAP and SAP amendments (with approval history)
+- TFL shells and output specifications
+- Final analysis datasets (e.g., ADaM) and metadata
+- Statistical programs, execution logs, and run documentation
+- QC records, checklists, and sign-offs
+- Final TFLs and CSR statistical sections
+- Version histories and change logs for key deliverables
+- Key decision records (e.g., analysis clarifications, deviation justifications)
+
+The goal is completeness and traceability, not minimalism.
+
+---
+
+### 16.4.3 Practical Archiving Best Practices
+
+Useful best practices include:
+
+- **Consistent version control**
+  - File naming conventions that include study ID, artifact type, version, and date
+  - Clear “Final/Locked” designation for submission-ready items
+
+- **Logical, navigable folder structure**
+  - A structure that mirrors the statistical lifecycle (SAP → ADaM → TFL → CSR)
+
+- **Reproducibility support**
+  - Documentation of software environment, seeds (if applicable), and run instructions
+  - Read-only protection for final outputs
+
+A simple test is: if someone unfamiliar with the project cannot navigate and reproduce key results, the archive is not inspection-ready.
+
+---
+
+## 16.5 Audit and Inspection Support
+
+### 16.5.1 Audits vs. Inspections (Operational Differences)
+
+Although often discussed together, audits and inspections differ operationally:
+
+- **Audits**
+  - May be internal, sponsor-led, or vendor-focused
+  - Often assess process compliance and readiness
+
+- **Inspections**
+  - Conducted by regulatory authorities (e.g., FDA, EMA, NMPA)
+  - Focus on data integrity, compliance, and defensibility of conclusions
+
+Statisticians may be involved in both, and expectations for traceability and clarity are high.
+
+---
+
+### 16.5.2 The Statistician’s Role During Audit/Inspection
+
+During audits or inspections, statisticians are expected to:
+
+- Explain analysis decisions clearly and consistently
+- Demonstrate traceability from protocol/SAP to datasets and outputs
+- Provide supporting documentation promptly
+- Answer questions calmly, factually, and without speculation
+
+Inspectors are primarily testing transparency and process control.
+
+---
+
+### 16.5.3 Common Statistical Audit/Inspection Questions
+
+Typical questions include:
+
+- How were analysis populations defined and applied?
+- How were missing data handled, and why is the approach appropriate?
+- Were SAP deviations identified, justified, and approved?
+- How was QC conducted and documented?
+- Can the primary endpoint results be reproduced from archived artifacts?
+
+Many “statistical” findings ultimately reflect documentation gaps, unclear traceability, or uncontrolled changes.
+
+---
+
+## 16.6 Practical Guidance for Inspection Readiness
+
+### 16.6.1 Preparation Before an Audit/Inspection
+
+Proactive preparation should include:
+
+- Ensuring SAPs and amendments are finalized, approved, and archived
+- Verifying that final TFLs match archived analysis datasets
+- Confirming QC documentation is complete and signed
+- Reviewing known deviations and ensuring written justifications exist
+- Checking that version control and file naming are consistent
+
+Inspection readiness should be continuous rather than reactive.
+
+---
+
+### 16.6.2 Behavior During Audit/Inspection
+
+During questioning:
+
+- Answer only what is asked—avoid unnecessary expansion
+- Use documented evidence whenever possible
+- Avoid guessing; if unsure, acknowledge and follow up with documentation
+- Escalate appropriately when a question requires cross-functional input
+
+A calm, consistent approach increases credibility and reduces follow-up burden.
+
+---
+
+### 16.6.3 After an Audit/Inspection: CAPA and Continuous Improvement
+
+After an audit or inspection:
+
+- Support root cause analysis for any findings
+- Contribute to corrective and preventive actions (CAPA)
+- Update processes, checklists, or SOP interpretations if needed
+- Capture lessons learned for future studies
+
+Quality improvement is an ongoing cycle, not a one-time exercise.
+
+---
+
+## 16.7 Key Takeaways
+
+1. Quality and compliance are foundational to statistical credibility.
+2. SOP adherence protects the study, the sponsor, and the statistician.
+3. ICH E9 and ICH E3 set expectations for defensible methods and reporting.
+4. Documentation and archiving are essential for reproducibility and traceability.
+5. Audits and inspections test transparency and process—not just correctness.
+6. Inspection readiness should be continuous, systematic, and evidence-based.

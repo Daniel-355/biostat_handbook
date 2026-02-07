@@ -1,0 +1,305 @@
+---
+title: "Clinical Trial Statistics Handbook"
+author: "Daniel He"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: true
+    toc_depth: 3
+  pdf_document:
+    toc: true
+    toc_depth: 3
+  word_document:
+    toc: true
+    toc_depth: 3
+---
+
+# Chapter 3  
+# Randomization and Stratification Design
+
+---
+
+## Chapter Objectives
+
+Randomization is a fundamental component of valid clinical trial design.  
+This chapter provides a practical and systematic overview of randomization and stratification strategies, focusing on both statistical principles and implementation considerations.
+
+After completing this chapter, the reader should be able to:
+
+- Select an appropriate randomization scheme for a given study  
+- Understand the strengths and limitations of common randomization methods  
+- Identify and justify stratification factors  
+- Coordinate randomization design with IWRS / RTSM and blinding teams  
+- Review and approve randomization specifications  
+- Clarify roles and governance in randomization list generation  
+
+---
+
+## 3.1 Purpose of Randomization in Clinical Trials
+
+The primary purposes of randomization are to:
+
+- Prevent selection bias  
+- Balance known and unknown prognostic factors across treatment groups  
+- Provide a valid basis for statistical inference  
+
+Randomization does not ensure perfect balance in every sample, but it ensures that any imbalance is random rather than systematic, which is essential for unbiased estimation and hypothesis testing.
+
+---
+
+## 3.2 Determination of the Randomization Scheme
+
+Selection of a randomization scheme should be driven by:
+
+- Planned sample size  
+- Number of treatment arms  
+- Expected enrollment pattern  
+- Importance of covariate balance  
+- Operational feasibility  
+
+No single randomization method is optimal for all trials.
+
+---
+
+### 3.2.1 Simple Randomization
+
+**Description**
+
+Simple randomization assigns participants to treatment groups purely by chance, typically using equal allocation probabilities.
+
+**Advantages**
+
+- Conceptually simple  
+- Easy to implement  
+- Maximally unpredictable  
+
+**Limitations**
+
+- Potential for treatment imbalance in small or moderate sample sizes  
+- No guarantee of balance at interim enrollment stages  
+
+**Typical Use**
+
+- Large trials  
+- Situations where moderate imbalance is acceptable  
+
+---
+
+### 3.2.2 Block Randomization
+
+**Description**
+
+Block randomization assigns treatments within blocks of fixed or varying size, ensuring balance within each block.
+
+**Advantages**
+
+- Maintains treatment balance throughout enrollment  
+- Particularly useful in small to moderate-sized trials  
+
+**Limitations**
+
+- Risk of predictability if block size is fixed and disclosed  
+- Requires careful concealment of block size  
+
+**Design Recommendation**
+
+Use randomly varying block sizes and maintain strict confidentiality.
+
+---
+
+### 3.2.3 Stratified Randomization
+
+**Description**
+
+Stratified randomization applies separate randomization schedules within strata defined by baseline prognostic factors.
+
+**Advantages**
+
+- Improves balance on key covariates  
+- Can increase efficiency and precision  
+
+**Limitations**
+
+- Increased complexity with multiple stratification factors  
+- Sparse enrollment within strata can reduce effectiveness  
+
+**Typical Use**
+
+- Trials with strong prognostic factors  
+- Moderate sample sizes where imbalance could affect interpretation  
+
+---
+
+### 3.2.4 Dynamic Randomization (Minimization)
+
+**Description**
+
+Dynamic randomization assigns treatments adaptively to minimize imbalance across selected covariates as subjects are enrolled.
+
+**Advantages**
+
+- Excellent balance across multiple factors  
+- Effective in small or complex trials  
+
+**Limitations**
+
+- More complex to implement  
+- Less intuitive than traditional randomization  
+- May be perceived as less random if not properly explained  
+
+**Important Consideration**
+
+A random component should be incorporated to preserve allocation unpredictability.
+
+---
+
+## 3.3 Selection of Stratification Factors
+
+### 3.3.1 Principles for Choosing Stratification Factors
+
+Stratification factors should be:
+
+- Strongly prognostic for the primary endpoint  
+- Reliably measured at baseline  
+- Limited in number  
+
+Over-stratification is a common and avoidable design error.
+
+---
+
+### 3.3.2 Common Stratification Factors
+
+Frequently used stratification factors include:
+
+- Study center or geographic region  
+- Baseline disease severity  
+- Prior treatment exposure  
+- Key clinical or demographic variables  
+
+Each additional factor multiplies the number of strata and increases operational complexity.
+
+---
+
+### 3.3.3 Alignment With the Analysis Plan
+
+Stratification factors used in randomization should generally be accounted for in the primary analysis model.
+
+Misalignment between randomization and analysis can reduce efficiency and raise interpretability concerns.
+
+---
+
+## 3.4 Coordination With IWRS / RTSM and Blinding Teams
+
+### 3.4.1 Role of IWRS / RTSM
+
+IWRS (Interactive Web Response System) or RTSM (Randomization and Trial Supply Management) systems are used to:
+
+- Implement the randomization algorithm  
+- Assign treatment at enrollment  
+- Manage drug supply and tracking  
+
+The statistical design must be translated precisely into system specifications.
+
+---
+
+### 3.4.2 Key Collaboration Considerations
+
+Effective coordination requires:
+
+- Clear documentation of the randomization method  
+- Precise definitions of stratification factors and levels  
+- Agreement on allocation ratios, block sizes, or minimization rules  
+
+Errors at this stage may be difficult or impossible to correct later.
+
+---
+
+### 3.4.3 Blinding Considerations
+
+Randomization design must be compatible with the study’s blinding strategy.
+
+Key considerations include:
+
+- Separation of blinded and unblinded roles  
+- Controlled access to treatment assignments  
+- Procedures for emergency unblinding  
+
+Randomization and blinding should be considered jointly.
+
+---
+
+## 3.5 Review of the Randomization Specification
+
+### 3.5.1 Purpose of the Randomization Specification
+
+The Randomization Specification document translates the statistical design into an operational plan.
+
+It typically includes:
+
+- Randomization method  
+- Allocation ratio  
+- Stratification factors and levels  
+- Block sizes or minimization algorithms  
+- Random seed handling and reproducibility considerations  
+
+---
+
+### 3.5.2 Statistician’s Review Responsibilities
+
+During review, the statistician should confirm that:
+
+- The specification is consistent with the protocol  
+- Stratification factors are correctly defined and coded  
+- Block sizes and algorithms preserve allocation concealment  
+- The design is operationally feasible and unambiguous  
+
+All discrepancies must be resolved prior to system implementation.
+
+---
+
+## 3.6 Generation of the Randomization List: Roles and Governance
+
+### 3.6.1 Determining Responsibility for Randomization List Generation
+
+Responsibility for generating the randomization list depends on:
+
+- Organizational standard operating procedures  
+- Blinding and independence requirements  
+- Data access controls  
+
+The approach should be clearly documented.
+
+---
+
+### 3.6.2 Firewalls and Independence
+
+When statisticians are involved in generating randomization lists, appropriate safeguards must be in place to ensure:
+
+- Preservation of study blinding  
+- Independence from operational decision-making  
+- Compliance with regulatory expectations  
+
+Clear definition of access rights and roles is essential.
+
+---
+
+### 3.6.3 Documentation and Traceability
+
+Regardless of who generates the randomization list, the process must be:
+
+- Reproducible  
+- Auditable  
+- Fully documented  
+
+This includes version control, approvals, and secure storage of randomization materials.
+
+---
+
+## Chapter Summary
+
+Randomization and stratification are foundational elements of trial integrity.  
+Appropriate selection of randomization methods, careful choice of stratification factors, and rigorous coordination with implementation teams ensure unbiased and interpretable treatment comparisons.
+
+Clear governance, documentation, and alignment with analysis plans are essential for maintaining scientific and regulatory credibility.
+
+---

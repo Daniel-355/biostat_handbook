@@ -1,0 +1,230 @@
+---
+title: "Clinical Trial Statistics Handbook"
+author: "Daniel He"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: true
+    toc_depth: 3
+  pdf_document:
+    toc: true
+    toc_depth: 3
+  word_document:
+    toc: true
+    toc_depth: 3
+---
+
+# Chapter 12: TFL Delivery — Tables, Figures, Listings, Statistical QC, Consistency Checks, and Version Control
+
+## 12.1 Why TFL Delivery Is Not “Just the Final Step”
+
+In real-world clinical trial operations, the delivery of Tables, Figures, and Listings (TFLs) is often treated as the “end of the analysis.” In practice, it is the point where statistical intent, SAP specifications, data realities, and regulatory expectations must converge into a defensible set of outputs.
+
+Protocol and SAP define what should be done.  
+ADaM and analysis datasets represent what was observed and derived.  
+**TFLs are the evidence regulators, clinicians, and sponsors actually review.**
+
+The Project Biostatistician’s accountability increases at this stage because regulators do not audit your code first—they audit the outputs. A single inconsistency across table text, figure annotations, or CSR narratives can trigger deep questioning and costly rework.
+
+## 12.2 The Project Biostatistician’s Role in the TFL Stage
+
+At the TFL stage, the Project Biostatistician should be viewed as the final owner of statistical validity and interpretability. Programming may be executed by statistical programmers or outsourced teams, but the biostatistician must ensure the statistical truth is preserved from SAP through final outputs.
+
+Key responsibilities include:
+
+- **Final interpretation ownership:** verifying outputs support the intended conclusions and are presented appropriately.
+- **SAP compliance:** confirming that each output follows the planned population, endpoint definitions, methods, and missing-data rules.
+- **Cross-functional alignment:** ensuring that medical, regulatory, and clinical teams understand what the TFLs show and what they do not show.
+- **Audit readiness:** ensuring traceability from SAP to ADaM to each TFL and narrative reference.
+
+In short, TFL delivery is where the biostatistician shifts from “analysis design” to “analysis defense.”
+
+## 12.3 Tables: Where Statistical Definitions Become Regulatory Evidence
+
+### 12.3.1 What a Table Must Represent
+
+A regulatory-grade table is not merely a summary. It is a structured manifestation of multiple statistical decisions, typically including:
+
+1. **Analysis population** (ITT, mITT, PP, Safety, etc.)
+2. **Endpoint and derivation definition** (baseline and post-baseline rules, visit mapping, windowing, censoring where applicable)
+3. **Statistical method** (descriptive statistics vs. model-based estimates, covariates, stratification factors)
+4. **Missing-data handling** (rules for inclusion, imputation strategy, estimand alignment)
+
+If any one of these layers is unclear or misaligned, the table becomes vulnerable to challenge.
+
+### 12.3.2 Practical Statistical Review Checklist for Tables
+
+Before approving any table for a sponsor review cycle or CSR integration, verify the following:
+
+- **Population alignment**
+  - Subject counts (N) match the analysis population definitions.
+  - Disposition of subjects excluded from analysis is clearly explainable.
+
+- **Visit and window consistency**
+  - Visit mapping follows protocol/SAP windows.
+  - Sample size shifts over visits are logical and traceable (dropout, missingness, visit schedule).
+
+- **Denominator correctness**
+  - Percentages use the correct denominator (overall N vs. non-missing N), consistent with conventions.
+
+- **Rounding and formatting**
+  - Rounding rules are consistent across tables (e.g., 1 decimal vs. 2 decimals).
+  - Labeling and footnotes match the SAP and reporting standards.
+
+- **Baseline integrity**
+  - Baseline values are correctly defined and do not inadvertently use post-dose data.
+
+Many high-impact issues arise not from a programming defect, but from a subtle misunderstanding of derivation rules.
+
+### 12.3.3 High-Risk Table Types That Require Extra Oversight
+
+Certain tables are routinely scrutinized and should receive enhanced biostatistician attention:
+
+- Primary endpoint summary tables
+- Key secondary endpoint analysis tables
+- Sensitivity analysis summary tables
+- Subgroup analysis tables (especially when claims are implied)
+
+For these tables, ensure not only correctness, but also interpretability and narrative alignment in CSR drafts.
+
+## 12.4 Figures: Interpretability and Transparency Over Aesthetics
+
+### 12.4.1 A Figure’s Purpose in Regulatory Review
+
+Figures are powerful because they shape interpretation quickly. That is also why regulatory reviewers examine them carefully. A figure must be:
+
+- **Readable and unambiguous**
+- **Consistent with the tables**
+- **Transparent in assumptions** (e.g., censoring, model smoothing, transformations)
+
+A figure can be visually polished and still be unacceptable if it misleads or omits key information.
+
+### 12.4.2 Key Checks for Survival and Longitudinal Figures
+
+For Kaplan–Meier plots, hazard ratio forest plots, or longitudinal mean profiles, confirm:
+
+- **Time origin correctness**
+  - The start time aligns with SAP (randomization, first dose, etc.).
+
+- **Censoring rules**
+  - Censoring definitions match SAP and are applied consistently.
+
+- **Number at risk**
+  - Risk sets are correct and displayed where required.
+
+- **Consistency with tabular outputs**
+  - Median survival, event counts, HRs, and p-values agree with the corresponding tables.
+
+Any table–figure disagreement is a red-flag issue and must be resolved before distribution.
+
+## 12.5 Listings: Not an Appendix, but a Gateway for Questions
+
+### 12.5.1 How Listings Are Used
+
+Listings are often treated as “supporting material,” but in real reviews they function as an investigative entry point. Listings are used to:
+
+- Validate endpoint derivations and visit alignment
+- Investigate outliers and anomalies
+- Confirm protocol deviation handling
+- Review deaths, SAEs, and key safety narratives
+
+If a reviewer suspects inconsistency, they may go straight to listings to find a case example.
+
+### 12.5.2 Listings That Are Most Likely to Be Challenged
+
+Listings requiring enhanced attention include:
+
+- Protocol deviation listings (especially major deviations affecting eligibility or endpoints)
+- Outlier listings and data queries
+- Death and SAE listings
+- Endpoint-derivation listings (e.g., components of composite endpoints)
+
+A useful mindset is:
+
+> If you were the reviewer, which line would you question first?
+
+## 12.6 Statistical Quality Control (QC): A Second Independent Brain
+
+### 12.6.1 What Effective Statistical QC Means
+
+Effective QC is not simply “re-running the program.” Instead, it is an independent logic-based verification of the analysis chain, including:
+
+- SAP → ADaM → TFL traceability checks
+- Independent recalculation of key numbers (spot checks)
+- Verification of derivation logic (baseline, censoring, windowing)
+- Confirmation that model specifications match SAP (covariates, strata, estimand)
+
+QC should aim to detect conceptual errors, not just computational ones.
+
+### 12.6.2 Core QC Principles
+
+A robust QC practice should follow these principles:
+
+- **Independence:** QC reviewers should not be the original author of the analysis.
+- **SAP-driven evaluation:** the benchmark is the SAP and study conventions, not the existing code.
+- **Documented resolution:** findings, decisions, and fixes must be recorded for audit readiness.
+
+QC protects study integrity; it is not intended to assign blame.
+
+## 12.7 Cross-Output Consistency Verification
+
+### 12.7.1 The Three Consistency Lines You Must Verify
+
+Consistency verification should be systematic along three lines:
+
+1. **Across TFLs**
+   - Same N, effect estimates, p-values, directions across relevant tables and figures.
+
+2. **Between TFLs and CSR text**
+   - Numbers in CSR narratives exactly match the referenced tables/figures.
+   - Statistical method descriptions match the implemented method.
+
+3. **Against SAP specifications**
+   - Population, endpoint, method, and missing-data rules match the plan.
+
+Consistency is not “nice to have.” It is central to submission defensibility.
+
+### 12.7.2 Common High-Risk Inconsistencies
+
+Examples of issues that frequently trigger major rework include:
+
+- P-values in text not matching table values
+- Figures using a different method than tables (e.g., log-rank vs. Cox)
+- Sensitivity analyses showing different directions without explanation
+- Subgroup results presented as claims without proper multiplicity context
+
+These issues do not always lead to rejection, but they reliably increase regulatory scrutiny.
+
+## 12.8 Version Control: The Lifeline in Late-Stage Deliverables
+
+### 12.8.1 Why Version Control Is Critical
+
+After database lock, TFL packages typically evolve through multiple cycles:
+
+- Sponsor review comments
+- Medical review revisions
+- CSR authoring alignment
+- Potential re-runs due to data reconciliation or late clarifications
+
+Without disciplined version control, teams lose the ability to prove which output was final and why it changed.
+
+### 12.8.2 Minimum Practical Version Control Standards
+
+At minimum, implement:
+
+- **Clear file naming conventions**
+  - Include study ID, output type, version, and date.
+
+- **Change logs**
+  - For each release package, document what changed, why it changed, and who approved.
+
+- **Final locking**
+  - Mark and archive final/locked outputs (e.g., `Final`, `Locked`, `For Submission`).
+
+Regulators do not penalize change. They penalize lack of traceability.
+
+## 12.9 Key Takeaways
+
+1. **TFLs are the definitive statistical deliverables**, not programming by-products.
+2. **Consistency and traceability matter more than aesthetics.**
+3. At the TFL stage, the biostatistician’s job is no longer to “run analyses,” but to **defend conclusions** with evidence that withstands regulatory scrutiny.

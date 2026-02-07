@@ -1,0 +1,171 @@
+ 
+# Chapter 14 Public Registration and Publication Support
+
+## 14.1 Why This Stage Matters: From Compliance to Public Scrutiny
+
+The statistical work of a clinical trial does not end at CSR delivery. Public disclosure and scientific publication represent the point at which trial results become visible to the outside world—clinicians, researchers, competitors, patients, and the broader scientific community.
+
+At this stage, the audience shifts from sponsor-facing stakeholders to public-facing scrutiny. Statistical reporting must therefore be:
+- Transparent
+- Reproducible
+- Defensible to external reviewers who were not part of the study
+
+This is often the phase where statistical rigor is tested under the most “neutral” conditions: independent readers will challenge unclear assumptions, inconsistencies, or selective interpretation.
+
+---
+
+## 14.2 Statistical Support for ClinicalTrials.gov Results Reporting
+
+### 14.2.1 How ClinicalTrials.gov Reporting Differs From CSR
+
+Compared with CSR, results reporting on ClinicalTrials.gov is:
+- Highly structured (fixed fields and formats)
+- Focused on factual disclosure rather than narrative interpretation
+- Publicly accessible and permanently visible
+- Less tolerant of ambiguous language or selective framing
+
+A key practical implication is that ClinicalTrials.gov reporting must be aligned with the underlying statistical sources (SAP/TFL/CSR), while being expressed within strict formatting and content constraints.
+
+---
+
+### 14.2.2 Core Statistical Responsibilities
+
+The Project Biostatistician typically supports or reviews:
+
+- Participant flow and analysis population counts
+- Baseline characteristics summaries
+- Primary and secondary outcome measure results
+- Adverse event summaries (often by SOC/PT and severity/relationship conventions)
+
+The statistical priority is ensuring that:
+- Counts (N) match the defined analysis populations and TFLs
+- Endpoint definitions match the SAP and CSR text
+- Methods are described accurately but succinctly
+- Disclosed results do not include “new” metrics not supported elsewhere
+
+---
+
+### 14.2.3 Common High-Risk Issues (Practical Pitfalls)
+
+Frequent issues that trigger questions or rework include:
+- Subject counts on ClinicalTrials.gov not matching CSR/TFL counts
+- Ambiguous wording about analysis populations (e.g., ITT vs. mITT vs. Safety)
+- Reporting additional statistics that were not in the CSR or not pre-specified
+- Including interpretive conclusions in result fields intended for factual reporting
+
+A useful mindset is: ClinicalTrials.gov is not a marketing channel—it is a compliance and transparency mechanism.
+
+---
+
+## 14.3 Statistical Methods Support for Medical Publications
+
+### 14.3.1 How Journal Reporting Differs From CSR
+
+Journal articles require statistical methods to be:
+- Concise and focused on the message of the paper
+- Understandable to a broad clinical readership
+- Sufficiently precise for statistical reproducibility
+
+While CSR aims for completeness, journal manuscripts aim for clarity and focus. However, concision must not come at the cost of accuracy.
+
+---
+
+### 14.3.2 What the Biostatistician Must Ensure
+
+The biostatistician should ensure the manuscript clearly describes:
+
+- Study objectives and endpoints (primary vs. secondary)
+- Analysis populations and inclusion/exclusion rules for analysis
+- Statistical models (including covariates and stratification factors)
+- Handling of multiplicity (if confirmatory claims are made)
+- Missing data strategies and estimand alignment where relevant
+- Sensitivity analyses and subgroup analyses, with appropriate interpretation boundaries
+
+A simple quality bar is: another qualified statistician should be able to reproduce the analysis from the manuscript plus supplementary material.
+
+---
+
+### 14.3.3 Common Statistical Writing Problems in Manuscripts
+
+Issues that frequently lead to reviewer concerns include:
+- Vague statements such as “standard methods were used”
+- Missing descriptions of multiplicity control while making multiple claims
+- Overstating subgroup findings without proper interaction testing and context
+- Presenting exploratory results as confirmatory evidence
+- Insufficient explanation of missing data impact on conclusions
+
+These problems are preventable through early statistical review and alignment with the SAP/CSR.
+
+---
+
+## 14.4 Responding to Reviewer Statistical Comments
+
+### 14.4.1 Common Types of Reviewer Questions
+
+Statistical reviewer comments commonly focus on:
+- Robustness of the primary endpoint conclusion
+- Justification of model choice and assumptions
+- Impact of missing data and dropout
+- Interpretation of subgroup findings
+- Adequacy of sample size and power relative to observed effects
+- Transparency of multiplicity control and confirmatory claim boundaries
+
+These questions often target the most sensitive areas of interpretation rather than pure computation.
+
+---
+
+### 14.4.2 The Biostatistician’s Role in the Response Process
+
+The biostatistician is typically:
+- The primary drafter of statistical responses
+- The main technical decision-maker on whether additional analyses are appropriate
+- Responsible for ensuring consistency between responses, manuscript text, and underlying trial documents (SAP/TFL/CSR)
+
+Reviewer responses are public-facing scientific arguments. They must remain fact-based, traceable, and consistent with the submitted content.
+
+---
+
+### 14.4.3 Practical Principles for Effective Responses
+
+Strong statistical responses generally:
+- Address each comment directly and neutrally
+- Reference manuscript sections and/or supplementary material explicitly
+- Clarify confirmatory vs. exploratory analyses
+- Provide additional analyses only when justified, and clearly label them if post hoc
+- Maintain consistency with the registered protocol/SAP/CSR
+
+Common mistakes include defensive language, avoiding the core question, or introducing new analyses without appropriate framing.
+
+---
+
+## 14.5 Decision Boundaries for Additional Analyses
+
+### 14.5.1 When Additional Analyses Are Appropriate
+
+Additional analyses are often reasonable when:
+- The planned method is sound but not sufficiently explained
+- Robustness concerns can be addressed via pre-specified sensitivity analyses
+- Supplemental analyses meaningfully improve interpretability without changing the evidentiary status of the primary conclusion
+
+In such cases, the goal is usually clarification and robustness demonstration, not narrative repositioning.
+
+---
+
+### 14.5.2 When Additional Analyses Should Be Avoided
+
+Additional analyses should be avoided or carefully constrained when:
+- They shift the interpretation of the primary endpoint beyond the registered and planned strategy
+- They create inconsistency with the CSR or registry disclosure
+- They introduce obvious data-driven “post hoc” risks without clear labeling and justification
+
+Not every reviewer request should be accepted. The biostatistician must protect interpretability and credibility.
+
+---
+
+## 14.6 Key Takeaways for Project Biostatisticians
+
+1. Public registry disclosure is a compliance baseline; publication is a credibility test.
+2. Statistical reporting must withstand scrutiny from independent readers with no project context.
+3. Consistency across registry reporting, CSR, and manuscripts is non-negotiable.
+4. Reviewer responses are scientific arguments—be traceable, neutral, and explicit about analysis status (confirmatory vs. exploratory).
+5. Once public, statistical errors are amplified and difficult to correct—invest in rigor before disclosure.

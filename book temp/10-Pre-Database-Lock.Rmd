@@ -1,0 +1,200 @@
+---
+title: "Clinical Trial Statistics Handbook"
+author: "Daniel He"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: true
+    toc_depth: 3
+  pdf_document:
+    toc: true
+    toc_depth: 3
+  word_document:
+    toc: true
+    toc_depth: 3
+---
+
+# Chapter 10: Pre-Database Lock Activities  
+*The Statistician’s Final Accountability Before Results Are Frozen*
+
+The period immediately preceding database lock represents the **final opportunity for statistical judgment to materially influence the integrity, interpretability, and regulatory defensibility of trial results**.
+
+At this stage, no new analyses are being invented.  
+Instead, the statistician’s responsibility is to **confirm alignment**—between plans and reality, definitions and data, and analytical intent and execution.
+
+Once the database is locked, unresolved issues become explanation problems rather than fixable problems.
+
+---
+
+## 10.1 Why the Pre-Lock Phase Is Statistically Critical
+
+The pre-lock phase is often misinterpreted as an administrative checkpoint.  
+From a statistical perspective, it is a **decision boundary**.
+
+Before database lock:
+- SAP assumptions are confronted with real data
+- Analysis datasets transition from conceptual definitions to fixed objects
+- TFL shells become binding deliverables
+
+After database lock:
+- Analysis definitions are frozen
+- Population flags are no longer negotiable
+- Deviations must be justified rather than corrected
+
+For the biostatistician, this is the **last point at which technical authority can prevent downstream analytical risk**.
+
+---
+
+## 10.2 Final Review of TFL Shells
+
+### 10.2.1 Why TFL Shells Must Be Finalized Before Lock
+
+TFL shells are not formatting artifacts.  
+They formally define:
+- What endpoints will be summarized
+- Which populations will be analyzed
+- How data will be stratified or grouped
+- What comparisons will be reported
+
+If a shell cannot be populated cleanly using existing analysis datasets, the issue lies upstream—in definitions, not presentation.
+
+---
+
+### 10.2.2 Statistical Verification of TFL Shells
+
+During final TFL shell review, statisticians must confirm that:
+- Titles, footnotes, and population labels align with the SAP
+- Endpoint definitions match available ADaM variables
+- Planned stratifications and subgroup analyses are derivable
+- No post-hoc endpoints or populations are implicitly introduced
+
+A practical rule:
+> **If a shell requires interpretive explanation to understand how it will be filled, it is not ready for database lock.**
+
+---
+
+## 10.3 Confirming Consistency Between SAP and Actual Data
+
+### 10.3.1 The Required Reality Check
+
+The SAP defines an idealized analytical framework.  
+The collected data reflect operational reality.
+
+Before database lock, statisticians must explicitly assess:
+- Existence of all SAP-defined variables
+- Adequacy of data granularity for planned analyses
+- Continued defensibility of SAP assumptions
+
+This assessment focuses on **material consistency**, not perfection.
+
+---
+
+### 10.3.2 Common Sources of Misalignment
+
+Frequent discrepancies include:
+- Planned visits that rarely occurred
+- Endpoints with higher-than-anticipated missingness
+- Covariates inconsistently collected across subjects
+- Time windows misaligned with actual visit timing
+
+When misalignment is identified, statisticians must determine whether:
+- The SAP can be applied as written
+- A justified SAP amendment is required before lock
+- The issue can be addressed through pre-specified sensitivity analyses
+
+Silence at this stage constitutes implicit endorsement.
+
+---
+
+## 10.4 Confirmation of Analysis Dataset Definitions
+
+### 10.4.1 Transition to Lock-Ready Analysis Datasets
+
+By the pre-lock phase, analysis datasets (typically ADaM) must be:
+- Fully specified
+- Deterministically derivable
+- Consistent with the SAP
+
+This includes finalization of:
+- Dataset structures
+- Variable derivations
+- Population flags
+- Parameter-level metadata
+
+---
+
+### 10.4.2 Statistical Confirmation Responsibilities
+
+Statisticians should explicitly verify that:
+- Each analysis dataset aligns with SAP specifications
+- Key variables are uniquely and reproducibly derived
+- Population flags are deterministic and traceable to source data
+- No analysis-critical derivation depends on post-lock decisions
+
+A guiding principle:
+> **If a derivation still depends on judgment calls, it is not ready for database lock.**
+
+---
+
+## 10.5 Statistical Sign-Off Prior to Database Lock
+
+### 10.5.1 Meaning of Statistical Sign-Off
+
+Statistical sign-off is not a procedural formality.  
+It represents a professional assertion:
+
+> **Based on statistical review, the data and definitions are sufficient to support the planned analyses as specified.**
+
+It does not imply:
+- Data perfection
+- Guaranteed favorable results
+- Absence of sensitivity analyses
+
+It confirms that analyses will be:
+- Reproducible
+- Interpretable
+- Defensible to regulators and auditors
+
+---
+
+### 10.5.2 Scope of Statistical Accountability
+
+By providing sign-off, the statistician confirms that:
+- TFL shells are executable and SAP-consistent
+- SAP assumptions remain materially valid
+- Analysis dataset definitions are finalized
+- Outstanding issues are documented and accepted
+
+Concerns not documented before lock will be assumed **not to exist**.
+
+---
+
+## 10.6 Common Pitfalls in the Pre-Lock Phase
+
+Experienced statisticians remain alert to:
+- Deferring issues with “we will explain it in the CSR”
+- Last-minute shell changes without SAP updates
+- Ambiguous population definitions left unresolved
+- Pressure to sign off without sufficient review time
+
+A critical lesson:
+> **Schedule pressure does not diminish statistical responsibility.**
+
+---
+
+## 10.7 Chapter Summary: Database Lock as a Line of No Return
+
+Database lock marks a definitive boundary.  
+Before it, statisticians can prevent analytical failure.  
+After it, they can only manage interpretive risk.
+
+The statistician’s value at this stage lies in:
+- Enforcing clarity before commitment
+- Challenging misalignment before irreversibility
+- Protecting analytical credibility under time pressure
+
+**Key takeaway:**
+
+> **Database lock freezes not only the data, but every statistical decision left unchallenged.**
+
+---

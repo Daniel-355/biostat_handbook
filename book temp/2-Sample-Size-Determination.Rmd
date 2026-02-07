@@ -1,0 +1,277 @@
+---
+title: "Clinical Trial Statistics Handbook"
+author: "Daniel He"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: true
+    toc_depth: 3
+  pdf_document:
+    toc: true
+    toc_depth: 3
+  word_document:
+    toc: true
+    toc_depth: 3
+---
+
+# Chapter 2  
+# Sample Size Determination
+
+## Chapter Objectives
+
+The objective of this chapter is to provide a practical, defensible, and regulator-ready framework for sample size determination in clinical trials.  
+Upon completing this chapter, the reader should be able to:
+
+- Understand sample size as a design decision rather than a mechanical calculation  
+- Justify assumptions used in sample size determination  
+- Evaluate effect size sources critically  
+- Account for dropout and multiplicity in planning  
+- Produce clear, auditable outputs for Protocols and SAPs  
+
+---
+
+## 2.1 The Role of Sample Size in Clinical Trial Design
+
+### 2.1.1 Sample Size Is Designed, Not Calculated
+
+In practice, sample size is not a purely mathematical result.  
+It is the consequence of multiple design assumptions:
+
+> Sample Size = Statistical Hypothesis × Effect Size × Variability × Operational Assumptions
+
+The role of the statistician is not to apply formulas blindly, but to ensure that:
+
+- The study question is answerable with the proposed sample size  
+- Assumptions are scientifically reasonable  
+- The design can withstand regulatory scrutiny  
+
+---
+
+### 2.1.2 Two Dangerous Extremes
+
+Statisticians should actively avoid:
+
+- **Over-optimism**: assuming an unrealistically large effect size, leading to underpowered studies  
+- **Over-conservatism**: inflating sample size beyond operational feasibility  
+
+The true value of statistical leadership lies in balancing scientific rigor, feasibility, and risk.
+
+---
+
+## 2.2 Sample Size Calculation Framework
+
+### 2.2.1 Core Components
+
+Regardless of endpoint type, all sample size calculations must clearly define:
+
+| Component | Description |
+|---------|-------------|
+| Primary endpoint | Sample size must be based on the primary endpoint only |
+| Statistical hypothesis | Null and alternative hypotheses |
+| Significance level | Type I error rate (α) |
+| Power | Probability of detecting the assumed effect |
+| Effect size | Mean difference, rate difference, or hazard ratio |
+| Variability | Standard deviation or event rate assumptions |
+
+---
+
+### 2.2.2 Endpoint-Specific Considerations
+
+#### Continuous Endpoints
+- Based on mean differences
+- Requires standard deviation assumptions
+- Highly sensitive to variance misspecification
+
+#### Binary Endpoints
+- Based on response rates or risk differences
+- Requires control group event rate assumptions
+- Low event rates rapidly increase sample size
+
+#### Time-to-Event Endpoints
+- Driven primarily by number of events
+- Dependent on follow-up duration and censoring
+- Assumed hazard ratio is the key driver
+
+#### Repeated Measures Endpoints
+- Correlation structure must be considered
+- Simplified approaches must clearly state assumptions
+
+---
+
+### 2.2.3 Transparency of Assumptions
+
+All assumptions used in sample size determination should be explicitly documented, including:
+
+- Data sources
+- Rationale for chosen values
+- Consequences if assumptions are violated
+
+---
+
+## 2.3 Effect Size Justification
+
+### 2.3.1 Why Effect Size Is the Highest-Risk Assumption
+
+Effect size assumptions directly determine:
+
+- Required sample size
+- Probability of trial success
+- Interpretability of results
+
+An unrealistic effect size almost guarantees trial failure.
+
+---
+
+### 2.3.2 Common Sources of Effect Size Assumptions
+
+#### Published Literature
+- Advantages: peer-reviewed, traceable
+- Risks: differences in population, endpoint definition, or dose
+
+#### Pilot or Phase I/II Studies
+- Advantages: same compound and indication
+- Risks: small sample size and optimistic bias
+
+#### Clinical Assumptions
+- Must be clinically meaningful
+- Must never be selected solely to reduce sample size
+
+---
+
+### 2.3.3 Reality Checks by the Statistician
+
+Statisticians should always ask:
+
+- Is this effect clinically plausible?
+- What happens if the true effect is smaller?
+- Should sensitivity or scenario analyses be conducted?
+
+---
+
+## 2.4 Dropout and Attrition Assumptions
+
+### 2.4.1 Why Dropout Matters
+
+Sample size calculations yield the number of evaluable subjects required for primary analysis, not the number to be randomized.
+
+Dropout assumptions bridge this gap.
+
+---
+
+### 2.4.2 Sources of Dropout Assumptions
+
+Common sources include:
+
+- Historical trials in the same indication
+- Disease severity and patient burden
+- Treatment duration and administration route
+- Frequency of study visits
+
+---
+
+### 2.4.3 Common Mistakes
+
+- Applying a default dropout rate without justification
+- Ignoring differential dropout across treatment arms
+- Failing to consider missingness at critical time points
+
+Dropout assumptions and adjustments must be explicitly stated.
+
+---
+
+## 2.5 Impact of Multiplicity on Sample Size
+
+### 2.5.1 Multiplicity Is Not Only an Analysis Issue
+
+Sample size may be affected when there are:
+
+- Multiple primary endpoints
+- Multiple dose comparisons
+- Multiple formal hypotheses
+
+---
+
+### 2.5.2 Common Strategies
+
+#### Hierarchical Testing
+- Sample size driven by the first primary endpoint
+- No sample size inflation for subsequent tests
+
+#### Bonferroni-Type Adjustments
+- α is divided across comparisons
+- Often leads to substantial sample size increases
+
+#### Composite Endpoints
+- Changes the definition of effect
+- Requires careful clinical interpretation
+
+---
+
+### 2.5.3 Key Message to Study Teams
+
+> Each additional formal comparison almost always increases the required sample size.
+
+---
+
+## 2.6 Deliverable 1: Sample Size Calculation Memo
+
+### 2.6.1 Purpose of the Memo
+
+The Sample Size Calculation Memo serves as:
+
+- An internal decision-making document
+- A regulatory defense artifact
+- The foundation for Protocol and SAP text
+
+---
+
+### 2.6.2 Recommended Structure
+
+1. Study background and primary endpoint  
+2. Statistical hypotheses  
+3. Effect size assumptions and justification  
+4. Sample size calculation methodology  
+5. Dropout adjustment  
+6. Sensitivity or scenario analyses (if applicable)  
+7. Final recommended sample size  
+
+---
+
+## 2.7 Deliverable 2: Sample Size Section in Protocol and SAP
+
+### 2.7.1 Protocol Writing Principles
+
+- Concise and regulator-friendly
+- Focused on primary assumptions
+- Avoid excessive discussion of uncertainty
+
+---
+
+### 2.7.2 SAP-Level Details
+
+The SAP should include:
+
+- Detailed calculation methods or formulas
+- Clarification of assumptions
+- Alignment with planned primary analysis methods
+
+---
+
+## 2.8 Statistician’s Pre-Finalization Checklist
+
+Before finalizing sample size, confirm that:
+
+- [ ] Sample size is based solely on the primary endpoint  
+- [ ] Effect size assumptions are clearly justified  
+- [ ] Dropout assumptions are realistic  
+- [ ] Multiplicity considerations are addressed  
+- [ ] Memo, Protocol, and SAP are internally consistent  
+
+---
+
+## Chapter Summary
+
+> Sample size is not about “calculating enough,”  
+> but about committing appropriate resources to answer a meaningful question.
+
+---

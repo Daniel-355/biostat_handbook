@@ -1,0 +1,282 @@
+ 
+
+# Statistical Analysis Plan (SAP) Development  
+## Core Statistical Work
+
+---
+
+## Chapter Objectives
+
+The Statistical Analysis Plan (SAP) is the definitive document that governs how clinical trial data are analyzed and interpreted.  
+This chapter provides a comprehensive and practical framework for developing a robust, regulator-ready SAP.
+
+After completing this chapter, the reader should be able to:
+
+- Define primary analysis methods with sufficient operational detail  
+- Specify models, covariates, and stratification handling clearly  
+- Plan secondary, exploratory, sensitivity, and subgroup analyses  
+- Define coherent multiplicity and missing data strategies  
+- Support interim analyses and Data Monitoring Committee (DMC) activities, if applicable  
+- Ensure all analyses are reproducible and implementable without post–database lock decisions  
+
+---
+
+## 5.1 Role of the SAP in Clinical Trials
+
+### 5.1.1 Why the SAP Is a Critical Document
+
+From a statistical perspective, the SAP serves as:
+
+- The **binding interpretation** of the protocol  
+- The **operational blueprint** for statistical programming  
+- The **primary reference** for regulatory review and inspection  
+
+Any analysis not prospectively specified in the SAP is vulnerable to being considered post hoc, regardless of scientific plausibility.
+
+---
+
+### 5.1.2 Relationship Between the Protocol and the SAP
+
+- The **protocol** defines *what* will be studied  
+- The **SAP** defines *how* the data will be analyzed  
+
+The SAP must be fully consistent with the protocol while providing substantially more detail to remove analytical ambiguity.
+
+---
+
+## 5.2 Definition of the Primary Analysis Method
+
+### 5.2.1 Purpose of the Primary Analysis
+
+The primary analysis directly addresses the primary estimand and supports the main study conclusion.  
+It must be defined in sufficient detail so that:
+
+- Independent statisticians would implement the same analysis  
+- Results are reproducible  
+- No analytical discretion remains after database lock  
+
+---
+
+### 5.2.2 Model Type Specification
+
+The SAP must explicitly specify the statistical model, including:
+
+- Model family (e.g., linear model, generalized linear model, Cox model)  
+- Link function, if applicable  
+- Distributional assumptions  
+
+Typical examples include:
+
+- ANCOVA for continuous endpoints  
+- Logistic regression for binary endpoints  
+- Cox proportional hazards models for time-to-event endpoints  
+
+Any key model assumptions should be stated and, where appropriate, assessed.
+
+---
+
+### 5.2.3 Covariate Specification
+
+The SAP should clearly define:
+
+- Which covariates are included in the model  
+- Whether covariates are pre-specified or data-driven  
+- How covariates are coded (continuous or categorical)  
+
+Covariates typically include baseline measures of the endpoint or other strong prognostic factors identified during study design.
+
+---
+
+### 5.2.4 Handling of Stratification Factors
+
+If stratified randomization was used, the SAP should specify:
+
+- Whether stratification factors are included as covariates  
+- Whether stratified tests or stratified models are applied  
+- How sparse or empty strata are handled  
+
+Consistency between randomization and analysis strategies is essential.
+
+---
+
+## 5.3 Secondary and Exploratory Analyses
+
+### 5.3.1 Secondary Analyses
+
+Secondary analyses address pre-specified secondary objectives and support interpretation of the primary results.  
+They should be fully specified in the SAP but clearly distinguished from the primary analysis.
+
+---
+
+### 5.3.2 Exploratory Analyses
+
+Exploratory analyses are hypothesis-generating and descriptive in nature.  
+The SAP should outline their general analytical approach while clearly labeling them as exploratory.
+
+---
+
+## 5.4 Multiplicity Control Strategy
+
+### 5.4.1 Importance of Multiplicity Control
+
+Multiplicity affects the interpretation of statistical significance.  
+The SAP must describe how Type I error is controlled across:
+
+- Multiple endpoints  
+- Multiple treatment comparisons  
+- Multiple time points or analyses  
+
+---
+
+### 5.4.2 Common Multiplicity Approaches
+
+Multiplicity strategies commonly specified in SAPs include:
+
+- Hierarchical testing procedures  
+- Gatekeeping strategies  
+- Alpha-splitting or adjustment methods  
+
+The chosen strategy must align with study objectives and be defined prior to unblinding.
+
+---
+
+## 5.5 Missing Data Handling Strategies
+
+### 5.5.1 Importance of Pre-Specifying Missing Data Methods
+
+Assumptions about missing data directly affect interpretation of treatment effects.  
+The SAP must prospectively specify missing data handling methods for each key analysis.
+
+---
+
+### 5.5.2 Commonly Used Methods
+
+The SAP should clearly state when and how the following methods are applied:
+
+- **MMRM (Mixed Model for Repeated Measures)**  
+- **Multiple Imputation (MI)**  
+- **Last Observation Carried Forward (LOCF)**  
+- **Non-Responder Imputation (NRI)**  
+
+Each method’s assumptions and limitations should be acknowledged.
+
+---
+
+### 5.5.3 Alignment With Estimands
+
+Missing data strategies should be consistent with the estimand framework (e.g., treatment policy, hypothetical, or composite strategies).
+
+---
+
+## 5.6 Definition of Repeat Assessments and Visit Window Rules
+
+### 5.6.1 Purpose of Visit Window Rules
+
+Repeated measurements and visit deviations must be handled consistently.  
+The SAP should define:
+
+- Visit windows  
+- Rules for selecting analysis values  
+- Handling of unscheduled or repeated assessments  
+
+---
+
+### 5.6.2 Statistical Rules for Repeat or Follow-Up Measurements
+
+The SAP should specify:
+
+- Which value is used when multiple measurements are available  
+- Whether averaging or selection rules apply  
+- How confirmatory or repeat tests are treated  
+
+Clear rules prevent downstream programming discrepancies.
+
+---
+
+## 5.7 Sensitivity Analysis Plan
+
+### 5.7.1 Purpose of Sensitivity Analyses
+
+Sensitivity analyses evaluate the robustness of the primary analysis to key assumptions.  
+They are essential for assessing the reliability of study conclusions.
+
+---
+
+### 5.7.2 Common Sensitivity Analyses
+
+Examples include:
+
+- Alternative missing data assumptions  
+- Different analysis populations  
+- Alternative model specifications  
+
+Each sensitivity analysis should be linked to a specific assumption being tested.
+
+---
+
+## 5.8 Subgroup Analysis Definition
+
+### 5.8.1 Purpose of Subgroup Analyses
+
+Subgroup analyses explore the consistency of treatment effects across predefined subpopulations.
+
+---
+
+### 5.8.2 Pre-Specification Requirements
+
+The SAP should define:
+
+- Subgroup variables and category definitions  
+- Statistical models used for subgroup analyses  
+- Whether treatment-by-subgroup interaction tests are conducted  
+
+Results should be interpreted cautiously and in context.
+
+---
+
+## 5.9 Interim Analysis and DMC Support (If Applicable)
+
+### 5.9.1 Interim Analysis Specifications
+
+If interim analyses are planned, the SAP should specify:
+
+- Timing or triggering criteria  
+- Statistical methods applied  
+- Alpha spending or adjustment approaches  
+- Decision boundaries  
+
+---
+
+### 5.9.2 DMC Support
+
+The SAP may include or reference:
+
+- Analysis outputs prepared for DMC review  
+- Data handling procedures for unblinded analyses  
+- Role separation and access controls  
+
+Clear procedures are essential to protect study integrity.
+
+---
+
+## 5.10 SAP Quality and Implementation Checklist
+
+Before finalizing the SAP, confirm that:
+
+- [ ] All primary and secondary analyses are fully specified  
+- [ ] Models, covariates, and stratification handling are explicit  
+- [ ] Multiplicity and missing data strategies are defined  
+- [ ] Sensitivity and subgroup analyses are pre-specified  
+- [ ] Interim analyses and DMC procedures are clearly described, if applicable  
+- [ ] All analyses can be implemented without post–database lock decisions  
+
+---
+
+## Chapter Summary
+
+The SAP transforms study objectives and protocol concepts into executable statistical analyses.  
+A high-quality SAP eliminates analytical ambiguity, ensures reproducibility, and provides a defensible basis for interpretation.
+
+Careful, detailed, and prospective SAP development is one of the most critical responsibilities of the statistician in clinical research.
+
+---
