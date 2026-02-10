@@ -4,7 +4,7 @@
 
 ---
 
-## Chapter Objectives
+## Chapter Objectives {-}
 
 This chapter provides a structured and practical framework for integrating statistical thinking into clinical trial design.  
 The emphasis is on ensuring that study objectives, endpoints, and hypotheses are **statistically feasible, analytically coherent, and scientifically defensible**.

@@ -2,7 +2,7 @@
 
 # Sample Size Determination
 
-## Chapter Objectives
+## Chapter Objectives {-}
 
 The objective of this chapter is to provide a practical, defensible, and regulator-ready framework for sample size determination in clinical trials.  
 Upon completing this chapter, the reader should be able to:

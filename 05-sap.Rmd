@@ -1,11 +1,10 @@
  
 
 # Statistical Analysis Plan (SAP) Development  
-## Core Statistical Work
 
 ---
 
-## Chapter Objectives
+## Chapter Objectives {-}
 
 The Statistical Analysis Plan (SAP) is the definitive document that governs how clinical trial data are analyzed and interpreted.  
 This chapter provides a comprehensive and practical framework for developing a robust, regulator-ready SAP.

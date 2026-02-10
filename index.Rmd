@@ -1,4 +1,4 @@
---- 
+---
 title: "Biostatistician’s Practical Handbook in Clinical Trials"
 author: "Daniel He"
 date: "`r Sys.Date()`"
@@ -15,7 +15,7 @@ link-citations: yes
 github-repo: rstudio/bookdown-demo
 ---
 
-# Preface
+# Preface {-}
 
 In clinical trials, the role of the biostatistician is often misunderstood.
 
@@ -31,7 +31,12 @@ This *Biostatistician’s Practical Handbook in Clinical Trials* is **not** a te
 
 The content of this handbook is organized around the core lifecycle of a clinical trial, following the continuous line of:
 
-**Protocol → SAP → TFL → CSR**
+**Protocol input → 
+SAP development → 
+Sample Calculation→ 
+[TFL generation](https://github.com/Daniel-355/pilot_data2/tree/main/08_Reports/Regulatory_Submission/Submission%20data%20files/Outputs/table) → 
+CSR contribution → 
+Submission support**
 
 This line represents not only document progression, but also the evolution of statistical responsibility—from high-level design concepts to fully traceable and auditable study conclusions.
 
@@ -54,7 +59,11 @@ The true value of a biostatistician is not reflected in how complex the model is
 
 May this handbook serve as a reliable reference point—helping you navigate clinical trial projects with clarity, consistency, and professional confidence.
 
+**Disclaimer:** All materials in this ebook are for educational purposes only. All information is based on publicly available information from the internet or computer simulations. I do not assume any responsibility for the accuracy and authenticity of the materials; please use them at your own discretion. If any material infringes on your copyright, please contact hedian.edu@gmail.com. I will correct it promptly.
+
 ---
+
+
 
 *Dedicated to all biostatisticians who quietly safeguard the integrity of clinical trial conclusions.*
 
@@ -66,6 +75,7 @@ knitr::write_bib(c(
   .packages(), 'bookdown', 'knitr', 'rmarkdown'
 ), 'packages.bib')
 ```
+
 
 
 

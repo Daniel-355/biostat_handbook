@@ -4,7 +4,7 @@
 
 ---
 
-## Chapter Objectives
+## Chapter Objectives {-}
 
 The clinical trial protocol is the authoritative document that defines how a study is conducted and analyzed.  
 This chapter focuses on the role of statistics in supporting, shaping, and safeguarding the statistical integrity of the protocol.

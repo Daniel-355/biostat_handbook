@@ -4,7 +4,7 @@
 
 ---
 
-## Chapter Objectives
+## Chapter Objectives {-}
 
 Randomization is a fundamental component of valid clinical trial design.  
 This chapter provides a practical and systematic overview of randomization and stratification strategies, focusing on both statistical principles and implementation considerations.

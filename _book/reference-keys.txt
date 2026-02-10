@@ -1,6 +1,4 @@
-preface
 trial-design-and-statistical-strategy
-chapter-objectives
 participation-in-statistical-feasibility-discussions-of-study-objectives-and-hypotheses
 importance-of-statistical-feasibility-at-the-objective-level
 characteristics-of-statistically-feasible-objectives
@@ -31,7 +29,6 @@ testing-strategy-and-multiplicity
 interpretability-of-results
 chapter-summary
 sample-size-determination
-chapter-objectives-1
 the-role-of-sample-size-in-clinical-trial-design
 sample-size-is-designed-not-calculated
 two-dangerous-extremes
@@ -70,7 +67,6 @@ sap-level-details
 statisticians-pre-finalization-checklist
 chapter-summary-1
 randomization-and-stratification-design
-chapter-objectives-2
 purpose-of-randomization-in-clinical-trials
 determination-of-the-randomization-scheme
 simple-randomization
@@ -94,7 +90,6 @@ firewalls-and-independence
 documentation-and-traceability
 chapter-summary-2
 statistical-support-for-the-protocol
-chapter-objectives-3
 role-of-statistics-in-the-protocol
 why-the-protocol-matters-statistically
 scope-of-statistical-support
@@ -125,8 +120,6 @@ common-implementation-gaps
 practical-review-checklist
 chapter-summary-3
 statistical-analysis-plan-sap-development
-core-statistical-work
-chapter-objectives-4
 role-of-the-sap-in-clinical-trials
 why-the-sap-is-a-critical-document
 relationship-between-the-protocol-and-the-sap
@@ -160,7 +153,6 @@ dmc-support
 sap-quality-and-implementation-checklist
 chapter-summary-4
 sap-review-finalization-and-governance
-chapter-objectives-5
 purpose-of-sap-review-and-finalization
 why-sap-review-is-a-high-risk-step
 what-sap-final-truly-means

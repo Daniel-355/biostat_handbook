@@ -4,7 +4,7 @@
 
 ---
 
-## Chapter Objectives
+## Chapter Objectives {-}
 
 The Statistical Analysis Plan (SAP) lifecycle does not end with drafting.  
 Review, finalization, and governance are critical steps that ensure the SAP is scientifically sound, procedurally compliant, and defensible under audit or regulatory review.
