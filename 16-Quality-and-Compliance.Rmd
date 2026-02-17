@@ -1,5 +1,5 @@
  
-# Chapter 16 Quality and Compliance
+# Quality and Compliance
 
 ## 16.1 The Invisible Backbone of Statistical Credibility
 

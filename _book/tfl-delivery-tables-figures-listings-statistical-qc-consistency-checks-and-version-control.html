@@ -4,13 +4,13 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 4 Statistical Support for the Protocol | Biostatistician’s Practical Handbook in Clinical Trials</title>
+  <title>Chapter 12 TFL Delivery — Tables, Figures, Listings, Statistical QC, Consistency Checks, and Version Control | Biostatistician’s Practical Handbook in Clinical Trials</title>
   <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
 The HTML output format for this example is bookdown::gitbook,
 set in the _output.yml file.</p>" />
   <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 4 Statistical Support for the Protocol | Biostatistician’s Practical Handbook in Clinical Trials" />
+  <meta property="og:title" content="Chapter 12 TFL Delivery — Tables, Figures, Listings, Statistical QC, Consistency Checks, and Version Control | Biostatistician’s Practical Handbook in Clinical Trials" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
@@ -19,7 +19,7 @@ set in the _output.yml file.</p>" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 4 Statistical Support for the Protocol | Biostatistician’s Practical Handbook in Clinical Trials" />
+  <meta name="twitter:title" content="Chapter 12 TFL Delivery — Tables, Figures, Listings, Statistical QC, Consistency Checks, and Version Control | Biostatistician’s Practical Handbook in Clinical Trials" />
   
   <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
 The HTML output format for this example is bookdown::gitbook,
@@ -36,8 +36,8 @@ set in the _output.yml file.</p>" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="randomization-and-stratification-design.html"/>
-<link rel="next" href="statistical-analysis-plan-sap-development.html"/>
+<link rel="prev" href="statistical-analysis-execution.html"/>
+<link rel="next" href="csr-support-statistical-writing-review-and-regulatory-interaction.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -668,326 +668,245 @@ set in the _output.yml file.</p>" />
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="statistical-support-for-the-protocol" class="section level1 hasAnchor" number="4">
-<h1><span class="header-section-number">Chapter 4</span> Statistical Support for the Protocol<a href="statistical-support-for-the-protocol.html#statistical-support-for-the-protocol" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<hr />
-<div id="chapter-objectives-3" class="section level2 unnumbered hasAnchor">
-<h2>Chapter Objectives<a href="statistical-support-for-the-protocol.html#chapter-objectives-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The clinical trial protocol is the authoritative document that defines how a study is conducted and analyzed.<br />
-This chapter focuses on the role of statistics in supporting, shaping, and safeguarding the statistical integrity of the protocol.</p>
-<p>After completing this chapter, the reader should be able to:</p>
+<div id="tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control" class="section level1 hasAnchor" number="12">
+<h1><span class="header-section-number">Chapter 12</span> TFL Delivery — Tables, Figures, Listings, Statistical QC, Consistency Checks, and Version Control<a href="tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html#tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="why-tfl-delivery-is-not-just-the-final-step" class="section level2 hasAnchor" number="12.1">
+<h2><span class="header-section-number">12.1</span> 12.1 Why TFL Delivery Is Not “Just the Final Step”<a href="tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html#why-tfl-delivery-is-not-just-the-final-step" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In real-world clinical trial operations, the delivery of Tables, Figures, and Listings (TFLs) is often treated as the “end of the analysis.” In practice, it is the point where statistical intent, SAP specifications, data realities, and regulatory expectations must converge into a defensible set of outputs.</p>
+<p>Protocol and SAP define what should be done.<br />
+ADaM and analysis datasets represent what was observed and derived.<br />
+<strong>TFLs are the evidence regulators, clinicians, and sponsors actually review.</strong></p>
+<p>The Project Biostatistician’s accountability increases at this stage because regulators do not audit your code first—they audit the outputs. A single inconsistency across table text, figure annotations, or CSR narratives can trigger deep questioning and costly rework.</p>
+</div>
+<div id="the-project-biostatisticians-role-in-the-tfl-stage" class="section level2 hasAnchor" number="12.2">
+<h2><span class="header-section-number">12.2</span> 12.2 The Project Biostatistician’s Role in the TFL Stage<a href="tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html#the-project-biostatisticians-role-in-the-tfl-stage" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>At the TFL stage, the Project Biostatistician should be viewed as the final owner of statistical validity and interpretability. Programming may be executed by statistical programmers or outsourced teams, but the biostatistician must ensure the statistical truth is preserved from SAP through final outputs.</p>
+<p>Key responsibilities include:</p>
 <ul>
-<li>Review and draft statistical sections of a protocol<br />
-</li>
-<li>Ensure internal consistency across objectives, endpoints, hypotheses, and analyses<br />
-</li>
-<li>Provide clear statistical rationale to support protocol development<br />
-</li>
-<li>Respond effectively to statistical questions from medical, clinical, and regulatory stakeholders<br />
-</li>
-<li>Ensure that protocol descriptions can be translated into SAPs and statistical programs</li>
+<li><strong>Final interpretation ownership:</strong> verifying outputs support the intended conclusions and are presented appropriately.</li>
+<li><strong>SAP compliance:</strong> confirming that each output follows the planned population, endpoint definitions, methods, and missing-data rules.</li>
+<li><strong>Cross-functional alignment:</strong> ensuring that medical, regulatory, and clinical teams understand what the TFLs show and what they do not show.</li>
+<li><strong>Audit readiness:</strong> ensuring traceability from SAP to ADaM to each TFL and narrative reference.</li>
 </ul>
-<hr />
+<p>In short, TFL delivery is where the biostatistician shifts from “analysis design” to “analysis defense.”</p>
 </div>
-<div id="role-of-statistics-in-the-protocol" class="section level2 hasAnchor" number="4.1">
-<h2><span class="header-section-number">4.1</span> 4.1 Role of Statistics in the Protocol<a href="statistical-support-for-the-protocol.html#role-of-statistics-in-the-protocol" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="why-the-protocol-matters-statistically" class="section level3 hasAnchor" number="4.1.1">
-<h3><span class="header-section-number">4.1.1</span> 4.1.1 Why the Protocol Matters Statistically<a href="statistical-support-for-the-protocol.html#why-the-protocol-matters-statistically" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>From a statistical perspective, the protocol is not merely descriptive. It is:</p>
+<div id="tables-where-statistical-definitions-become-regulatory-evidence" class="section level2 hasAnchor" number="12.3">
+<h2><span class="header-section-number">12.3</span> 12.3 Tables: Where Statistical Definitions Become Regulatory Evidence<a href="tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html#tables-where-statistical-definitions-become-regulatory-evidence" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="what-a-table-must-represent" class="section level3 hasAnchor" number="12.3.1">
+<h3><span class="header-section-number">12.3.1</span> 12.3.1 What a Table Must Represent<a href="tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html#what-a-table-must-represent" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A regulatory-grade table is not merely a summary. It is a structured manifestation of multiple statistical decisions, typically including:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Analysis population</strong> (ITT, mITT, PP, Safety, etc.)</li>
+<li><strong>Endpoint and derivation definition</strong> (baseline and post-baseline rules, visit mapping, windowing, censoring where applicable)</li>
+<li><strong>Statistical method</strong> (descriptive statistics vs. model-based estimates, covariates, stratification factors)</li>
+<li><strong>Missing-data handling</strong> (rules for inclusion, imputation strategy, estimand alignment)</li>
+</ol>
+<p>If any one of these layers is unclear or misaligned, the table becomes vulnerable to challenge.</p>
+</div>
+<div id="practical-statistical-review-checklist-for-tables" class="section level3 hasAnchor" number="12.3.2">
+<h3><span class="header-section-number">12.3.2</span> 12.3.2 Practical Statistical Review Checklist for Tables<a href="tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html#practical-statistical-review-checklist-for-tables" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Before approving any table for a sponsor review cycle or CSR integration, verify the following:</p>
 <ul>
-<li>The <strong>formal definition</strong> of what will be tested<br />
-</li>
-<li>The <strong>boundary</strong> of permissible analyses<br />
-</li>
-<li>The <strong>reference document</strong> for SAP development, programming, and regulatory review</li>
-</ul>
-<p>Analyses not supported by the protocol are vulnerable to challenge, regardless of post hoc justification.</p>
-<hr />
-</div>
-<div id="scope-of-statistical-support" class="section level3 hasAnchor" number="4.1.2">
-<h3><span class="header-section-number">4.1.2</span> 4.1.2 Scope of Statistical Support<a href="statistical-support-for-the-protocol.html#scope-of-statistical-support" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Statistical support for a protocol typically includes:</p>
+<li><strong>Population alignment</strong>
 <ul>
-<li>Definition and review of statistical hypotheses<br />
-</li>
-<li>Precise specification of endpoints<br />
-</li>
-<li>Justification of sample size<br />
-</li>
-<li>Definition of analysis populations<br />
-</li>
-<li>Description of interim analyses, if applicable</li>
-</ul>
-<p>Each component must be aligned with the study objectives and with one another.</p>
-<hr />
-</div>
-</div>
-<div id="statistical-hypotheses-in-the-protocol" class="section level2 hasAnchor" number="4.2">
-<h2><span class="header-section-number">4.2</span> 4.2 Statistical Hypotheses in the Protocol<a href="statistical-support-for-the-protocol.html#statistical-hypotheses-in-the-protocol" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="purpose-of-statistical-hypotheses" class="section level3 hasAnchor" number="4.2.1">
-<h3><span class="header-section-number">4.2.1</span> 4.2.1 Purpose of Statistical Hypotheses<a href="statistical-support-for-the-protocol.html#purpose-of-statistical-hypotheses" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Statistical hypotheses formalize study objectives and specify:</p>
+<li>Subject counts (N) match the analysis population definitions.</li>
+<li>Disposition of subjects excluded from analysis is clearly explainable.</li>
+</ul></li>
+<li><strong>Visit and window consistency</strong>
 <ul>
-<li>The primary comparison of interest<br />
-</li>
-<li>The nature and direction of inference<br />
-</li>
-<li>The basis for decision-making</li>
-</ul>
-<p>The protocol must clearly identify which hypothesis supports the primary study conclusion.</p>
-<hr />
-</div>
-<div id="key-review-and-drafting-considerations" class="section level3 hasAnchor" number="4.2.2">
-<h3><span class="header-section-number">4.2.2</span> 4.2.2 Key Review and Drafting Considerations<a href="statistical-support-for-the-protocol.html#key-review-and-drafting-considerations" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>When reviewing or drafting hypotheses, confirm that:</p>
+<li>Visit mapping follows protocol/SAP windows.</li>
+<li>Sample size shifts over visits are logical and traceable (dropout, missingness, visit schedule).</li>
+</ul></li>
+<li><strong>Denominator correctness</strong>
 <ul>
-<li>Null (H0) and alternative (H1) hypotheses are explicitly stated<br />
-</li>
-<li>The hypothesis corresponds to the primary endpoint<br />
-</li>
-<li>Directionality (one-sided or two-sided) is specified<br />
-</li>
-<li>The hypothesis is consistent with the planned analysis method</li>
-</ul>
-<p>Ambiguous hypotheses often lead to interpretational and regulatory challenges.</p>
-<hr />
-</div>
-</div>
-<div id="endpoint-definitions" class="section level2 hasAnchor" number="4.3">
-<h2><span class="header-section-number">4.3</span> 4.3 Endpoint Definitions<a href="statistical-support-for-the-protocol.html#endpoint-definitions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="importance-of-precise-endpoint-definitions" class="section level3 hasAnchor" number="4.3.1">
-<h3><span class="header-section-number">4.3.1</span> 4.3.1 Importance of Precise Endpoint Definitions<a href="statistical-support-for-the-protocol.html#importance-of-precise-endpoint-definitions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Endpoints translate clinical objectives into measurable quantities.<br />
-Statistically, endpoints must be defined with sufficient precision to allow:</p>
+<li>Percentages use the correct denominator (overall N vs. non-missing N), consistent with conventions.</li>
+</ul></li>
+<li><strong>Rounding and formatting</strong>
 <ul>
-<li>Consistent data collection<br />
-</li>
-<li>Unambiguous analysis<br />
-</li>
-<li>Reproducible results</li>
-</ul>
-<p>Vague or incomplete endpoint definitions are a frequent source of protocol deficiencies.</p>
-<hr />
-</div>
-<div id="primary-and-secondary-endpoints-1" class="section level3 hasAnchor" number="4.3.2">
-<h3><span class="header-section-number">4.3.2</span> 4.3.2 Primary and Secondary Endpoints<a href="statistical-support-for-the-protocol.html#primary-and-secondary-endpoints-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The protocol should clearly distinguish between:</p>
+<li>Rounding rules are consistent across tables (e.g., 1 decimal vs. 2 decimals).</li>
+<li>Labeling and footnotes match the SAP and reporting standards.</li>
+</ul></li>
+<li><strong>Baseline integrity</strong>
 <ul>
-<li><strong>Primary endpoints</strong>, which drive sample size, hypothesis testing, and primary conclusions<br />
-</li>
-<li><strong>Secondary endpoints</strong>, which support interpretation or exploratory objectives</li>
+<li>Baseline values are correctly defined and do not inadvertently use post-dose data.</li>
+</ul></li>
 </ul>
-<p>Each endpoint description should specify:</p>
+<p>Many high-impact issues arise not from a programming defect, but from a subtle misunderstanding of derivation rules.</p>
+</div>
+<div id="high-risk-table-types-that-require-extra-oversight" class="section level3 hasAnchor" number="12.3.3">
+<h3><span class="header-section-number">12.3.3</span> 12.3.3 High-Risk Table Types That Require Extra Oversight<a href="tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html#high-risk-table-types-that-require-extra-oversight" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Certain tables are routinely scrutinized and should receive enhanced biostatistician attention:</p>
 <ul>
-<li>What is measured<br />
-</li>
-<li>How it is measured<br />
-</li>
-<li>When it is measured</li>
+<li>Primary endpoint summary tables</li>
+<li>Key secondary endpoint analysis tables</li>
+<li>Sensitivity analysis summary tables</li>
+<li>Subgroup analysis tables (especially when claims are implied)</li>
 </ul>
-<hr />
+<p>For these tables, ensure not only correctness, but also interpretability and narrative alignment in CSR drafts.</p>
 </div>
-<div id="common-endpoint-issues-to-resolve-early" class="section level3 hasAnchor" number="4.3.3">
-<h3><span class="header-section-number">4.3.3</span> 4.3.3 Common Endpoint Issues to Resolve Early<a href="statistical-support-for-the-protocol.html#common-endpoint-issues-to-resolve-early" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="figures-interpretability-and-transparency-over-aesthetics" class="section level2 hasAnchor" number="12.4">
+<h2><span class="header-section-number">12.4</span> 12.4 Figures: Interpretability and Transparency Over Aesthetics<a href="tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html#figures-interpretability-and-transparency-over-aesthetics" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="a-figures-purpose-in-regulatory-review" class="section level3 hasAnchor" number="12.4.1">
+<h3><span class="header-section-number">12.4.1</span> 12.4.1 A Figure’s Purpose in Regulatory Review<a href="tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html#a-figures-purpose-in-regulatory-review" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Figures are powerful because they shape interpretation quickly. That is also why regulatory reviewers examine them carefully. A figure must be:</p>
 <ul>
-<li>Composite endpoints without explicit construction rules<br />
-</li>
-<li>Endpoints lacking clearly defined analysis time windows<br />
-</li>
-<li>Multiple endpoints labeled as primary without a testing strategy</li>
+<li><strong>Readable and unambiguous</strong></li>
+<li><strong>Consistent with the tables</strong></li>
+<li><strong>Transparent in assumptions</strong> (e.g., censoring, model smoothing, transformations)</li>
 </ul>
-<p>Such issues should be addressed before protocol finalization.</p>
-<hr />
+<p>A figure can be visually polished and still be unacceptable if it misleads or omits key information.</p>
 </div>
-</div>
-<div id="sample-size-description" class="section level2 hasAnchor" number="4.4">
-<h2><span class="header-section-number">4.4</span> 4.4 Sample Size Description<a href="statistical-support-for-the-protocol.html#sample-size-description" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="purpose-of-sample-size-in-the-protocol" class="section level3 hasAnchor" number="4.4.1">
-<h3><span class="header-section-number">4.4.1</span> 4.4.1 Purpose of Sample Size in the Protocol<a href="statistical-support-for-the-protocol.html#purpose-of-sample-size-in-the-protocol" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The protocol must explain <strong>why the planned sample size is appropriate</strong>, not merely state a numerical target.</p>
-<p>The description should include:</p>
+<div id="key-checks-for-survival-and-longitudinal-figures" class="section level3 hasAnchor" number="12.4.2">
+<h3><span class="header-section-number">12.4.2</span> 12.4.2 Key Checks for Survival and Longitudinal Figures<a href="tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html#key-checks-for-survival-and-longitudinal-figures" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>For Kaplan–Meier plots, hazard ratio forest plots, or longitudinal mean profiles, confirm:</p>
 <ul>
-<li>The primary endpoint used for the calculation<br />
-</li>
-<li>Key statistical assumptions<br />
-</li>
-<li>Target power and significance level</li>
-</ul>
-<hr />
-</div>
-<div id="appropriate-level-of-detail" class="section level3 hasAnchor" number="4.4.2">
-<h3><span class="header-section-number">4.4.2</span> 4.4.2 Appropriate Level of Detail<a href="statistical-support-for-the-protocol.html#appropriate-level-of-detail" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The protocol should:</p>
+<li><strong>Time origin correctness</strong>
 <ul>
-<li>Clearly state assumptions and rationale<br />
-</li>
-<li>Avoid excessive technical detail<br />
-</li>
-<li>Remain consistent with the SAP and any supporting sample size documentation</li>
-</ul>
-<p>Detailed derivations are typically reserved for the SAP or a separate memo.</p>
-<hr />
-</div>
-</div>
-<div id="analysis-populations" class="section level2 hasAnchor" number="4.5">
-<h2><span class="header-section-number">4.5</span> 4.5 Analysis Populations<a href="statistical-support-for-the-protocol.html#analysis-populations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="purpose-of-defining-analysis-sets" class="section level3 hasAnchor" number="4.5.1">
-<h3><span class="header-section-number">4.5.1</span> 4.5.1 Purpose of Defining Analysis Sets<a href="statistical-support-for-the-protocol.html#purpose-of-defining-analysis-sets" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Analysis populations define which subjects contribute to each analysis.<br />
-Clear definitions prevent ambiguity and post hoc decision-making.</p>
-<p>Commonly defined populations include:</p>
+<li>The start time aligns with SAP (randomization, first dose, etc.).</li>
+</ul></li>
+<li><strong>Censoring rules</strong>
 <ul>
-<li><strong>Intent-to-Treat (ITT)</strong><br />
-</li>
-<li><strong>Per-Protocol (PP)</strong><br />
-</li>
-<li><strong>Safety Population</strong></li>
-</ul>
-<hr />
-</div>
-<div id="key-considerations-for-common-populations" class="section level3 hasAnchor" number="4.5.2">
-<h3><span class="header-section-number">4.5.2</span> 4.5.2 Key Considerations for Common Populations<a href="statistical-support-for-the-protocol.html#key-considerations-for-common-populations" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<li>Censoring definitions match SAP and are applied consistently.</li>
+</ul></li>
+<li><strong>Number at risk</strong>
 <ul>
-<li><strong>ITT</strong>: Preserves randomization and reflects treatment assignment<br />
-</li>
-<li><strong>PP</strong>: Evaluates treatment effect under ideal adherence; requires objective exclusion criteria<br />
-</li>
-<li><strong>Safety</strong>: Typically based on treatment received</li>
-</ul>
-<p>Definitions must be objective, reproducible, and operational.</p>
-<hr />
-</div>
-<div id="alignment-with-study-objectives" class="section level3 hasAnchor" number="4.5.3">
-<h3><span class="header-section-number">4.5.3</span> 4.5.3 Alignment With Study Objectives<a href="statistical-support-for-the-protocol.html#alignment-with-study-objectives" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The protocol should clearly specify:</p>
+<li>Risk sets are correct and displayed where required.</li>
+</ul></li>
+<li><strong>Consistency with tabular outputs</strong>
 <ul>
-<li>The primary population for efficacy analyses<br />
-</li>
-<li>Any supportive or sensitivity populations</li>
+<li>Median survival, event counts, HRs, and p-values agree with the corresponding tables.</li>
+</ul></li>
 </ul>
-<p>Misalignment between objectives and analysis populations can weaken interpretability.</p>
-<hr />
+<p>Any table–figure disagreement is a red-flag issue and must be resolved before distribution.</p>
 </div>
 </div>
-<div id="interim-analyses-if-applicable" class="section level2 hasAnchor" number="4.6">
-<h2><span class="header-section-number">4.6</span> 4.6 Interim Analyses (If Applicable)<a href="statistical-support-for-the-protocol.html#interim-analyses-if-applicable" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="purpose-of-interim-analyses" class="section level3 hasAnchor" number="4.6.1">
-<h3><span class="header-section-number">4.6.1</span> 4.6.1 Purpose of Interim Analyses<a href="statistical-support-for-the-protocol.html#purpose-of-interim-analyses" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Interim analyses may be conducted for:</p>
+<div id="listings-not-an-appendix-but-a-gateway-for-questions" class="section level2 hasAnchor" number="12.5">
+<h2><span class="header-section-number">12.5</span> 12.5 Listings: Not an Appendix, but a Gateway for Questions<a href="tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html#listings-not-an-appendix-but-a-gateway-for-questions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="how-listings-are-used" class="section level3 hasAnchor" number="12.5.1">
+<h3><span class="header-section-number">12.5.1</span> 12.5.1 How Listings Are Used<a href="tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html#how-listings-are-used" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Listings are often treated as “supporting material,” but in real reviews they function as an investigative entry point. Listings are used to:</p>
 <ul>
-<li>Safety monitoring<br />
-</li>
-<li>Futility assessment<br />
-</li>
-<li>Early evidence of efficacy</li>
+<li>Validate endpoint derivations and visit alignment</li>
+<li>Investigate outliers and anomalies</li>
+<li>Confirm protocol deviation handling</li>
+<li>Review deaths, SAEs, and key safety narratives</li>
 </ul>
-<p>If planned, interim analyses must be described prospectively in the protocol.</p>
-<hr />
+<p>If a reviewer suspects inconsistency, they may go straight to listings to find a case example.</p>
 </div>
-<div id="required-protocol-elements" class="section level3 hasAnchor" number="4.6.2">
-<h3><span class="header-section-number">4.6.2</span> 4.6.2 Required Protocol Elements<a href="statistical-support-for-the-protocol.html#required-protocol-elements" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The protocol should specify:</p>
+<div id="listings-that-are-most-likely-to-be-challenged" class="section level3 hasAnchor" number="12.5.2">
+<h3><span class="header-section-number">12.5.2</span> 12.5.2 Listings That Are Most Likely to Be Challenged<a href="tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html#listings-that-are-most-likely-to-be-challenged" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Listings requiring enhanced attention include:</p>
 <ul>
-<li>Timing or triggering criteria for interim analyses<br />
-</li>
-<li>Purpose of each interim analysis<br />
-</li>
-<li>Impact on Type I error control<br />
-</li>
-<li>Decision-making authority</li>
+<li>Protocol deviation listings (especially major deviations affecting eligibility or endpoints)</li>
+<li>Outlier listings and data queries</li>
+<li>Death and SAE listings</li>
+<li>Endpoint-derivation listings (e.g., components of composite endpoints)</li>
 </ul>
-<p>Statements such as “an interim analysis may be conducted” are insufficient.</p>
-<hr />
-</div>
-<div id="relationship-to-the-sap" class="section level3 hasAnchor" number="4.6.3">
-<h3><span class="header-section-number">4.6.3</span> 4.6.3 Relationship to the SAP<a href="statistical-support-for-the-protocol.html#relationship-to-the-sap" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The protocol establishes the framework for interim analyses, while the SAP provides operational detail.<br />
-Consistency between the two documents is essential.</p>
-<hr />
+<p>A useful mindset is:</p>
+<blockquote>
+<p>If you were the reviewer, which line would you question first?</p>
+</blockquote>
 </div>
 </div>
-<div id="responding-to-statistical-questions-from-stakeholders" class="section level2 hasAnchor" number="4.7">
-<h2><span class="header-section-number">4.7</span> 4.7 Responding to Statistical Questions From Stakeholders<a href="statistical-support-for-the-protocol.html#responding-to-statistical-questions-from-stakeholders" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="common-sources-of-statistical-questions" class="section level3 hasAnchor" number="4.7.1">
-<h3><span class="header-section-number">4.7.1</span> 4.7.1 Common Sources of Statistical Questions<a href="statistical-support-for-the-protocol.html#common-sources-of-statistical-questions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Statistical questions may arise from:</p>
+<div id="statistical-quality-control-qc-a-second-independent-brain" class="section level2 hasAnchor" number="12.6">
+<h2><span class="header-section-number">12.6</span> 12.6 Statistical Quality Control (QC): A Second Independent Brain<a href="tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html#statistical-quality-control-qc-a-second-independent-brain" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="what-effective-statistical-qc-means" class="section level3 hasAnchor" number="12.6.1">
+<h3><span class="header-section-number">12.6.1</span> 12.6.1 What Effective Statistical QC Means<a href="tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html#what-effective-statistical-qc-means" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Effective QC is not simply “re-running the program.” Instead, it is an independent logic-based verification of the analysis chain, including:</p>
 <ul>
-<li>Medical teams (clinical relevance, endpoint selection)<br />
-</li>
-<li>Clinical operations (feasibility, population definitions)<br />
-</li>
-<li>Regulatory reviewers (assumptions, control of error rates)</li>
+<li>SAP → ADaM → TFL traceability checks</li>
+<li>Independent recalculation of key numbers (spot checks)</li>
+<li>Verification of derivation logic (baseline, censoring, windowing)</li>
+<li>Confirmation that model specifications match SAP (covariates, strata, estimand)</li>
 </ul>
-<hr />
+<p>QC should aim to detect conceptual errors, not just computational ones.</p>
 </div>
-<div id="principles-for-effective-responses" class="section level3 hasAnchor" number="4.7.2">
-<h3><span class="header-section-number">4.7.2</span> 4.7.2 Principles for Effective Responses<a href="statistical-support-for-the-protocol.html#principles-for-effective-responses" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Effective statistical responses should be:</p>
+<div id="core-qc-principles" class="section level3 hasAnchor" number="12.6.2">
+<h3><span class="header-section-number">12.6.2</span> 12.6.2 Core QC Principles<a href="tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html#core-qc-principles" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A robust QC practice should follow these principles:</p>
 <ul>
-<li>Scientifically grounded<br />
-</li>
-<li>Consistent with the protocol<br />
-</li>
-<li>Transparent about assumptions<br />
-</li>
-<li>Clearly linked to study objectives</li>
+<li><strong>Independence:</strong> QC reviewers should not be the original author of the analysis.</li>
+<li><strong>SAP-driven evaluation:</strong> the benchmark is the SAP and study conventions, not the existing code.</li>
+<li><strong>Documented resolution:</strong> findings, decisions, and fixes must be recorded for audit readiness.</li>
 </ul>
-<p>Uncertainty should be acknowledged and appropriately bounded.</p>
-<hr />
+<p>QC protects study integrity; it is not intended to assign blame.</p>
 </div>
 </div>
-<div id="ensuring-protocol-descriptions-are-implementable" class="section level2 hasAnchor" number="4.8">
-<h2><span class="header-section-number">4.8</span> 4.8 Ensuring Protocol Descriptions Are Implementable<a href="statistical-support-for-the-protocol.html#ensuring-protocol-descriptions-are-implementable" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="protocol-to-sap-translation" class="section level3 hasAnchor" number="4.8.1">
-<h3><span class="header-section-number">4.8.1</span> 4.8.1 Protocol to SAP Translation<a href="statistical-support-for-the-protocol.html#protocol-to-sap-translation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Every statistical statement in the protocol should be:</p>
+<div id="cross-output-consistency-verification" class="section level2 hasAnchor" number="12.7">
+<h2><span class="header-section-number">12.7</span> 12.7 Cross-Output Consistency Verification<a href="tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html#cross-output-consistency-verification" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="the-three-consistency-lines-you-must-verify" class="section level3 hasAnchor" number="12.7.1">
+<h3><span class="header-section-number">12.7.1</span> 12.7.1 The Three Consistency Lines You Must Verify<a href="tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html#the-three-consistency-lines-you-must-verify" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Consistency verification should be systematic along three lines:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Across TFLs</strong>
 <ul>
-<li>Interpretable in analytic terms<br />
-</li>
-<li>Expandable into SAP-level detail<br />
-</li>
-<li>Implementable in statistical programming</li>
-</ul>
-<p>If a protocol description cannot be translated into code, it is insufficiently specified.</p>
-<hr />
-</div>
-<div id="common-implementation-gaps" class="section level3 hasAnchor" number="4.8.2">
-<h3><span class="header-section-number">4.8.2</span> 4.8.2 Common Implementation Gaps<a href="statistical-support-for-the-protocol.html#common-implementation-gaps" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<li>Same N, effect estimates, p-values, directions across relevant tables and figures.</li>
+</ul></li>
+<li><strong>Between TFLs and CSR text</strong>
 <ul>
-<li>Endpoints defined without analysis rules<br />
-</li>
-<li>Analysis populations lacking operational criteria<br />
-</li>
-<li>Hypotheses stated without corresponding tests</li>
+<li>Numbers in CSR narratives exactly match the referenced tables/figures.</li>
+<li>Statistical method descriptions match the implemented method.</li>
+</ul></li>
+<li><strong>Against SAP specifications</strong>
+<ul>
+<li>Population, endpoint, method, and missing-data rules match the plan.</li>
+</ul></li>
+</ol>
+<p>Consistency is not “nice to have.” It is central to submission defensibility.</p>
+</div>
+<div id="common-high-risk-inconsistencies" class="section level3 hasAnchor" number="12.7.2">
+<h3><span class="header-section-number">12.7.2</span> 12.7.2 Common High-Risk Inconsistencies<a href="tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html#common-high-risk-inconsistencies" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Examples of issues that frequently trigger major rework include:</p>
+<ul>
+<li>P-values in text not matching table values</li>
+<li>Figures using a different method than tables (e.g., log-rank vs. Cox)</li>
+<li>Sensitivity analyses showing different directions without explanation</li>
+<li>Subgroup results presented as claims without proper multiplicity context</li>
 </ul>
-<p>Identifying and resolving these gaps early reduces downstream rework.</p>
-<hr />
+<p>These issues do not always lead to rejection, but they reliably increase regulatory scrutiny.</p>
 </div>
 </div>
-<div id="practical-review-checklist" class="section level2 hasAnchor" number="4.9">
-<h2><span class="header-section-number">4.9</span> 4.9 Practical Review Checklist<a href="statistical-support-for-the-protocol.html#practical-review-checklist" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Before protocol finalization, confirm that:</p>
-<ul class="task-list">
-<li><label><input type="checkbox" />Statistical hypotheses are explicit and aligned with objectives<br />
-</label></li>
-<li><label><input type="checkbox" />Endpoints are clearly defined and measurable<br />
-</label></li>
-<li><label><input type="checkbox" />Sample size assumptions are stated and justified<br />
-</label></li>
-<li><label><input type="checkbox" />Analysis populations are clearly defined<br />
-</label></li>
-<li><label><input type="checkbox" />Interim analyses are prospectively described, if applicable<br />
-</label></li>
-<li><label><input type="checkbox" />All statistical descriptions can be implemented in the SAP and programs</label></li>
+<div id="version-control-the-lifeline-in-late-stage-deliverables" class="section level2 hasAnchor" number="12.8">
+<h2><span class="header-section-number">12.8</span> 12.8 Version Control: The Lifeline in Late-Stage Deliverables<a href="tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html#version-control-the-lifeline-in-late-stage-deliverables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="why-version-control-is-critical" class="section level3 hasAnchor" number="12.8.1">
+<h3><span class="header-section-number">12.8.1</span> 12.8.1 Why Version Control Is Critical<a href="tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html#why-version-control-is-critical" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>After database lock, TFL packages typically evolve through multiple cycles:</p>
+<ul>
+<li>Sponsor review comments</li>
+<li>Medical review revisions</li>
+<li>CSR authoring alignment</li>
+<li>Potential re-runs due to data reconciliation or late clarifications</li>
 </ul>
-<hr />
+<p>Without disciplined version control, teams lose the ability to prove which output was final and why it changed.</p>
 </div>
-<div id="chapter-summary-3" class="section level2 hasAnchor" number="4.10">
-<h2><span class="header-section-number">4.10</span> Chapter Summary<a href="statistical-support-for-the-protocol.html#chapter-summary-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Statistical support of the protocol ensures that a study is not only scientifically motivated but also analytically executable.</p>
-<p>Clear, consistent, and operational statistical descriptions form the foundation for credible analyses, regulatory confidence, and interpretable results.</p>
-<p>Early and thorough statistical involvement in protocol development is essential to the success of clinical research.</p>
-<hr />
+<div id="minimum-practical-version-control-standards" class="section level3 hasAnchor" number="12.8.2">
+<h3><span class="header-section-number">12.8.2</span> 12.8.2 Minimum Practical Version Control Standards<a href="tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html#minimum-practical-version-control-standards" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>At minimum, implement:</p>
+<ul>
+<li><strong>Clear file naming conventions</strong>
+<ul>
+<li>Include study ID, output type, version, and date.</li>
+</ul></li>
+<li><strong>Change logs</strong>
+<ul>
+<li>For each release package, document what changed, why it changed, and who approved.</li>
+</ul></li>
+<li><strong>Final locking</strong>
+<ul>
+<li>Mark and archive final/locked outputs (e.g., <code>Final</code>, <code>Locked</code>, <code>For Submission</code>).</li>
+</ul></li>
+</ul>
+<p>Regulators do not penalize change. They penalize lack of traceability.</p>
+</div>
+</div>
+<div id="key-takeaways" class="section level2 hasAnchor" number="12.9">
+<h2><span class="header-section-number">12.9</span> 12.9 Key Takeaways<a href="tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control.html#key-takeaways" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li><strong>TFLs are the definitive statistical deliverables</strong>, not programming by-products.</li>
+<li><strong>Consistency and traceability matter more than aesthetics.</strong></li>
+<li>At the TFL stage, the biostatistician’s job is no longer to “run analyses,” but to <strong>defend conclusions</strong> with evidence that withstands regulatory scrutiny.</li>
+</ol>
 
 </div>
 </div>
@@ -996,8 +915,8 @@ Consistency between the two documents is essential.</p>
           </div>
         </div>
       </div>
-<a href="randomization-and-stratification-design.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="statistical-analysis-plan-sap-development.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="statistical-analysis-execution.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="csr-support-statistical-writing-review-and-regulatory-interaction.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -1028,7 +947,7 @@ gitbook.start({
     "size": 2
   },
   "edit": {
-    "link": "https://github.com/USERNAME/REPO/edit/BRANCH/04-protocol.Rmd",
+    "link": "https://github.com/USERNAME/REPO/edit/BRANCH/12-TFL-Delivery.Rmd",
     "text": "Edit"
   },
   "history": {

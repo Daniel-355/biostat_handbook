@@ -244,7 +244,7 @@ meaning-of-statistical-sign-off
 scope-of-statistical-accountability
 common-pitfalls-in-the-pre-lock-phase
 chapter-summary-database-lock-as-a-line-of-no-return
-chapter-11-statistical-analysis-execution
+statistical-analysis-execution
 the-nature-of-statistical-execution
 generation-of-primary-analysis-results
 primary-analysis-as-the-anchor
@@ -263,7 +263,7 @@ complementary-roles
 effective-statistical-communication
 common-risks-during-analysis-execution
 chapter-summary-execution-as-professional-judgment
-chapter-12-tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control
+tfl-delivery-tables-figures-listings-statistical-qc-consistency-checks-and-version-control
 why-tfl-delivery-is-not-just-the-final-step
 the-project-biostatisticians-role-in-the-tfl-stage
 tables-where-statistical-definitions-become-regulatory-evidence
@@ -286,7 +286,7 @@ version-control-the-lifeline-in-late-stage-deliverables
 why-version-control-is-critical
 minimum-practical-version-control-standards
 key-takeaways
-chapter-13-csr-support-statistical-writing-review-and-regulatory-interaction
+csr-support-statistical-writing-review-and-regulatory-interaction
 csr-support-as-a-critical-transition-point
 the-role-of-statistics-within-the-csr
 statistics-is-not-an-appendix
@@ -309,7 +309,7 @@ the-biostatisticians-role-in-regulatory-interactions
 common-types-of-regulatory-statistical-questions
 practical-guidance-for-regulatory-responses
 key-takeaways-for-project-biostatisticians
-chapter-14-public-registration-and-publication-support
+public-registration-and-publication-support
 why-this-stage-matters-from-compliance-to-public-scrutiny
 statistical-support-for-clinicaltrials.gov-results-reporting
 how-clinicaltrials.gov-reporting-differs-from-csr
@@ -327,7 +327,7 @@ decision-boundaries-for-additional-analyses
 when-additional-analyses-are-appropriate
 when-additional-analyses-should-be-avoided
 key-takeaways-for-project-biostatisticians-1
-chapter-15-project-communication
+project-communication
 communication-as-a-core-biostatistics-competency
 participation-in-project-team-meetings
 objectives-in-regular-project-meetings
@@ -347,7 +347,7 @@ balanced-risk-communication
 avoiding-common-sponsor-communication-mistakes
 building-trust-the-statistician-as-a-project-advisor
 key-takeaways-1
-chapter-16-quality-and-compliance
+quality-and-compliance
 the-invisible-backbone-of-statistical-credibility
 why-quality-and-compliance-matter-for-statistics
 statistics-is-a-regulated-discipline

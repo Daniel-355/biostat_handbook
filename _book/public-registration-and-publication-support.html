@@ -4,13 +4,13 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 4 Statistical Support for the Protocol | Biostatistician’s Practical Handbook in Clinical Trials</title>
+  <title>Chapter 14 Public Registration and Publication Support | Biostatistician’s Practical Handbook in Clinical Trials</title>
   <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
 The HTML output format for this example is bookdown::gitbook,
 set in the _output.yml file.</p>" />
   <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 4 Statistical Support for the Protocol | Biostatistician’s Practical Handbook in Clinical Trials" />
+  <meta property="og:title" content="Chapter 14 Public Registration and Publication Support | Biostatistician’s Practical Handbook in Clinical Trials" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
@@ -19,7 +19,7 @@ set in the _output.yml file.</p>" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 4 Statistical Support for the Protocol | Biostatistician’s Practical Handbook in Clinical Trials" />
+  <meta name="twitter:title" content="Chapter 14 Public Registration and Publication Support | Biostatistician’s Practical Handbook in Clinical Trials" />
   
   <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
 The HTML output format for this example is bookdown::gitbook,
@@ -36,8 +36,8 @@ set in the _output.yml file.</p>" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="randomization-and-stratification-design.html"/>
-<link rel="next" href="statistical-analysis-plan-sap-development.html"/>
+<link rel="prev" href="csr-support-statistical-writing-review-and-regulatory-interaction.html"/>
+<link rel="next" href="project-communication.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -668,326 +668,159 @@ set in the _output.yml file.</p>" />
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="statistical-support-for-the-protocol" class="section level1 hasAnchor" number="4">
-<h1><span class="header-section-number">Chapter 4</span> Statistical Support for the Protocol<a href="statistical-support-for-the-protocol.html#statistical-support-for-the-protocol" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="public-registration-and-publication-support" class="section level1 hasAnchor" number="14">
+<h1><span class="header-section-number">Chapter 14</span> Public Registration and Publication Support<a href="public-registration-and-publication-support.html#public-registration-and-publication-support" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="why-this-stage-matters-from-compliance-to-public-scrutiny" class="section level2 hasAnchor" number="14.1">
+<h2><span class="header-section-number">14.1</span> 14.1 Why This Stage Matters: From Compliance to Public Scrutiny<a href="public-registration-and-publication-support.html#why-this-stage-matters-from-compliance-to-public-scrutiny" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The statistical work of a clinical trial does not end at CSR delivery. Public disclosure and scientific publication represent the point at which trial results become visible to the outside world—clinicians, researchers, competitors, patients, and the broader scientific community.</p>
+<p>At this stage, the audience shifts from sponsor-facing stakeholders to public-facing scrutiny. Statistical reporting must therefore be:
+- Transparent
+- Reproducible
+- Defensible to external reviewers who were not part of the study</p>
+<p>This is often the phase where statistical rigor is tested under the most “neutral” conditions: independent readers will challenge unclear assumptions, inconsistencies, or selective interpretation.</p>
 <hr />
-<div id="chapter-objectives-3" class="section level2 unnumbered hasAnchor">
-<h2>Chapter Objectives<a href="statistical-support-for-the-protocol.html#chapter-objectives-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The clinical trial protocol is the authoritative document that defines how a study is conducted and analyzed.<br />
-This chapter focuses on the role of statistics in supporting, shaping, and safeguarding the statistical integrity of the protocol.</p>
-<p>After completing this chapter, the reader should be able to:</p>
+</div>
+<div id="statistical-support-for-clinicaltrials.gov-results-reporting" class="section level2 hasAnchor" number="14.2">
+<h2><span class="header-section-number">14.2</span> 14.2 Statistical Support for ClinicalTrials.gov Results Reporting<a href="public-registration-and-publication-support.html#statistical-support-for-clinicaltrials.gov-results-reporting" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="how-clinicaltrials.gov-reporting-differs-from-csr" class="section level3 hasAnchor" number="14.2.1">
+<h3><span class="header-section-number">14.2.1</span> 14.2.1 How ClinicalTrials.gov Reporting Differs From CSR<a href="public-registration-and-publication-support.html#how-clinicaltrials.gov-reporting-differs-from-csr" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Compared with CSR, results reporting on ClinicalTrials.gov is:
+- Highly structured (fixed fields and formats)
+- Focused on factual disclosure rather than narrative interpretation
+- Publicly accessible and permanently visible
+- Less tolerant of ambiguous language or selective framing</p>
+<p>A key practical implication is that ClinicalTrials.gov reporting must be aligned with the underlying statistical sources (SAP/TFL/CSR), while being expressed within strict formatting and content constraints.</p>
+<hr />
+</div>
+<div id="core-statistical-responsibilities" class="section level3 hasAnchor" number="14.2.2">
+<h3><span class="header-section-number">14.2.2</span> 14.2.2 Core Statistical Responsibilities<a href="public-registration-and-publication-support.html#core-statistical-responsibilities" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The Project Biostatistician typically supports or reviews:</p>
 <ul>
-<li>Review and draft statistical sections of a protocol<br />
-</li>
-<li>Ensure internal consistency across objectives, endpoints, hypotheses, and analyses<br />
-</li>
-<li>Provide clear statistical rationale to support protocol development<br />
-</li>
-<li>Respond effectively to statistical questions from medical, clinical, and regulatory stakeholders<br />
-</li>
-<li>Ensure that protocol descriptions can be translated into SAPs and statistical programs</li>
+<li>Participant flow and analysis population counts</li>
+<li>Baseline characteristics summaries</li>
+<li>Primary and secondary outcome measure results</li>
+<li>Adverse event summaries (often by SOC/PT and severity/relationship conventions)</li>
 </ul>
+<p>The statistical priority is ensuring that:
+- Counts (N) match the defined analysis populations and TFLs
+- Endpoint definitions match the SAP and CSR text
+- Methods are described accurately but succinctly
+- Disclosed results do not include “new” metrics not supported elsewhere</p>
 <hr />
 </div>
-<div id="role-of-statistics-in-the-protocol" class="section level2 hasAnchor" number="4.1">
-<h2><span class="header-section-number">4.1</span> 4.1 Role of Statistics in the Protocol<a href="statistical-support-for-the-protocol.html#role-of-statistics-in-the-protocol" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="why-the-protocol-matters-statistically" class="section level3 hasAnchor" number="4.1.1">
-<h3><span class="header-section-number">4.1.1</span> 4.1.1 Why the Protocol Matters Statistically<a href="statistical-support-for-the-protocol.html#why-the-protocol-matters-statistically" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>From a statistical perspective, the protocol is not merely descriptive. It is:</p>
+<div id="common-high-risk-issues-practical-pitfalls" class="section level3 hasAnchor" number="14.2.3">
+<h3><span class="header-section-number">14.2.3</span> 14.2.3 Common High-Risk Issues (Practical Pitfalls)<a href="public-registration-and-publication-support.html#common-high-risk-issues-practical-pitfalls" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Frequent issues that trigger questions or rework include:
+- Subject counts on ClinicalTrials.gov not matching CSR/TFL counts
+- Ambiguous wording about analysis populations (e.g., ITT vs. mITT vs. Safety)
+- Reporting additional statistics that were not in the CSR or not pre-specified
+- Including interpretive conclusions in result fields intended for factual reporting</p>
+<p>A useful mindset is: ClinicalTrials.gov is not a marketing channel—it is a compliance and transparency mechanism.</p>
+<hr />
+</div>
+</div>
+<div id="statistical-methods-support-for-medical-publications" class="section level2 hasAnchor" number="14.3">
+<h2><span class="header-section-number">14.3</span> 14.3 Statistical Methods Support for Medical Publications<a href="public-registration-and-publication-support.html#statistical-methods-support-for-medical-publications" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="how-journal-reporting-differs-from-csr" class="section level3 hasAnchor" number="14.3.1">
+<h3><span class="header-section-number">14.3.1</span> 14.3.1 How Journal Reporting Differs From CSR<a href="public-registration-and-publication-support.html#how-journal-reporting-differs-from-csr" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Journal articles require statistical methods to be:
+- Concise and focused on the message of the paper
+- Understandable to a broad clinical readership
+- Sufficiently precise for statistical reproducibility</p>
+<p>While CSR aims for completeness, journal manuscripts aim for clarity and focus. However, concision must not come at the cost of accuracy.</p>
+<hr />
+</div>
+<div id="what-the-biostatistician-must-ensure" class="section level3 hasAnchor" number="14.3.2">
+<h3><span class="header-section-number">14.3.2</span> 14.3.2 What the Biostatistician Must Ensure<a href="public-registration-and-publication-support.html#what-the-biostatistician-must-ensure" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The biostatistician should ensure the manuscript clearly describes:</p>
 <ul>
-<li>The <strong>formal definition</strong> of what will be tested<br />
-</li>
-<li>The <strong>boundary</strong> of permissible analyses<br />
-</li>
-<li>The <strong>reference document</strong> for SAP development, programming, and regulatory review</li>
+<li>Study objectives and endpoints (primary vs. secondary)</li>
+<li>Analysis populations and inclusion/exclusion rules for analysis</li>
+<li>Statistical models (including covariates and stratification factors)</li>
+<li>Handling of multiplicity (if confirmatory claims are made)</li>
+<li>Missing data strategies and estimand alignment where relevant</li>
+<li>Sensitivity analyses and subgroup analyses, with appropriate interpretation boundaries</li>
 </ul>
-<p>Analyses not supported by the protocol are vulnerable to challenge, regardless of post hoc justification.</p>
+<p>A simple quality bar is: another qualified statistician should be able to reproduce the analysis from the manuscript plus supplementary material.</p>
 <hr />
 </div>
-<div id="scope-of-statistical-support" class="section level3 hasAnchor" number="4.1.2">
-<h3><span class="header-section-number">4.1.2</span> 4.1.2 Scope of Statistical Support<a href="statistical-support-for-the-protocol.html#scope-of-statistical-support" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Statistical support for a protocol typically includes:</p>
-<ul>
-<li>Definition and review of statistical hypotheses<br />
-</li>
-<li>Precise specification of endpoints<br />
-</li>
-<li>Justification of sample size<br />
-</li>
-<li>Definition of analysis populations<br />
-</li>
-<li>Description of interim analyses, if applicable</li>
-</ul>
-<p>Each component must be aligned with the study objectives and with one another.</p>
+<div id="common-statistical-writing-problems-in-manuscripts" class="section level3 hasAnchor" number="14.3.3">
+<h3><span class="header-section-number">14.3.3</span> 14.3.3 Common Statistical Writing Problems in Manuscripts<a href="public-registration-and-publication-support.html#common-statistical-writing-problems-in-manuscripts" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Issues that frequently lead to reviewer concerns include:
+- Vague statements such as “standard methods were used”
+- Missing descriptions of multiplicity control while making multiple claims
+- Overstating subgroup findings without proper interaction testing and context
+- Presenting exploratory results as confirmatory evidence
+- Insufficient explanation of missing data impact on conclusions</p>
+<p>These problems are preventable through early statistical review and alignment with the SAP/CSR.</p>
 <hr />
 </div>
 </div>
-<div id="statistical-hypotheses-in-the-protocol" class="section level2 hasAnchor" number="4.2">
-<h2><span class="header-section-number">4.2</span> 4.2 Statistical Hypotheses in the Protocol<a href="statistical-support-for-the-protocol.html#statistical-hypotheses-in-the-protocol" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="purpose-of-statistical-hypotheses" class="section level3 hasAnchor" number="4.2.1">
-<h3><span class="header-section-number">4.2.1</span> 4.2.1 Purpose of Statistical Hypotheses<a href="statistical-support-for-the-protocol.html#purpose-of-statistical-hypotheses" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Statistical hypotheses formalize study objectives and specify:</p>
-<ul>
-<li>The primary comparison of interest<br />
-</li>
-<li>The nature and direction of inference<br />
-</li>
-<li>The basis for decision-making</li>
-</ul>
-<p>The protocol must clearly identify which hypothesis supports the primary study conclusion.</p>
+<div id="responding-to-reviewer-statistical-comments" class="section level2 hasAnchor" number="14.4">
+<h2><span class="header-section-number">14.4</span> 14.4 Responding to Reviewer Statistical Comments<a href="public-registration-and-publication-support.html#responding-to-reviewer-statistical-comments" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="common-types-of-reviewer-questions" class="section level3 hasAnchor" number="14.4.1">
+<h3><span class="header-section-number">14.4.1</span> 14.4.1 Common Types of Reviewer Questions<a href="public-registration-and-publication-support.html#common-types-of-reviewer-questions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Statistical reviewer comments commonly focus on:
+- Robustness of the primary endpoint conclusion
+- Justification of model choice and assumptions
+- Impact of missing data and dropout
+- Interpretation of subgroup findings
+- Adequacy of sample size and power relative to observed effects
+- Transparency of multiplicity control and confirmatory claim boundaries</p>
+<p>These questions often target the most sensitive areas of interpretation rather than pure computation.</p>
 <hr />
 </div>
-<div id="key-review-and-drafting-considerations" class="section level3 hasAnchor" number="4.2.2">
-<h3><span class="header-section-number">4.2.2</span> 4.2.2 Key Review and Drafting Considerations<a href="statistical-support-for-the-protocol.html#key-review-and-drafting-considerations" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>When reviewing or drafting hypotheses, confirm that:</p>
-<ul>
-<li>Null (H0) and alternative (H1) hypotheses are explicitly stated<br />
-</li>
-<li>The hypothesis corresponds to the primary endpoint<br />
-</li>
-<li>Directionality (one-sided or two-sided) is specified<br />
-</li>
-<li>The hypothesis is consistent with the planned analysis method</li>
-</ul>
-<p>Ambiguous hypotheses often lead to interpretational and regulatory challenges.</p>
+<div id="the-biostatisticians-role-in-the-response-process" class="section level3 hasAnchor" number="14.4.2">
+<h3><span class="header-section-number">14.4.2</span> 14.4.2 The Biostatistician’s Role in the Response Process<a href="public-registration-and-publication-support.html#the-biostatisticians-role-in-the-response-process" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The biostatistician is typically:
+- The primary drafter of statistical responses
+- The main technical decision-maker on whether additional analyses are appropriate
+- Responsible for ensuring consistency between responses, manuscript text, and underlying trial documents (SAP/TFL/CSR)</p>
+<p>Reviewer responses are public-facing scientific arguments. They must remain fact-based, traceable, and consistent with the submitted content.</p>
 <hr />
 </div>
-</div>
-<div id="endpoint-definitions" class="section level2 hasAnchor" number="4.3">
-<h2><span class="header-section-number">4.3</span> 4.3 Endpoint Definitions<a href="statistical-support-for-the-protocol.html#endpoint-definitions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="importance-of-precise-endpoint-definitions" class="section level3 hasAnchor" number="4.3.1">
-<h3><span class="header-section-number">4.3.1</span> 4.3.1 Importance of Precise Endpoint Definitions<a href="statistical-support-for-the-protocol.html#importance-of-precise-endpoint-definitions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Endpoints translate clinical objectives into measurable quantities.<br />
-Statistically, endpoints must be defined with sufficient precision to allow:</p>
-<ul>
-<li>Consistent data collection<br />
-</li>
-<li>Unambiguous analysis<br />
-</li>
-<li>Reproducible results</li>
-</ul>
-<p>Vague or incomplete endpoint definitions are a frequent source of protocol deficiencies.</p>
-<hr />
-</div>
-<div id="primary-and-secondary-endpoints-1" class="section level3 hasAnchor" number="4.3.2">
-<h3><span class="header-section-number">4.3.2</span> 4.3.2 Primary and Secondary Endpoints<a href="statistical-support-for-the-protocol.html#primary-and-secondary-endpoints-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The protocol should clearly distinguish between:</p>
-<ul>
-<li><strong>Primary endpoints</strong>, which drive sample size, hypothesis testing, and primary conclusions<br />
-</li>
-<li><strong>Secondary endpoints</strong>, which support interpretation or exploratory objectives</li>
-</ul>
-<p>Each endpoint description should specify:</p>
-<ul>
-<li>What is measured<br />
-</li>
-<li>How it is measured<br />
-</li>
-<li>When it is measured</li>
-</ul>
-<hr />
-</div>
-<div id="common-endpoint-issues-to-resolve-early" class="section level3 hasAnchor" number="4.3.3">
-<h3><span class="header-section-number">4.3.3</span> 4.3.3 Common Endpoint Issues to Resolve Early<a href="statistical-support-for-the-protocol.html#common-endpoint-issues-to-resolve-early" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ul>
-<li>Composite endpoints without explicit construction rules<br />
-</li>
-<li>Endpoints lacking clearly defined analysis time windows<br />
-</li>
-<li>Multiple endpoints labeled as primary without a testing strategy</li>
-</ul>
-<p>Such issues should be addressed before protocol finalization.</p>
+<div id="practical-principles-for-effective-responses" class="section level3 hasAnchor" number="14.4.3">
+<h3><span class="header-section-number">14.4.3</span> 14.4.3 Practical Principles for Effective Responses<a href="public-registration-and-publication-support.html#practical-principles-for-effective-responses" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Strong statistical responses generally:
+- Address each comment directly and neutrally
+- Reference manuscript sections and/or supplementary material explicitly
+- Clarify confirmatory vs. exploratory analyses
+- Provide additional analyses only when justified, and clearly label them if post hoc
+- Maintain consistency with the registered protocol/SAP/CSR</p>
+<p>Common mistakes include defensive language, avoiding the core question, or introducing new analyses without appropriate framing.</p>
 <hr />
 </div>
 </div>
-<div id="sample-size-description" class="section level2 hasAnchor" number="4.4">
-<h2><span class="header-section-number">4.4</span> 4.4 Sample Size Description<a href="statistical-support-for-the-protocol.html#sample-size-description" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="purpose-of-sample-size-in-the-protocol" class="section level3 hasAnchor" number="4.4.1">
-<h3><span class="header-section-number">4.4.1</span> 4.4.1 Purpose of Sample Size in the Protocol<a href="statistical-support-for-the-protocol.html#purpose-of-sample-size-in-the-protocol" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The protocol must explain <strong>why the planned sample size is appropriate</strong>, not merely state a numerical target.</p>
-<p>The description should include:</p>
-<ul>
-<li>The primary endpoint used for the calculation<br />
-</li>
-<li>Key statistical assumptions<br />
-</li>
-<li>Target power and significance level</li>
-</ul>
+<div id="decision-boundaries-for-additional-analyses" class="section level2 hasAnchor" number="14.5">
+<h2><span class="header-section-number">14.5</span> 14.5 Decision Boundaries for Additional Analyses<a href="public-registration-and-publication-support.html#decision-boundaries-for-additional-analyses" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="when-additional-analyses-are-appropriate" class="section level3 hasAnchor" number="14.5.1">
+<h3><span class="header-section-number">14.5.1</span> 14.5.1 When Additional Analyses Are Appropriate<a href="public-registration-and-publication-support.html#when-additional-analyses-are-appropriate" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Additional analyses are often reasonable when:
+- The planned method is sound but not sufficiently explained
+- Robustness concerns can be addressed via pre-specified sensitivity analyses
+- Supplemental analyses meaningfully improve interpretability without changing the evidentiary status of the primary conclusion</p>
+<p>In such cases, the goal is usually clarification and robustness demonstration, not narrative repositioning.</p>
 <hr />
 </div>
-<div id="appropriate-level-of-detail" class="section level3 hasAnchor" number="4.4.2">
-<h3><span class="header-section-number">4.4.2</span> 4.4.2 Appropriate Level of Detail<a href="statistical-support-for-the-protocol.html#appropriate-level-of-detail" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The protocol should:</p>
-<ul>
-<li>Clearly state assumptions and rationale<br />
-</li>
-<li>Avoid excessive technical detail<br />
-</li>
-<li>Remain consistent with the SAP and any supporting sample size documentation</li>
-</ul>
-<p>Detailed derivations are typically reserved for the SAP or a separate memo.</p>
+<div id="when-additional-analyses-should-be-avoided" class="section level3 hasAnchor" number="14.5.2">
+<h3><span class="header-section-number">14.5.2</span> 14.5.2 When Additional Analyses Should Be Avoided<a href="public-registration-and-publication-support.html#when-additional-analyses-should-be-avoided" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Additional analyses should be avoided or carefully constrained when:
+- They shift the interpretation of the primary endpoint beyond the registered and planned strategy
+- They create inconsistency with the CSR or registry disclosure
+- They introduce obvious data-driven “post hoc” risks without clear labeling and justification</p>
+<p>Not every reviewer request should be accepted. The biostatistician must protect interpretability and credibility.</p>
 <hr />
 </div>
 </div>
-<div id="analysis-populations" class="section level2 hasAnchor" number="4.5">
-<h2><span class="header-section-number">4.5</span> 4.5 Analysis Populations<a href="statistical-support-for-the-protocol.html#analysis-populations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="purpose-of-defining-analysis-sets" class="section level3 hasAnchor" number="4.5.1">
-<h3><span class="header-section-number">4.5.1</span> 4.5.1 Purpose of Defining Analysis Sets<a href="statistical-support-for-the-protocol.html#purpose-of-defining-analysis-sets" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Analysis populations define which subjects contribute to each analysis.<br />
-Clear definitions prevent ambiguity and post hoc decision-making.</p>
-<p>Commonly defined populations include:</p>
-<ul>
-<li><strong>Intent-to-Treat (ITT)</strong><br />
-</li>
-<li><strong>Per-Protocol (PP)</strong><br />
-</li>
-<li><strong>Safety Population</strong></li>
-</ul>
-<hr />
-</div>
-<div id="key-considerations-for-common-populations" class="section level3 hasAnchor" number="4.5.2">
-<h3><span class="header-section-number">4.5.2</span> 4.5.2 Key Considerations for Common Populations<a href="statistical-support-for-the-protocol.html#key-considerations-for-common-populations" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ul>
-<li><strong>ITT</strong>: Preserves randomization and reflects treatment assignment<br />
-</li>
-<li><strong>PP</strong>: Evaluates treatment effect under ideal adherence; requires objective exclusion criteria<br />
-</li>
-<li><strong>Safety</strong>: Typically based on treatment received</li>
-</ul>
-<p>Definitions must be objective, reproducible, and operational.</p>
-<hr />
-</div>
-<div id="alignment-with-study-objectives" class="section level3 hasAnchor" number="4.5.3">
-<h3><span class="header-section-number">4.5.3</span> 4.5.3 Alignment With Study Objectives<a href="statistical-support-for-the-protocol.html#alignment-with-study-objectives" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The protocol should clearly specify:</p>
-<ul>
-<li>The primary population for efficacy analyses<br />
-</li>
-<li>Any supportive or sensitivity populations</li>
-</ul>
-<p>Misalignment between objectives and analysis populations can weaken interpretability.</p>
-<hr />
-</div>
-</div>
-<div id="interim-analyses-if-applicable" class="section level2 hasAnchor" number="4.6">
-<h2><span class="header-section-number">4.6</span> 4.6 Interim Analyses (If Applicable)<a href="statistical-support-for-the-protocol.html#interim-analyses-if-applicable" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="purpose-of-interim-analyses" class="section level3 hasAnchor" number="4.6.1">
-<h3><span class="header-section-number">4.6.1</span> 4.6.1 Purpose of Interim Analyses<a href="statistical-support-for-the-protocol.html#purpose-of-interim-analyses" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Interim analyses may be conducted for:</p>
-<ul>
-<li>Safety monitoring<br />
-</li>
-<li>Futility assessment<br />
-</li>
-<li>Early evidence of efficacy</li>
-</ul>
-<p>If planned, interim analyses must be described prospectively in the protocol.</p>
-<hr />
-</div>
-<div id="required-protocol-elements" class="section level3 hasAnchor" number="4.6.2">
-<h3><span class="header-section-number">4.6.2</span> 4.6.2 Required Protocol Elements<a href="statistical-support-for-the-protocol.html#required-protocol-elements" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The protocol should specify:</p>
-<ul>
-<li>Timing or triggering criteria for interim analyses<br />
-</li>
-<li>Purpose of each interim analysis<br />
-</li>
-<li>Impact on Type I error control<br />
-</li>
-<li>Decision-making authority</li>
-</ul>
-<p>Statements such as “an interim analysis may be conducted” are insufficient.</p>
-<hr />
-</div>
-<div id="relationship-to-the-sap" class="section level3 hasAnchor" number="4.6.3">
-<h3><span class="header-section-number">4.6.3</span> 4.6.3 Relationship to the SAP<a href="statistical-support-for-the-protocol.html#relationship-to-the-sap" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The protocol establishes the framework for interim analyses, while the SAP provides operational detail.<br />
-Consistency between the two documents is essential.</p>
-<hr />
-</div>
-</div>
-<div id="responding-to-statistical-questions-from-stakeholders" class="section level2 hasAnchor" number="4.7">
-<h2><span class="header-section-number">4.7</span> 4.7 Responding to Statistical Questions From Stakeholders<a href="statistical-support-for-the-protocol.html#responding-to-statistical-questions-from-stakeholders" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="common-sources-of-statistical-questions" class="section level3 hasAnchor" number="4.7.1">
-<h3><span class="header-section-number">4.7.1</span> 4.7.1 Common Sources of Statistical Questions<a href="statistical-support-for-the-protocol.html#common-sources-of-statistical-questions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Statistical questions may arise from:</p>
-<ul>
-<li>Medical teams (clinical relevance, endpoint selection)<br />
-</li>
-<li>Clinical operations (feasibility, population definitions)<br />
-</li>
-<li>Regulatory reviewers (assumptions, control of error rates)</li>
-</ul>
-<hr />
-</div>
-<div id="principles-for-effective-responses" class="section level3 hasAnchor" number="4.7.2">
-<h3><span class="header-section-number">4.7.2</span> 4.7.2 Principles for Effective Responses<a href="statistical-support-for-the-protocol.html#principles-for-effective-responses" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Effective statistical responses should be:</p>
-<ul>
-<li>Scientifically grounded<br />
-</li>
-<li>Consistent with the protocol<br />
-</li>
-<li>Transparent about assumptions<br />
-</li>
-<li>Clearly linked to study objectives</li>
-</ul>
-<p>Uncertainty should be acknowledged and appropriately bounded.</p>
-<hr />
-</div>
-</div>
-<div id="ensuring-protocol-descriptions-are-implementable" class="section level2 hasAnchor" number="4.8">
-<h2><span class="header-section-number">4.8</span> 4.8 Ensuring Protocol Descriptions Are Implementable<a href="statistical-support-for-the-protocol.html#ensuring-protocol-descriptions-are-implementable" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="protocol-to-sap-translation" class="section level3 hasAnchor" number="4.8.1">
-<h3><span class="header-section-number">4.8.1</span> 4.8.1 Protocol to SAP Translation<a href="statistical-support-for-the-protocol.html#protocol-to-sap-translation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Every statistical statement in the protocol should be:</p>
-<ul>
-<li>Interpretable in analytic terms<br />
-</li>
-<li>Expandable into SAP-level detail<br />
-</li>
-<li>Implementable in statistical programming</li>
-</ul>
-<p>If a protocol description cannot be translated into code, it is insufficiently specified.</p>
-<hr />
-</div>
-<div id="common-implementation-gaps" class="section level3 hasAnchor" number="4.8.2">
-<h3><span class="header-section-number">4.8.2</span> 4.8.2 Common Implementation Gaps<a href="statistical-support-for-the-protocol.html#common-implementation-gaps" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ul>
-<li>Endpoints defined without analysis rules<br />
-</li>
-<li>Analysis populations lacking operational criteria<br />
-</li>
-<li>Hypotheses stated without corresponding tests</li>
-</ul>
-<p>Identifying and resolving these gaps early reduces downstream rework.</p>
-<hr />
-</div>
-</div>
-<div id="practical-review-checklist" class="section level2 hasAnchor" number="4.9">
-<h2><span class="header-section-number">4.9</span> 4.9 Practical Review Checklist<a href="statistical-support-for-the-protocol.html#practical-review-checklist" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Before protocol finalization, confirm that:</p>
-<ul class="task-list">
-<li><label><input type="checkbox" />Statistical hypotheses are explicit and aligned with objectives<br />
-</label></li>
-<li><label><input type="checkbox" />Endpoints are clearly defined and measurable<br />
-</label></li>
-<li><label><input type="checkbox" />Sample size assumptions are stated and justified<br />
-</label></li>
-<li><label><input type="checkbox" />Analysis populations are clearly defined<br />
-</label></li>
-<li><label><input type="checkbox" />Interim analyses are prospectively described, if applicable<br />
-</label></li>
-<li><label><input type="checkbox" />All statistical descriptions can be implemented in the SAP and programs</label></li>
-</ul>
-<hr />
-</div>
-<div id="chapter-summary-3" class="section level2 hasAnchor" number="4.10">
-<h2><span class="header-section-number">4.10</span> Chapter Summary<a href="statistical-support-for-the-protocol.html#chapter-summary-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Statistical support of the protocol ensures that a study is not only scientifically motivated but also analytically executable.</p>
-<p>Clear, consistent, and operational statistical descriptions form the foundation for credible analyses, regulatory confidence, and interpretable results.</p>
-<p>Early and thorough statistical involvement in protocol development is essential to the success of clinical research.</p>
-<hr />
+<div id="key-takeaways-for-project-biostatisticians-1" class="section level2 hasAnchor" number="14.6">
+<h2><span class="header-section-number">14.6</span> 14.6 Key Takeaways for Project Biostatisticians<a href="public-registration-and-publication-support.html#key-takeaways-for-project-biostatisticians-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li>Public registry disclosure is a compliance baseline; publication is a credibility test.</li>
+<li>Statistical reporting must withstand scrutiny from independent readers with no project context.</li>
+<li>Consistency across registry reporting, CSR, and manuscripts is non-negotiable.</li>
+<li>Reviewer responses are scientific arguments—be traceable, neutral, and explicit about analysis status (confirmatory vs. exploratory).</li>
+<li>Once public, statistical errors are amplified and difficult to correct—invest in rigor before disclosure.</li>
+</ol>
 
 </div>
 </div>
@@ -996,8 +829,8 @@ Consistency between the two documents is essential.</p>
           </div>
         </div>
       </div>
-<a href="randomization-and-stratification-design.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="statistical-analysis-plan-sap-development.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="csr-support-statistical-writing-review-and-regulatory-interaction.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="project-communication.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -1028,7 +861,7 @@ gitbook.start({
     "size": 2
   },
   "edit": {
-    "link": "https://github.com/USERNAME/REPO/edit/BRANCH/04-protocol.Rmd",
+    "link": "https://github.com/USERNAME/REPO/edit/BRANCH/14-Publication-Support.Rmd",
     "text": "Edit"
   },
   "history": {

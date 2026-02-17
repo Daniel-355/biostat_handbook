@@ -1,6 +1,6 @@
  
 
-# Chapter 12 TFL Delivery — Tables, Figures, Listings, Statistical QC, Consistency Checks, and Version Control
+# TFL Delivery — Tables, Figures, Listings, Statistical QC, Consistency Checks, and Version Control
 
 ## 12.1 Why TFL Delivery Is Not “Just the Final Step”
 

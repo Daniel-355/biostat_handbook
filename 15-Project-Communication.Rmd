@@ -1,6 +1,6 @@
  
 
-# Chapter 15 Project Communication
+# Project Communication
 
 ## 15.1 Communication as a Core Biostatistics Competency
 
