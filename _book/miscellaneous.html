@@ -4,13 +4,13 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 15 Project Communication | Biostatistician’s Practical Handbook in Clinical Trials</title>
+  <title>Chapter 17 Miscellaneous | Biostatistician’s Practical Handbook in Clinical Trials</title>
   <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
 The HTML output format for this example is bookdown::gitbook,
 set in the _output.yml file.</p>" />
   <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 15 Project Communication | Biostatistician’s Practical Handbook in Clinical Trials" />
+  <meta property="og:title" content="Chapter 17 Miscellaneous | Biostatistician’s Practical Handbook in Clinical Trials" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
@@ -19,7 +19,7 @@ set in the _output.yml file.</p>" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 15 Project Communication | Biostatistician’s Practical Handbook in Clinical Trials" />
+  <meta name="twitter:title" content="Chapter 17 Miscellaneous | Biostatistician’s Practical Handbook in Clinical Trials" />
   
   <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
 The HTML output format for this example is bookdown::gitbook,
@@ -36,8 +36,8 @@ set in the _output.yml file.</p>" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="public-registration-and-publication-support.html"/>
-<link rel="next" href="quality-and-compliance.html"/>
+<link rel="prev" href="quality-and-compliance.html"/>
+
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -677,228 +677,31 @@ set in the _output.yml file.</p>" />
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="project-communication" class="section level1 hasAnchor" number="15">
-<h1><span class="header-section-number">Chapter 15</span> Project Communication<a href="project-communication.html#project-communication" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="communication-as-a-core-biostatistics-competency" class="section level2 hasAnchor" number="15.1">
-<h2><span class="header-section-number">15.1</span> Communication as a Core Biostatistics Competency<a href="project-communication.html#communication-as-a-core-biostatistics-competency" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>In clinical trials, strong statistical work is necessary but not sufficient. If statistical insights cannot be understood by non-statisticians, they cannot meaningfully influence decisions. Project communication is therefore not a “soft skill” add-on—it is a core professional responsibility for the Project Biostatistician.</p>
-<p>Many project failures are not caused by incorrect analyses, but by:
-- Statistical risks identified too late
-- Risks communicated too weakly or too strongly
-- Misalignment between statistics, medicine, and operations
-- Late-stage surprises that could have been prevented earlier</p>
-<p>Effective communication enables the statistician to act as a translator, risk signaler, and stabilizer—protecting scientific credibility while supporting timely, pragmatic decisions.</p>
-<hr />
+<div id="miscellaneous" class="section level1 hasAnchor" number="17">
+<h1><span class="header-section-number">Chapter 17</span> Miscellaneous<a href="miscellaneous.html#miscellaneous" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="adaptive-randomization-probabilities-and-interim-analysis" class="section level2 hasAnchor" number="17.1">
+<h2><span class="header-section-number">17.1</span> Adaptive randomization probabilities and Interim Analysis<a href="miscellaneous.html#adaptive-randomization-probabilities-and-interim-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This <a href="https://rpubs.com/Daniel_He/1361412">report</a> simulates an FDA-style adaptive clinical trial in R, combining response-adaptive randomization, a single interim sample-size re-estimation, and stopping rules to estimate the treatment effect and empirical power across 500 simulated trials.</p>
 </div>
-<div id="participation-in-project-team-meetings" class="section level2 hasAnchor" number="15.2">
-<h2><span class="header-section-number">15.2</span> Participation in Project Team Meetings<a href="project-communication.html#participation-in-project-team-meetings" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="objectives-in-regular-project-meetings" class="section level3 hasAnchor" number="15.2.1">
-<h3><span class="header-section-number">15.2.1</span> Objectives in Regular Project Meetings<a href="project-communication.html#objectives-in-regular-project-meetings" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>In routine project meetings, the biostatistician should avoid turning status updates into statistical lectures. The goal is to provide a decision-oriented summary that is understandable, actionable, and consistent with the study plan.</p>
-<p>A practical three-question framework for each meeting update is:</p>
-<ol style="list-style-type: decimal">
-<li><strong>What does the data currently suggest?</strong><br />
-</li>
-<li><strong>How confident are we—and why?</strong><br />
-</li>
-<li><strong>What could still change the conclusion?</strong></li>
-</ol>
-<p>This structure keeps the discussion focused on progress, uncertainty, and decision risk.</p>
-<hr />
+<div id="be-simulation" class="section level2 hasAnchor" number="17.2">
+<h2><span class="header-section-number">17.2</span> BE Simulation<a href="miscellaneous.html#be-simulation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This BE simulation <a href="https://rpubs.com/Daniel_He/1360859">script</a> uses Monte Carlo–generated concentration–time profiles with between-subject and residual variability to estimate the probability that AUC and Cmax jointly meet the 90% CI bioequivalence limits (0.80–1.25) across scenarios of true GMR, sample size, and uncertainty in variability assumptions.</p>
 </div>
-<div id="what-to-bring-to-every-meeting-practical-checklist" class="section level3 hasAnchor" number="15.2.2">
-<h3><span class="header-section-number">15.2.2</span> What to Bring to Every Meeting (Practical Checklist)<a href="project-communication.html#what-to-bring-to-every-meeting-practical-checklist" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Bring clear, simple updates on:</p>
-<ul>
-<li><strong>Status</strong>
-<ul>
-<li>What analyses are complete, in progress, or pending</li>
-<li>Dependencies (data cleaning, database updates, programming timelines)</li>
-</ul></li>
-<li><strong>Risks</strong>
-<ul>
-<li>Emerging issues such as imbalance, missingness, dropout patterns, protocol deviations</li>
-<li>Items that could affect power, interpretability, or the primary endpoint</li>
-</ul></li>
-<li><strong>Decisions Needed</strong>
-<ul>
-<li>What the team must decide (e.g., clarify rules, adjust timelines, request additional outputs)</li>
-<li>What information is needed to make the decision</li>
-</ul></li>
-</ul>
-<hr />
+<div id="real-world-study" class="section level2 hasAnchor" number="17.3">
+<h2><span class="header-section-number">17.3</span> Real-World Study<a href="miscellaneous.html#real-world-study" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This real-world study <a href="https://rpubs.com/Daniel_He/1360810">workflow</a> simulates an observational dataset, summarizes baseline covariates, uses propensity-score matching (plus balance diagnostics) and an IPTW sensitivity analysis, then fits Cox/KM survival models showing that age and comorbidity strongly increase event risk while the exposure group has no statistically significant association with time-to-event after adjustment.</p>
 </div>
-<div id="common-communication-pitfalls" class="section level3 hasAnchor" number="15.2.3">
-<h3><span class="header-section-number">15.2.3</span> Common Communication Pitfalls<a href="project-communication.html#common-communication-pitfalls" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Common pitfalls that reduce statistical influence include:</p>
-<ul>
-<li>Using technical jargon without translation</li>
-<li>Providing excessive detail instead of a clear summary</li>
-<li>Raising concerns without ranking priority or explaining impact</li>
-<li>Staying silent until issues become critical (silence is often interpreted as “no risk”)</li>
-</ul>
-<hr />
+<div id="iseiss-pooling" class="section level2 hasAnchor" number="17.4">
+<h2><span class="header-section-number">17.4</span> ISE/ISS pooling<a href="miscellaneous.html#iseiss-pooling" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This ISE/ISS simulation <a href="https://rpubs.com/Daniel_He/1361337">project</a> generates multi-trial patient-level efficacy and safety data, computes study-specific treatment effects, and applies REML random-effects meta-analysis to estimate pooled efficacy (mean difference ≈ 1.44) and safety risk difference (≈ 2.4%) across studies with negligible heterogeneity.</p>
 </div>
+<div id="diagnostic-test" class="section level2 hasAnchor" number="17.5">
+<h2><span class="header-section-number">17.5</span> Diagnostic test<a href="miscellaneous.html#diagnostic-test" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This diagnostic test <a href="https://rpubs.com/Daniel_He/1321453">workflow</a> demonstrates how to compute and interpret 2×2 table metrics (sensitivity, specificity, predictive values, likelihood ratios), update post-test probability via Bayes’ theorem, and compare binary and multi-class ROC/AUC performance—including paired, unpaired, and partial AUC tests—using multiple R packages.</p>
 </div>
-<div id="participation-in-medical-discussions" class="section level2 hasAnchor" number="15.3">
-<h2><span class="header-section-number">15.3</span> Participation in Medical Discussions<a href="project-communication.html#participation-in-medical-discussions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="bridging-statistical-evidence-and-clinical-meaning" class="section level3 hasAnchor" number="15.3.1">
-<h3><span class="header-section-number">15.3.1</span> Bridging Statistical Evidence and Clinical Meaning<a href="project-communication.html#bridging-statistical-evidence-and-clinical-meaning" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Medical discussions often focus on clinical relevance, benefit–risk balance, and real-world interpretability. The biostatistician’s role is to clarify what the data can and cannot support while aligning statistical interpretation with clinical decision needs.</p>
-<p>Effective approaches include:
-- Emphasizing the difference between “numerical trend” and “statistical evidence”
-- Translating uncertainty into clinically meaningful terms
-- Avoiding rigid language that sounds like rejection when the true message is uncertainty</p>
-<p>Examples:
-- Instead of “not statistically significant,” say:<br />
-“The data are compatible with both a small benefit and no benefit.”
-- Instead of “wide confidence interval,” say:<br />
-“The estimate is still unstable due to limited information.”</p>
-<hr />
-</div>
-<div id="handling-disagreement-respectfully" class="section level3 hasAnchor" number="15.3.2">
-<h3><span class="header-section-number">15.3.2</span> Handling Disagreement Respectfully<a href="project-communication.html#handling-disagreement-respectfully" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>When statistical conclusions conflict with clinical enthusiasm:
-- Acknowledge the clinical perspective and the rationale behind it
-- Restate the statistical constraints calmly and factually
-- Emphasize uncertainty and evidentiary boundaries rather than negation</p>
-<p>A useful mindset is:</p>
-<blockquote>
-<p>You are not saying “no.” You are saying “not yet proven.”</p>
-</blockquote>
-<hr />
-</div>
-</div>
-<div id="participation-in-regulatory-communication-meetings" class="section level2 hasAnchor" number="15.4">
-<h2><span class="header-section-number">15.4</span> Participation in Regulatory Communication Meetings<a href="project-communication.html#participation-in-regulatory-communication-meetings" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="what-regulators-expect-from-statisticians" class="section level3 hasAnchor" number="15.4.1">
-<h3><span class="header-section-number">15.4.1</span> What Regulators Expect From Statisticians<a href="project-communication.html#what-regulators-expect-from-statisticians" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>In regulatory meetings, statisticians are expected to:
-- Support scientific consistency across protocol, SAP, TFLs, and CSR narratives
-- Answer questions clearly and directly
-- Avoid speculation beyond submitted materials
-- Maintain precise language and consistent terminology</p>
-<p>Regulators focus on statistical reasoning and defensibility—not programming details.</p>
-<hr />
-</div>
-<div id="practical-communication-principles-in-regulatory-settings" class="section level3 hasAnchor" number="15.4.2">
-<h3><span class="header-section-number">15.4.2</span> Practical Communication Principles in Regulatory Settings<a href="project-communication.html#practical-communication-principles-in-regulatory-settings" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ul>
-<li>Answer the question asked—no more, no less</li>
-<li>Be precise rather than verbose</li>
-<li>Use consistent terms aligned with the SAP and CSR</li>
-<li>Avoid introducing new analyses unless explicitly requested</li>
-<li>Separate confirmatory and exploratory evidence clearly</li>
-</ul>
-<p>Over-explaining can unintentionally create new questions.</p>
-<hr />
-</div>
-</div>
-<div id="explaining-statistical-concepts-in-non-statistical-language" class="section level2 hasAnchor" number="15.5">
-<h2><span class="header-section-number">15.5</span> Explaining Statistical Concepts in Non-Statistical Language<a href="project-communication.html#explaining-statistical-concepts-in-non-statistical-language" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="the-translation-responsibility" class="section level3 hasAnchor" number="15.5.1">
-<h3><span class="header-section-number">15.5.1</span> The Translation Responsibility<a href="project-communication.html#the-translation-responsibility" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>A Project Biostatistician must translate statistical concepts into decision language. If stakeholders cannot restate the message correctly, communication has failed—regardless of statistical correctness.</p>
-<p>Practical translations:</p>
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Statistical Term</th>
-<th>Decision-Oriented Translation</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>p-value &gt; 0.05</td>
-<td>The data do not rule out chance as an explanation.</td>
-</tr>
-<tr class="even">
-<td>Confidence interval</td>
-<td>The plausible range of the true effect based on the data we have.</td>
-</tr>
-<tr class="odd">
-<td>Sensitivity analysis</td>
-<td>We tested whether conclusions change under reasonable assumptions.</td>
-</tr>
-<tr class="even">
-<td>Missing not at random</td>
-<td>Dropouts may differ in a way that could bias the result.</td>
-</tr>
-<tr class="odd">
-<td>Model assumption</td>
-<td>This conclusion depends on assumptions about how outcomes behave over time.</td>
-</tr>
-<tr class="even">
-<td>Multiplicity</td>
-<td>More comparisons increase the chance of false positives unless controlled.</td>
-</tr>
-</tbody>
-</table>
-<hr />
-</div>
-<div id="practical-tips-for-clear-statistical-explanations" class="section level3 hasAnchor" number="15.5.2">
-<h3><span class="header-section-number">15.5.2</span> Practical Tips for Clear Statistical Explanations<a href="project-communication.html#practical-tips-for-clear-statistical-explanations" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ul>
-<li>Start with the decision implication, then provide the statistical reason</li>
-<li>Use analogies carefully (only when they clarify, not oversimplify)</li>
-<li>Use ranges and scenarios rather than single-point certainty</li>
-<li>Repeat key messages consistently across meetings and documents</li>
-</ul>
-<hr />
-</div>
-</div>
-<div id="communicating-risk-to-sponsors-without-creating-panic" class="section level2 hasAnchor" number="15.6">
-<h2><span class="header-section-number">15.6</span> Communicating Risk to Sponsors Without Creating Panic<a href="project-communication.html#communicating-risk-to-sponsors-without-creating-panic" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="balanced-risk-communication" class="section level3 hasAnchor" number="15.6.1">
-<h3><span class="header-section-number">15.6.1</span> Balanced Risk Communication<a href="project-communication.html#balanced-risk-communication" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Sponsors need early warning signals—not alarm bells. Effective risk communication is calm, structured, and solution-oriented.</p>
-<p>A recommended structure is:</p>
-<ol style="list-style-type: decimal">
-<li><strong>What we are seeing</strong></li>
-<li><strong>Why it may matter</strong></li>
-<li><strong>What could happen if nothing changes</strong></li>
-<li><strong>What we can do now</strong></li>
-</ol>
-<p>This format provides clarity without creating unnecessary fear.</p>
-<hr />
-</div>
-<div id="avoiding-common-sponsor-communication-mistakes" class="section level3 hasAnchor" number="15.6.2">
-<h3><span class="header-section-number">15.6.2</span> Avoiding Common Sponsor Communication Mistakes<a href="project-communication.html#avoiding-common-sponsor-communication-mistakes" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Common mistakes include:
-- Overstating uncertainty and creating panic
-- Downplaying real risks to avoid difficult conversations
-- Using overly technical language that reduces comprehension
-- Communicating risks too late, causing surprise and mistrust</p>
-<p>Trust is built when sponsors feel informed, not surprised.</p>
-<hr />
-</div>
-</div>
-<div id="building-trust-the-statistician-as-a-project-advisor" class="section level2 hasAnchor" number="15.7">
-<h2><span class="header-section-number">15.7</span> Building Trust: The Statistician as a Project Advisor<a href="project-communication.html#building-trust-the-statistician-as-a-project-advisor" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The most effective project statisticians:
-- Speak early rather than late
-- Speak clearly rather than technically
-- Speak honestly rather than defensively</p>
-<p>They become trusted advisors who:
-- Interpret risk
-- Support decisions
-- Protect scientific credibility
-- Keep the team aligned and calm under uncertainty</p>
-<hr />
-</div>
-<div id="key-takeaways-1" class="section level2 hasAnchor" number="15.8">
-<h2><span class="header-section-number">15.8</span> Key Takeaways<a href="project-communication.html#key-takeaways-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<ol style="list-style-type: decimal">
-<li>Communication is a core statistical competency, not a soft skill.</li>
-<li>The goal is shared understanding, not technical completeness.</li>
-<li>Early, calm risk communication prevents crisis.</li>
-<li>Non-statistical language increases statistical impact.</li>
-<li>A trusted statistician shapes decisions without creating unnecessary alarm.</li>
-</ol>
+<div id="statistical-modeling" class="section level2 hasAnchor" number="17.6">
+<h2><span class="header-section-number">17.6</span> Statistical modeling<a href="miscellaneous.html#statistical-modeling" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Led end-to-end <a href="https://rpubs.com/Daniel_He/1361503">statistical modeling</a> initiatives spanning adaptive trial simulation, bioequivalence and power analysis, real-world causal inference, ISE/ISS meta-analysis, Bayesian joint modeling, and machine-learning–enhanced treatment effect estimation, delivering reproducible R-based pipelines and regulatory-ready analytical solutions across clinical research domains.</p>
 
 </div>
 </div>
@@ -907,8 +710,8 @@ set in the _output.yml file.</p>" />
           </div>
         </div>
       </div>
-<a href="public-registration-and-publication-support.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="quality-and-compliance.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="quality-and-compliance.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -939,7 +742,7 @@ gitbook.start({
     "size": 2
   },
   "edit": {
-    "link": "https://github.com/USERNAME/REPO/edit/BRANCH/15-Project-Communication.Rmd",
+    "link": "https://github.com/USERNAME/REPO/edit/BRANCH/17-Miscellaneous.Rmd",
     "text": "Edit"
   },
   "history": {

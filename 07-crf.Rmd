@@ -1,5 +1,3 @@
- 
-
 # Data Standards and Analysis Readiness  
 
 *From CRF Design to CDISC: Where Statistical Quality Truly Begins*
@@ -15,9 +13,9 @@ This chapter focuses on the practical responsibilities of a Project Biostatistic
 
 ---
 
-## 7.1 Why Must Biostatisticians Participate in CRF Design Review?
+## Why Must Biostatisticians Participate in CRF Design Review?
 
-### 7.1.1 A Hard Industry Truth
+### A Hard Industry Truth
 
 **CRF design is the upstream source of all future TFLs.**
 
@@ -32,7 +30,7 @@ When statisticians are absent during CRF design, analysis teams are forced to *c
 
 ---
 
-### 7.1.2 The Statistician’s Role in CRF Review
+### The Statistician’s Role in CRF Review
 
 The statistician is **not** responsible for:
 - Page layout
@@ -45,9 +43,9 @@ Instead, the statistician must answer one critical question:
 
 ---
 
-## 7.2 Four Core Dimensions of “Analyzability” in CRF Review
+## Four Core Dimensions of “Analyzability” in CRF Review
 
-### 7.2.1 Data Collection Frequency: Does It Support the Planned Model?
+### Data Collection Frequency: Does It Support the Planned Model?
 
 This is one of the most underestimated yet critical review points.
 
@@ -67,7 +65,7 @@ The correct question is not *“Is this visit collected?”* but rather:
 
 ---
 
-### 7.2.2 Units, Ranges, and Logical Validity
+### Units, Ranges, and Logical Validity
 
 #### (a) Units: Simple but Dangerous
 
@@ -117,9 +115,9 @@ Without this:
 
 ---
 
-## 7.3 Confirming the CDISC Strategy (SDTM and ADaM)
+## Confirming the CDISC Strategy (SDTM and ADaM)
 
-### 7.3.1 The Statistician as a Standards Gatekeeper
+### The Statistician as a Standards Gatekeeper
 
 While statisticians may not write SDTM or ADaM code, they **must** be involved in confirming:
 - Adoption of SDTM and ADaM
@@ -130,7 +128,7 @@ Standards strategy is a **cross-functional decision**, not solely a DM or progra
 
 ---
 
-### 7.3.2 Key SDTM Considerations from a Statistical Perspective
+### Key SDTM Considerations from a Statistical Perspective
 
 Statisticians should verify:
 - Proper domain placement for primary endpoints
@@ -143,7 +141,7 @@ A useful rule of thumb:
 
 ---
 
-### 7.3.3 Early ADaM Thinking
+### Early ADaM Thinking
 
 Before CRF finalization, statisticians should consider:
 - Complexity of primary endpoint derivations
@@ -158,9 +156,9 @@ Then ADaM specifications will become increasingly verbose and analytically fragi
 
 ---
 
-## 7.4 Alignment with Data Management: Collaboration, Not Handoff
+## Alignment with Data Management: Collaboration, Not Handoff
 
-### 7.4.1 Key Topics for Statistician–DM Alignment
+### Key Topics for Statistician–DM Alignment
 
 Statisticians should proactively align with Data Management on:
 - Key analysis variable lists
@@ -171,7 +169,7 @@ This alignment is not a formality—it establishes **interpretation consistency*
 
 ---
 
-### 7.4.2 A Sign of a Mature Project Team
+### A Sign of a Mature Project Team
 
 In well-functioning teams:
 - DM asks statisticians during CRF design:  
@@ -183,7 +181,7 @@ This reflects maturity of responsibility, not authority.
 
 ---
 
-## 7.5 Chapter Summary: The Statistician’s True Value at This Stage
+## Chapter Summary: The Statistician’s True Value at This Stage
 
 At the data standards and analysis preparation stage, a biostatistician’s value is **not** measured by:
 - Lines of code written

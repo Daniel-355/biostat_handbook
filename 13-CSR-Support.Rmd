@@ -1,8 +1,6 @@
- 
-
 # CSR Support — Statistical Writing, Review, and Regulatory Interaction
 
-## 13.1 CSR Support as a Critical Transition Point
+## CSR Support as a Critical Transition Point
 
 Clinical Study Report (CSR) support represents a major transition in the role of the Project Biostatistician. At this stage, statistical work shifts from internal analysis delivery to **external scientific and regulatory communication**.
 
@@ -15,9 +13,9 @@ At this point, the biostatistician is no longer only responsible for generating 
 
 ---
 
-## 13.2 The Role of Statistics Within the CSR
+## The Role of Statistics Within the CSR
 
-### 13.2.1 Statistics Is Not an Appendix
+### Statistics Is Not an Appendix
 
 From a regulatory perspective, statistical sections are central, not supplemental. Key CSR sections relying heavily on statistical integrity include:
 - Statistical Methods
@@ -33,7 +31,7 @@ If the statistical narrative is weak or inconsistent, the credibility of the ent
 
 ---
 
-### 13.2.2 Responsibilities of the Project Biostatistician
+### Responsibilities of the Project Biostatistician
 
 During CSR development, the Project Biostatistician is responsible for:
 
@@ -47,9 +45,9 @@ In essence, the statistical sections of the CSR represent the biostatistician’
 
 ---
 
-## 13.3 Writing and Reviewing the Statistical Methods Section
+## Writing and Reviewing the Statistical Methods Section
 
-### 13.3.1 Purpose of the Methods Section
+### Purpose of the Methods Section
 
 The objective of the statistical methods section is not to replicate the SAP verbatim, but to:
 - Describe what was actually done
@@ -62,7 +60,7 @@ The guiding principle is:
 
 ---
 
-### 13.3.2 Core Elements That Must Be Covered
+### Core Elements That Must Be Covered
 
 The statistical methods section should clearly and accurately describe:
 
@@ -82,7 +80,7 @@ Ambiguous language should be avoided.
 
 ---
 
-### 13.3.3 Common High-Risk Writing Issues
+### Common High-Risk Writing Issues
 
 Frequent causes of regulatory questions include:
 - Inconsistent naming of statistical models
@@ -94,9 +92,9 @@ These issues often appear minor but can lead to significant regulatory scrutiny.
 
 ---
 
-## 13.4 Reviewing the Results Sections
+## Reviewing the Results Sections
 
-### 13.4.1 Role of the Statistical Reviewer
+### Role of the Statistical Reviewer
 
 The results sections of the CSR should not simply restate TFLs. Instead, they should:
 - Summarize key findings in a structured manner
@@ -107,7 +105,7 @@ The biostatistician must ensure that every numerical value in the CSR text can b
 
 ---
 
-### 13.4.2 Key Review Checks for Results Text
+### Key Review Checks for Results Text
 
 The following elements must be verified line by line:
 
@@ -121,9 +119,9 @@ Special caution should be exercised with language suggesting trends or numerical
 
 ---
 
-## 13.5 Ensuring Consistency Between Methods and Results
+## Ensuring Consistency Between Methods and Results
 
-### 13.5.1 Three Critical Consistency Pathways
+### Three Critical Consistency Pathways
 
 Statistical consistency must be ensured across three primary pathways:
 
@@ -140,7 +138,7 @@ Any break in these pathways is likely to be identified during regulatory review.
 
 ---
 
-### 13.5.2 Common High-Risk Inconsistencies
+### Common High-Risk Inconsistencies
 
 Examples of issues that frequently trigger regulatory questions include:
 - Describing one statistical method but reporting results from another
@@ -151,9 +149,9 @@ Such inconsistencies significantly increase the likelihood of follow-up question
 
 ---
 
-## 13.6 Responding to QA and Internal Review Questions
+## Responding to QA and Internal Review Questions
 
-### 13.6.1 Sources of QA Questions
+### Sources of QA Questions
 
 QA and review questions may arise from:
 - Independent internal statistical review
@@ -165,7 +163,7 @@ These questions should be treated as early indicators of potential regulatory co
 
 ---
 
-### 13.6.2 Principles for Effective QA Responses
+### Principles for Effective QA Responses
 
 Effective statistical responses should:
 - Be fact-based and fully traceable
@@ -177,9 +175,9 @@ Defensive or vague responses often increase scrutiny rather than resolve concern
 
 ---
 
-## 13.7 Supporting Regulatory Inquiries (FDA, EMA, NMPA)
+## Supporting Regulatory Inquiries (FDA, EMA, NMPA)
 
-### 13.7.1 The Biostatistician’s Role in Regulatory Interactions
+### The Biostatistician’s Role in Regulatory Interactions
 
 During regulatory review, the biostatistician often serves as:
 - The primary technical author of statistical responses
@@ -190,7 +188,7 @@ Regulators focus on statistical reasoning and decision logic, not on programming
 
 ---
 
-### 13.7.2 Common Types of Regulatory Statistical Questions
+### Common Types of Regulatory Statistical Questions
 
 Regulatory agencies frequently question:
 - Robustness of primary endpoint conclusions
@@ -203,7 +201,7 @@ These questions often reflect issues that could have been anticipated earlier in
 
 ---
 
-### 13.7.3 Practical Guidance for Regulatory Responses
+### Practical Guidance for Regulatory Responses
 
 When responding to regulatory inquiries:
 - Base all responses on submitted materials whenever possible
@@ -215,7 +213,7 @@ Regulatory inquiries represent a formal test of the statistical logic underlying
 
 ---
 
-## 13.8 Key Takeaways for Project Biostatisticians
+## Key Takeaways for Project Biostatisticians
 
 1. The statistical sections of the CSR are formal scientific statements, not technical summaries.
 2. Every statistical claim in the CSR must be traceable, defensible, and internally consistent.

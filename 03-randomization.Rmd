@@ -1,5 +1,3 @@
- 
-
 # Randomization and Stratification Design
 
 ---
@@ -20,7 +18,7 @@ After completing this chapter, the reader should be able to:
 
 ---
 
-## 3.1 Purpose of Randomization in Clinical Trials
+## Purpose of Randomization in Clinical Trials
 
 The primary purposes of randomization are to:
 
@@ -32,7 +30,7 @@ Randomization does not ensure perfect balance in every sample, but it ensures th
 
 ---
 
-## 3.2 Determination of the Randomization Scheme
+## Determination of the Randomization Scheme
 
 Selection of a randomization scheme should be driven by:
 
@@ -46,7 +44,7 @@ No single randomization method is optimal for all trials.
 
 ---
 
-### 3.2.1 Simple Randomization
+### Simple Randomization
 
 **Description**
 
@@ -70,7 +68,7 @@ Simple randomization assigns participants to treatment groups purely by chance, 
 
 ---
 
-### 3.2.2 Block Randomization
+### Block Randomization
 
 **Description**
 
@@ -92,7 +90,7 @@ Use randomly varying block sizes and maintain strict confidentiality.
 
 ---
 
-### 3.2.3 Stratified Randomization
+### Stratified Randomization
 
 **Description**
 
@@ -115,7 +113,7 @@ Stratified randomization applies separate randomization schedules within strata 
 
 ---
 
-### 3.2.4 Dynamic Randomization (Minimization)
+### Dynamic Randomization (Minimization)
 
 **Description**
 
@@ -138,9 +136,9 @@ A random component should be incorporated to preserve allocation unpredictabilit
 
 ---
 
-## 3.3 Selection of Stratification Factors
+## Selection of Stratification Factors
 
-### 3.3.1 Principles for Choosing Stratification Factors
+### Principles for Choosing Stratification Factors
 
 Stratification factors should be:
 
@@ -152,7 +150,7 @@ Over-stratification is a common and avoidable design error.
 
 ---
 
-### 3.3.2 Common Stratification Factors
+### Common Stratification Factors
 
 Frequently used stratification factors include:
 
@@ -165,7 +163,7 @@ Each additional factor multiplies the number of strata and increases operational
 
 ---
 
-### 3.3.3 Alignment With the Analysis Plan
+### Alignment With the Analysis Plan
 
 Stratification factors used in randomization should generally be accounted for in the primary analysis model.
 
@@ -173,9 +171,9 @@ Misalignment between randomization and analysis can reduce efficiency and raise 
 
 ---
 
-## 3.4 Coordination With IWRS / RTSM and Blinding Teams
+## Coordination With IWRS / RTSM and Blinding Teams
 
-### 3.4.1 Role of IWRS / RTSM
+### Role of IWRS / RTSM
 
 IWRS (Interactive Web Response System) or RTSM (Randomization and Trial Supply Management) systems are used to:
 
@@ -187,7 +185,7 @@ The statistical design must be translated precisely into system specifications.
 
 ---
 
-### 3.4.2 Key Collaboration Considerations
+### Key Collaboration Considerations
 
 Effective coordination requires:
 
@@ -199,7 +197,7 @@ Errors at this stage may be difficult or impossible to correct later.
 
 ---
 
-### 3.4.3 Blinding Considerations
+### Blinding Considerations
 
 Randomization design must be compatible with the study’s blinding strategy.
 
@@ -213,9 +211,9 @@ Randomization and blinding should be considered jointly.
 
 ---
 
-## 3.5 Review of the Randomization Specification
+## Review of the Randomization Specification
 
-### 3.5.1 Purpose of the Randomization Specification
+### Purpose of the Randomization Specification
 
 The Randomization Specification document translates the statistical design into an operational plan.
 
@@ -229,7 +227,7 @@ It typically includes:
 
 ---
 
-### 3.5.2 Statistician’s Review Responsibilities
+### Statistician’s Review Responsibilities
 
 During review, the statistician should confirm that:
 
@@ -242,9 +240,9 @@ All discrepancies must be resolved prior to system implementation.
 
 ---
 
-## 3.6 Generation of the Randomization List: Roles and Governance
+## Generation of the Randomization List: Roles and Governance
 
-### 3.6.1 Determining Responsibility for Randomization List Generation
+### Determining Responsibility for Randomization List Generation
 
 Responsibility for generating the randomization list depends on:
 
@@ -256,7 +254,7 @@ The approach should be clearly documented.
 
 ---
 
-### 3.6.2 Firewalls and Independence
+### Firewalls and Independence
 
 When statisticians are involved in generating randomization lists, appropriate safeguards must be in place to ensure:
 
@@ -268,7 +266,7 @@ Clear definition of access rights and roles is essential.
 
 ---
 
-### 3.6.3 Documentation and Traceability
+### Documentation and Traceability
 
 Regardless of who generates the randomization list, the process must be:
 

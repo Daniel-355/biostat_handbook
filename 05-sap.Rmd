@@ -1,5 +1,3 @@
- 
-
 # Statistical Analysis Plan (SAP) Development  
 
 ---
@@ -20,9 +18,9 @@ After completing this chapter, the reader should be able to:
 
 ---
 
-## 5.1 Role of the SAP in Clinical Trials
+## Role of the SAP in Clinical Trials
 
-### 5.1.1 Why the SAP Is a Critical Document
+### Why the SAP Is a Critical Document
 
 From a statistical perspective, the SAP serves as:
 
@@ -34,7 +32,7 @@ Any analysis not prospectively specified in the SAP is vulnerable to being consi
 
 ---
 
-### 5.1.2 Relationship Between the Protocol and the SAP
+### Relationship Between the Protocol and the SAP
 
 - The **protocol** defines *what* will be studied  
 - The **SAP** defines *how* the data will be analyzed  
@@ -43,9 +41,9 @@ The SAP must be fully consistent with the protocol while providing substantially
 
 ---
 
-## 5.2 Definition of the Primary Analysis Method
+## Definition of the Primary Analysis Method
 
-### 5.2.1 Purpose of the Primary Analysis
+### Purpose of the Primary Analysis
 
 The primary analysis directly addresses the primary estimand and supports the main study conclusion.  
 It must be defined in sufficient detail so that:
@@ -56,7 +54,7 @@ It must be defined in sufficient detail so that:
 
 ---
 
-### 5.2.2 Model Type Specification
+### Model Type Specification
 
 The SAP must explicitly specify the statistical model, including:
 
@@ -74,7 +72,7 @@ Any key model assumptions should be stated and, where appropriate, assessed.
 
 ---
 
-### 5.2.3 Covariate Specification
+### Covariate Specification
 
 The SAP should clearly define:
 
@@ -86,7 +84,7 @@ Covariates typically include baseline measures of the endpoint or other strong p
 
 ---
 
-### 5.2.4 Handling of Stratification Factors
+### Handling of Stratification Factors
 
 If stratified randomization was used, the SAP should specify:
 
@@ -98,25 +96,25 @@ Consistency between randomization and analysis strategies is essential.
 
 ---
 
-## 5.3 Secondary and Exploratory Analyses
+## Secondary and Exploratory Analyses
 
-### 5.3.1 Secondary Analyses
+### Secondary Analyses
 
 Secondary analyses address pre-specified secondary objectives and support interpretation of the primary results.  
 They should be fully specified in the SAP but clearly distinguished from the primary analysis.
 
 ---
 
-### 5.3.2 Exploratory Analyses
+### Exploratory Analyses
 
 Exploratory analyses are hypothesis-generating and descriptive in nature.  
 The SAP should outline their general analytical approach while clearly labeling them as exploratory.
 
 ---
 
-## 5.4 Multiplicity Control Strategy
+## Multiplicity Control Strategy
 
-### 5.4.1 Importance of Multiplicity Control
+### Importance of Multiplicity Control
 
 Multiplicity affects the interpretation of statistical significance.  
 The SAP must describe how Type I error is controlled across:
@@ -127,7 +125,7 @@ The SAP must describe how Type I error is controlled across:
 
 ---
 
-### 5.4.2 Common Multiplicity Approaches
+### Common Multiplicity Approaches
 
 Multiplicity strategies commonly specified in SAPs include:
 
@@ -139,16 +137,16 @@ The chosen strategy must align with study objectives and be defined prior to unb
 
 ---
 
-## 5.5 Missing Data Handling Strategies
+## Missing Data Handling Strategies
 
-### 5.5.1 Importance of Pre-Specifying Missing Data Methods
+### Importance of Pre-Specifying Missing Data Methods
 
 Assumptions about missing data directly affect interpretation of treatment effects.  
 The SAP must prospectively specify missing data handling methods for each key analysis.
 
 ---
 
-### 5.5.2 Commonly Used Methods
+### Commonly Used Methods
 
 The SAP should clearly state when and how the following methods are applied:
 
@@ -161,15 +159,15 @@ Each method’s assumptions and limitations should be acknowledged.
 
 ---
 
-### 5.5.3 Alignment With Estimands
+### Alignment With Estimands
 
 Missing data strategies should be consistent with the estimand framework (e.g., treatment policy, hypothetical, or composite strategies).
 
 ---
 
-## 5.6 Definition of Repeat Assessments and Visit Window Rules
+## Definition of Repeat Assessments and Visit Window Rules
 
-### 5.6.1 Purpose of Visit Window Rules
+### Purpose of Visit Window Rules
 
 Repeated measurements and visit deviations must be handled consistently.  
 The SAP should define:
@@ -180,7 +178,7 @@ The SAP should define:
 
 ---
 
-### 5.6.2 Statistical Rules for Repeat or Follow-Up Measurements
+### Statistical Rules for Repeat or Follow-Up Measurements
 
 The SAP should specify:
 
@@ -192,16 +190,16 @@ Clear rules prevent downstream programming discrepancies.
 
 ---
 
-## 5.7 Sensitivity Analysis Plan
+## Sensitivity Analysis Plan
 
-### 5.7.1 Purpose of Sensitivity Analyses
+### Purpose of Sensitivity Analyses
 
 Sensitivity analyses evaluate the robustness of the primary analysis to key assumptions.  
 They are essential for assessing the reliability of study conclusions.
 
 ---
 
-### 5.7.2 Common Sensitivity Analyses
+### Common Sensitivity Analyses
 
 Examples include:
 
@@ -213,15 +211,15 @@ Each sensitivity analysis should be linked to a specific assumption being tested
 
 ---
 
-## 5.8 Subgroup Analysis Definition
+## Subgroup Analysis Definition
 
-### 5.8.1 Purpose of Subgroup Analyses
+### Purpose of Subgroup Analyses
 
 Subgroup analyses explore the consistency of treatment effects across predefined subpopulations.
 
 ---
 
-### 5.8.2 Pre-Specification Requirements
+### Pre-Specification Requirements
 
 The SAP should define:
 
@@ -233,9 +231,9 @@ Results should be interpreted cautiously and in context.
 
 ---
 
-## 5.9 Interim Analysis and DMC Support (If Applicable)
+## Interim Analysis and DMC Support (If Applicable)
 
-### 5.9.1 Interim Analysis Specifications
+### Interim Analysis Specifications
 
 If interim analyses are planned, the SAP should specify:
 
@@ -246,7 +244,7 @@ If interim analyses are planned, the SAP should specify:
 
 ---
 
-### 5.9.2 DMC Support
+### DMC Support
 
 The SAP may include or reference:
 
@@ -258,7 +256,7 @@ Clear procedures are essential to protect study integrity.
 
 ---
 
-## 5.10 SAP Quality and Implementation Checklist
+## SAP Quality and Implementation Checklist
 
 Before finalizing the SAP, confirm that:
 

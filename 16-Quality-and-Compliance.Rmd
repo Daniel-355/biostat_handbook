@@ -1,7 +1,6 @@
- 
 # Quality and Compliance
 
-## 16.1 The Invisible Backbone of Statistical Credibility
+## The Invisible Backbone of Statistical Credibility
 
 In clinical trials, quality and compliance are rarely highlighted when everything runs smoothly—but they become immediately visible when something goes wrong. For Project Biostatisticians, quality is not an abstract regulatory topic; it is a set of daily operational practices that determine whether statistical work is defensible under audit and inspection.
 
@@ -9,9 +8,9 @@ This chapter focuses on practical actions that help statisticians ensure their w
 
 ---
 
-## 16.2 Why Quality and Compliance Matter for Statistics
+## Why Quality and Compliance Matter for Statistics
 
-### 16.2.1 Statistics Is a Regulated Discipline
+### Statistics Is a Regulated Discipline
 
 Clinical trial statistics operates under explicit regulatory expectations. Statistical outputs are not only scientific results—they are regulated deliverables. Regulators and auditors expect that:
 
@@ -24,7 +23,7 @@ Quality failures are often not about incorrect calculations, but about **lack of
 
 ---
 
-### 16.2.2 The Statistician’s Accountability
+### The Statistician’s Accountability
 
 For Project Biostatisticians, quality and compliance responsibilities include:
 
@@ -39,9 +38,9 @@ A useful mindset is:
 
 ---
 
-## 16.3 Core Frameworks: SOPs, ICH E9, and ICH E3
+## Core Frameworks: SOPs, ICH E9, and ICH E3
 
-### 16.3.1 SOP Compliance: The First Line of Defense
+### SOP Compliance: The First Line of Defense
 
 Standard Operating Procedures (SOPs) define how statistical activities must be conducted within an organization. For biostatistics, SOPs commonly cover:
 
@@ -60,7 +59,7 @@ Unrecorded deviations are generally far riskier than justified and documented on
 
 ---
 
-### 16.3.2 ICH E9: Statistical Principles for Clinical Trials
+### ICH E9: Statistical Principles for Clinical Trials
 
 ICH E9 establishes expectations for statistical credibility, including:
 
@@ -74,7 +73,7 @@ From a compliance perspective, ICH E9 alignment means that the analysis must add
 
 ---
 
-### 16.3.3 ICH E3: Clinical Study Reports
+### ICH E3: Clinical Study Reports
 
 ICH E3 governs how results are documented in the CSR, including:
 
@@ -87,9 +86,9 @@ Statistical inconsistencies between SAP, TFLs, and CSR narratives are common tri
 
 ---
 
-## 16.4 Statistical Documentation and Archiving
+## Statistical Documentation and Archiving
 
-### 16.4.1 Why Archiving Is a Statistical Responsibility
+### Why Archiving Is a Statistical Responsibility
 
 Archiving is sometimes seen as an administrative task, but for statisticians it is a core quality activity. Archived materials must enable an independent reviewer to:
 
@@ -102,7 +101,7 @@ Poor archiving effectively equals undocumented analysis.
 
 ---
 
-### 16.4.2 What Should Be Archived (Practical List)
+### What Should Be Archived (Practical List)
 
 A typical inspection-ready statistical archive should include:
 
@@ -120,7 +119,7 @@ The goal is completeness and traceability, not minimalism.
 
 ---
 
-### 16.4.3 Practical Archiving Best Practices
+### Practical Archiving Best Practices
 
 Useful best practices include:
 
@@ -139,9 +138,9 @@ A simple test is: if someone unfamiliar with the project cannot navigate and rep
 
 ---
 
-## 16.5 Audit and Inspection Support
+## Audit and Inspection Support
 
-### 16.5.1 Audits vs. Inspections (Operational Differences)
+### Audits vs. Inspections (Operational Differences)
 
 Although often discussed together, audits and inspections differ operationally:
 
@@ -157,7 +156,7 @@ Statisticians may be involved in both, and expectations for traceability and cla
 
 ---
 
-### 16.5.2 The Statistician’s Role During Audit/Inspection
+### The Statistician’s Role During Audit/Inspection
 
 During audits or inspections, statisticians are expected to:
 
@@ -170,7 +169,7 @@ Inspectors are primarily testing transparency and process control.
 
 ---
 
-### 16.5.3 Common Statistical Audit/Inspection Questions
+### Common Statistical Audit/Inspection Questions
 
 Typical questions include:
 
@@ -184,9 +183,9 @@ Many “statistical” findings ultimately reflect documentation gaps, unclear t
 
 ---
 
-## 16.6 Practical Guidance for Inspection Readiness
+## Practical Guidance for Inspection Readiness
 
-### 16.6.1 Preparation Before an Audit/Inspection
+### Preparation Before an Audit/Inspection
 
 Proactive preparation should include:
 
@@ -200,7 +199,7 @@ Inspection readiness should be continuous rather than reactive.
 
 ---
 
-### 16.6.2 Behavior During Audit/Inspection
+### Behavior During Audit/Inspection
 
 During questioning:
 
@@ -213,7 +212,7 @@ A calm, consistent approach increases credibility and reduces follow-up burden.
 
 ---
 
-### 16.6.3 After an Audit/Inspection: CAPA and Continuous Improvement
+### After an Audit/Inspection: CAPA and Continuous Improvement
 
 After an audit or inspection:
 
@@ -226,7 +225,7 @@ Quality improvement is an ongoing cycle, not a one-time exercise.
 
 ---
 
-## 16.7 Key Takeaways
+## Key Takeaways
 
 1. Quality and compliance are foundational to statistical credibility.
 2. SOP adherence protects the study, the sponsor, and the statistician.

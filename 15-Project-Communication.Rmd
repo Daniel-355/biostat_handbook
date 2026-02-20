@@ -1,8 +1,6 @@
- 
-
 # Project Communication
 
-## 15.1 Communication as a Core Biostatistics Competency
+## Communication as a Core Biostatistics Competency
 
 In clinical trials, strong statistical work is necessary but not sufficient. If statistical insights cannot be understood by non-statisticians, they cannot meaningfully influence decisions. Project communication is therefore not a “soft skill” add-on—it is a core professional responsibility for the Project Biostatistician.
 
@@ -16,9 +14,9 @@ Effective communication enables the statistician to act as a translator, risk si
 
 ---
 
-## 15.2 Participation in Project Team Meetings
+## Participation in Project Team Meetings
 
-### 15.2.1 Objectives in Regular Project Meetings
+### Objectives in Regular Project Meetings
 
 In routine project meetings, the biostatistician should avoid turning status updates into statistical lectures. The goal is to provide a decision-oriented summary that is understandable, actionable, and consistent with the study plan.
 
@@ -32,7 +30,7 @@ This structure keeps the discussion focused on progress, uncertainty, and decisi
 
 ---
 
-### 15.2.2 What to Bring to Every Meeting (Practical Checklist)
+### What to Bring to Every Meeting (Practical Checklist)
 
 Bring clear, simple updates on:
 
@@ -50,7 +48,7 @@ Bring clear, simple updates on:
 
 ---
 
-### 15.2.3 Common Communication Pitfalls
+### Common Communication Pitfalls
 
 Common pitfalls that reduce statistical influence include:
 
@@ -61,9 +59,9 @@ Common pitfalls that reduce statistical influence include:
 
 ---
 
-## 15.3 Participation in Medical Discussions
+## Participation in Medical Discussions
 
-### 15.3.1 Bridging Statistical Evidence and Clinical Meaning
+### Bridging Statistical Evidence and Clinical Meaning
 
 Medical discussions often focus on clinical relevance, benefit–risk balance, and real-world interpretability. The biostatistician’s role is to clarify what the data can and cannot support while aligning statistical interpretation with clinical decision needs.
 
@@ -80,7 +78,7 @@ Examples:
 
 ---
 
-### 15.3.2 Handling Disagreement Respectfully
+### Handling Disagreement Respectfully
 
 When statistical conclusions conflict with clinical enthusiasm:
 - Acknowledge the clinical perspective and the rationale behind it
@@ -93,9 +91,9 @@ A useful mindset is:
 
 ---
 
-## 15.4 Participation in Regulatory Communication Meetings
+## Participation in Regulatory Communication Meetings
 
-### 15.4.1 What Regulators Expect From Statisticians
+### What Regulators Expect From Statisticians
 
 In regulatory meetings, statisticians are expected to:
 - Support scientific consistency across protocol, SAP, TFLs, and CSR narratives
@@ -107,7 +105,7 @@ Regulators focus on statistical reasoning and defensibility—not programming de
 
 ---
 
-### 15.4.2 Practical Communication Principles in Regulatory Settings
+### Practical Communication Principles in Regulatory Settings
 
 - Answer the question asked—no more, no less
 - Be precise rather than verbose
@@ -119,9 +117,9 @@ Over-explaining can unintentionally create new questions.
 
 ---
 
-## 15.5 Explaining Statistical Concepts in Non-Statistical Language
+## Explaining Statistical Concepts in Non-Statistical Language
 
-### 15.5.1 The Translation Responsibility
+### The Translation Responsibility
 
 A Project Biostatistician must translate statistical concepts into decision language. If stakeholders cannot restate the message correctly, communication has failed—regardless of statistical correctness.
 
@@ -138,7 +136,7 @@ Practical translations:
 
 ---
 
-### 15.5.2 Practical Tips for Clear Statistical Explanations
+### Practical Tips for Clear Statistical Explanations
 
 - Start with the decision implication, then provide the statistical reason
 - Use analogies carefully (only when they clarify, not oversimplify)
@@ -147,9 +145,9 @@ Practical translations:
 
 ---
 
-## 15.6 Communicating Risk to Sponsors Without Creating Panic
+## Communicating Risk to Sponsors Without Creating Panic
 
-### 15.6.1 Balanced Risk Communication
+### Balanced Risk Communication
 
 Sponsors need early warning signals—not alarm bells. Effective risk communication is calm, structured, and solution-oriented.
 
@@ -164,7 +162,7 @@ This format provides clarity without creating unnecessary fear.
 
 ---
 
-### 15.6.2 Avoiding Common Sponsor Communication Mistakes
+### Avoiding Common Sponsor Communication Mistakes
 
 Common mistakes include:
 - Overstating uncertainty and creating panic
@@ -176,7 +174,7 @@ Trust is built when sponsors feel informed, not surprised.
 
 ---
 
-## 15.7 Building Trust: The Statistician as a Project Advisor
+## Building Trust: The Statistician as a Project Advisor
 
 The most effective project statisticians:
 - Speak early rather than late
@@ -191,7 +189,7 @@ They become trusted advisors who:
 
 ---
 
-## 15.8 Key Takeaways
+## Key Takeaways
 
 1. Communication is a core statistical competency, not a soft skill.
 2. The goal is shared understanding, not technical completeness.

@@ -1,8 +1,6 @@
- 
-
 # TFL Delivery — Tables, Figures, Listings, Statistical QC, Consistency Checks, and Version Control
 
-## 12.1 Why TFL Delivery Is Not “Just the Final Step”
+## Why TFL Delivery Is Not “Just the Final Step”
 
 In real-world clinical trial operations, the delivery of Tables, Figures, and Listings (TFLs) is often treated as the “end of the analysis.” In practice, it is the point where statistical intent, SAP specifications, data realities, and regulatory expectations must converge into a defensible set of outputs.
 
@@ -12,7 +10,7 @@ ADaM and analysis datasets represent what was observed and derived.
 
 The Project Biostatistician’s accountability increases at this stage because regulators do not audit your code first—they audit the outputs. A single inconsistency across table text, figure annotations, or CSR narratives can trigger deep questioning and costly rework.
 
-## 12.2 The Project Biostatistician’s Role in the TFL Stage
+## The Project Biostatistician’s Role in the TFL Stage
 
 At the TFL stage, the Project Biostatistician should be viewed as the final owner of statistical validity and interpretability. Programming may be executed by statistical programmers or outsourced teams, but the biostatistician must ensure the statistical truth is preserved from SAP through final outputs.
 
@@ -25,9 +23,9 @@ Key responsibilities include:
 
 In short, TFL delivery is where the biostatistician shifts from “analysis design” to “analysis defense.”
 
-## 12.3 Tables: Where Statistical Definitions Become Regulatory Evidence
+## Tables: Where Statistical Definitions Become Regulatory Evidence
 
-### 12.3.1 What a Table Must Represent
+### What a Table Must Represent
 
 A regulatory-grade table is not merely a summary. It is a structured manifestation of multiple statistical decisions, typically including:
 
@@ -38,7 +36,7 @@ A regulatory-grade table is not merely a summary. It is a structured manifestati
 
 If any one of these layers is unclear or misaligned, the table becomes vulnerable to challenge.
 
-### 12.3.2 Practical Statistical Review Checklist for Tables
+### Practical Statistical Review Checklist for Tables
 
 Before approving any table for a sponsor review cycle or CSR integration, verify the following:
 
@@ -62,7 +60,7 @@ Before approving any table for a sponsor review cycle or CSR integration, verify
 
 Many high-impact issues arise not from a programming defect, but from a subtle misunderstanding of derivation rules.
 
-### 12.3.3 High-Risk Table Types That Require Extra Oversight
+### High-Risk Table Types That Require Extra Oversight
 
 Certain tables are routinely scrutinized and should receive enhanced biostatistician attention:
 
@@ -73,9 +71,9 @@ Certain tables are routinely scrutinized and should receive enhanced biostatisti
 
 For these tables, ensure not only correctness, but also interpretability and narrative alignment in CSR drafts.
 
-## 12.4 Figures: Interpretability and Transparency Over Aesthetics
+## Figures: Interpretability and Transparency Over Aesthetics
 
-### 12.4.1 A Figure’s Purpose in Regulatory Review
+### A Figure’s Purpose in Regulatory Review
 
 Figures are powerful because they shape interpretation quickly. That is also why regulatory reviewers examine them carefully. A figure must be:
 
@@ -85,7 +83,7 @@ Figures are powerful because they shape interpretation quickly. That is also why
 
 A figure can be visually polished and still be unacceptable if it misleads or omits key information.
 
-### 12.4.2 Key Checks for Survival and Longitudinal Figures
+### Key Checks for Survival and Longitudinal Figures
 
 For Kaplan–Meier plots, hazard ratio forest plots, or longitudinal mean profiles, confirm:
 
@@ -103,9 +101,9 @@ For Kaplan–Meier plots, hazard ratio forest plots, or longitudinal mean profil
 
 Any table–figure disagreement is a red-flag issue and must be resolved before distribution.
 
-## 12.5 Listings: Not an Appendix, but a Gateway for Questions
+## Listings: Not an Appendix, but a Gateway for Questions
 
-### 12.5.1 How Listings Are Used
+### How Listings Are Used
 
 Listings are often treated as “supporting material,” but in real reviews they function as an investigative entry point. Listings are used to:
 
@@ -116,7 +114,7 @@ Listings are often treated as “supporting material,” but in real reviews the
 
 If a reviewer suspects inconsistency, they may go straight to listings to find a case example.
 
-### 12.5.2 Listings That Are Most Likely to Be Challenged
+### Listings That Are Most Likely to Be Challenged
 
 Listings requiring enhanced attention include:
 
@@ -129,9 +127,9 @@ A useful mindset is:
 
 > If you were the reviewer, which line would you question first?
 
-## 12.6 Statistical Quality Control (QC): A Second Independent Brain
+## Statistical Quality Control (QC): A Second Independent Brain
 
-### 12.6.1 What Effective Statistical QC Means
+### What Effective Statistical QC Means
 
 Effective QC is not simply “re-running the program.” Instead, it is an independent logic-based verification of the analysis chain, including:
 
@@ -142,7 +140,7 @@ Effective QC is not simply “re-running the program.” Instead, it is an indep
 
 QC should aim to detect conceptual errors, not just computational ones.
 
-### 12.6.2 Core QC Principles
+### Core QC Principles
 
 A robust QC practice should follow these principles:
 
@@ -152,9 +150,9 @@ A robust QC practice should follow these principles:
 
 QC protects study integrity; it is not intended to assign blame.
 
-## 12.7 Cross-Output Consistency Verification
+## Cross-Output Consistency Verification
 
-### 12.7.1 The Three Consistency Lines You Must Verify
+### The Three Consistency Lines You Must Verify
 
 Consistency verification should be systematic along three lines:
 
@@ -170,7 +168,7 @@ Consistency verification should be systematic along three lines:
 
 Consistency is not “nice to have.” It is central to submission defensibility.
 
-### 12.7.2 Common High-Risk Inconsistencies
+### Common High-Risk Inconsistencies
 
 Examples of issues that frequently trigger major rework include:
 
@@ -181,9 +179,9 @@ Examples of issues that frequently trigger major rework include:
 
 These issues do not always lead to rejection, but they reliably increase regulatory scrutiny.
 
-## 12.8 Version Control: The Lifeline in Late-Stage Deliverables
+## Version Control: The Lifeline in Late-Stage Deliverables
 
-### 12.8.1 Why Version Control Is Critical
+### Why Version Control Is Critical
 
 After database lock, TFL packages typically evolve through multiple cycles:
 
@@ -194,7 +192,7 @@ After database lock, TFL packages typically evolve through multiple cycles:
 
 Without disciplined version control, teams lose the ability to prove which output was final and why it changed.
 
-### 12.8.2 Minimum Practical Version Control Standards
+### Minimum Practical Version Control Standards
 
 At minimum, implement:
 
@@ -209,7 +207,7 @@ At minimum, implement:
 
 Regulators do not penalize change. They penalize lack of traceability.
 
-## 12.9 Key Takeaways
+## Key Takeaways
 
 1. **TFLs are the definitive statistical deliverables**, not programming by-products.
 2. **Consistency and traceability matter more than aesthetics.**

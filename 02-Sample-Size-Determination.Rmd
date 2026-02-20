@@ -1,5 +1,3 @@
- 
-
 # Sample Size Determination
 
 ## Chapter Objectives {-}
@@ -15,9 +13,9 @@ Upon completing this chapter, the reader should be able to:
 
 ---
 
-## 2.1 The Role of Sample Size in Clinical Trial Design
+## The Role of Sample Size in Clinical Trial Design
 
-### 2.1.1 Sample Size Is Designed, Not Calculated
+### Sample Size Is Designed, Not Calculated
 
 In practice, sample size is not a purely mathematical result.  
 It is the consequence of multiple design assumptions:
@@ -32,7 +30,7 @@ The role of the statistician is not to apply formulas blindly, but to ensure tha
 
 ---
 
-### 2.1.2 Two Dangerous Extremes
+### Two Dangerous Extremes
 
 Statisticians should actively avoid:
 
@@ -43,9 +41,9 @@ The true value of statistical leadership lies in balancing scientific rigor, fea
 
 ---
 
-## 2.2 Sample Size Calculation Framework
+## Sample Size Calculation Framework
 
-### 2.2.1 Core Components
+### Core Components
 
 Regardless of endpoint type, all sample size calculations must clearly define:
 
@@ -60,7 +58,7 @@ Regardless of endpoint type, all sample size calculations must clearly define:
 
 ---
 
-### 2.2.2 Endpoint-Specific Considerations
+### Endpoint-Specific Considerations
 
 #### Continuous Endpoints
 - Based on mean differences
@@ -83,7 +81,7 @@ Regardless of endpoint type, all sample size calculations must clearly define:
 
 ---
 
-### 2.2.3 Transparency of Assumptions
+### Transparency of Assumptions
 
 All assumptions used in sample size determination should be explicitly documented, including:
 
@@ -93,9 +91,9 @@ All assumptions used in sample size determination should be explicitly documente
 
 ---
 
-## 2.3 Effect Size Justification
+## Effect Size Justification
 
-### 2.3.1 Why Effect Size Is the Highest-Risk Assumption
+### Why Effect Size Is the Highest-Risk Assumption
 
 Effect size assumptions directly determine:
 
@@ -107,7 +105,7 @@ An unrealistic effect size almost guarantees trial failure.
 
 ---
 
-### 2.3.2 Common Sources of Effect Size Assumptions
+### Common Sources of Effect Size Assumptions
 
 #### Published Literature
 - Advantages: peer-reviewed, traceable
@@ -123,7 +121,7 @@ An unrealistic effect size almost guarantees trial failure.
 
 ---
 
-### 2.3.3 Reality Checks by the Statistician
+### Reality Checks by the Statistician
 
 Statisticians should always ask:
 
@@ -133,9 +131,9 @@ Statisticians should always ask:
 
 ---
 
-## 2.4 Dropout and Attrition Assumptions
+## Dropout and Attrition Assumptions
 
-### 2.4.1 Why Dropout Matters
+### Why Dropout Matters
 
 Sample size calculations yield the number of evaluable subjects required for primary analysis, not the number to be randomized.
 
@@ -143,7 +141,7 @@ Dropout assumptions bridge this gap.
 
 ---
 
-### 2.4.2 Sources of Dropout Assumptions
+### Sources of Dropout Assumptions
 
 Common sources include:
 
@@ -154,7 +152,7 @@ Common sources include:
 
 ---
 
-### 2.4.3 Common Mistakes
+### Common Mistakes
 
 - Applying a default dropout rate without justification
 - Ignoring differential dropout across treatment arms
@@ -164,9 +162,9 @@ Dropout assumptions and adjustments must be explicitly stated.
 
 ---
 
-## 2.5 Impact of Multiplicity on Sample Size
+## Impact of Multiplicity on Sample Size
 
-### 2.5.1 Multiplicity Is Not Only an Analysis Issue
+### Multiplicity Is Not Only an Analysis Issue
 
 Sample size may be affected when there are:
 
@@ -176,7 +174,7 @@ Sample size may be affected when there are:
 
 ---
 
-### 2.5.2 Common Strategies
+### Common Strategies
 
 #### Hierarchical Testing
 - Sample size driven by the first primary endpoint
@@ -192,15 +190,15 @@ Sample size may be affected when there are:
 
 ---
 
-### 2.5.3 Key Message to Study Teams
+### Key Message to Study Teams
 
 > Each additional formal comparison almost always increases the required sample size.
 
 ---
 
-## 2.6 Deliverable 1: Sample Size Calculation Memo
+## Deliverable 1: Sample Size Calculation Memo
 
-### 2.6.1 Purpose of the Memo
+### Purpose of the Memo
 
 The Sample Size Calculation Memo serves as:
 
@@ -210,7 +208,7 @@ The Sample Size Calculation Memo serves as:
 
 ---
 
-### 2.6.2 Recommended Structure
+### Recommended Structure
 
 1. Study background and primary endpoint  
 2. Statistical hypotheses  
@@ -222,9 +220,9 @@ The Sample Size Calculation Memo serves as:
 
 ---
 
-## 2.7 Deliverable 2: Sample Size Section in Protocol and SAP
+## Deliverable 2: Sample Size Section in Protocol and SAP
 
-### 2.7.1 Protocol Writing Principles
+### Protocol Writing Principles
 
 - Concise and regulator-friendly
 - Focused on primary assumptions
@@ -232,7 +230,7 @@ The Sample Size Calculation Memo serves as:
 
 ---
 
-### 2.7.2 SAP-Level Details
+### SAP-Level Details
 
 The SAP should include:
 
@@ -242,7 +240,7 @@ The SAP should include:
 
 ---
 
-## 2.8 Statistician’s Pre-Finalization Checklist
+## Statistician’s Pre-Finalization Checklist
 
 Before finalizing sample size, confirm that:
 
@@ -258,5 +256,3 @@ Before finalizing sample size, confirm that:
 
 > Sample size is not about “calculating enough,”  
 > but about committing appropriate resources to answer a meaningful question.
-
----

@@ -1,5 +1,3 @@
- 
-
 # Blind Data Review (BDR)  
 
 *The Statistician’s Final Gate Before Database Lock*
@@ -13,9 +11,9 @@ This assessment must be made **under full blinding**, without access to treatmen
 
 ---
 
-## 8.1 Why Blind Data Review Is Statistically Critical
+## Why Blind Data Review Is Statistically Critical
 
-### 8.1.1 BDR Is Not a Routine Data Cleaning Step
+### BDR Is Not a Routine Data Cleaning Step
 
 In many projects, BDR is treated as:
 - A procedural milestone
@@ -38,7 +36,7 @@ For the biostatistician, **BDR is the last opportunity to influence analytical i
 
 ---
 
-### 8.1.2 The Statistician’s Unique Responsibility in BDR
+### The Statistician’s Unique Responsibility in BDR
 
 Unlike Data Management or Clinical Operations, statisticians do not focus on:
 - How data were operationally collected
@@ -50,9 +48,9 @@ Instead, statisticians assess:
 
 ---
 
-## 8.2 Statistical Support of the BDR Plan
+## Statistical Support of the BDR Plan
 
-### 8.2.1 Objectives of a Robust BDR Plan
+### Objectives of a Robust BDR Plan
 
 A well-designed BDR Plan should:
 - Define the scope and timing of blinded review activities
@@ -67,7 +65,7 @@ From a statistical standpoint, the plan must ensure that:
 
 ---
 
-### 8.2.2 Statistical Contributions to the BDR Plan
+### Statistical Contributions to the BDR Plan
 
 Biostatisticians should actively shape:
 - Which summaries and listings are produced
@@ -80,9 +78,9 @@ A key mindset:
 
 ---
 
-## 8.3 Core Review Areas During Blind Data Review
+## Core Review Areas During Blind Data Review
 
-### 8.3.1 Data Completeness
+### Data Completeness
 
 #### Statistical Review Focus
 
@@ -109,7 +107,7 @@ If missingness mechanisms cannot be reasonably argued, **the SAP’s missing dat
 
 ---
 
-### 8.3.2 Outliers and Extreme Values
+### Outliers and Extreme Values
 
 #### Statistical Interpretation of Outliers
 
@@ -136,7 +134,7 @@ BDR should emphasize:
 
 ---
 
-### 8.3.3 Visit Deviations
+### Visit Deviations
 
 #### Analytical Definition of Visit Deviations
 

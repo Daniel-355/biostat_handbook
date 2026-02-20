@@ -369,3 +369,10 @@ preparation-before-an-auditinspection
 behavior-during-auditinspection
 after-an-auditinspection-capa-and-continuous-improvement
 key-takeaways-2
+miscellaneous
+adaptive-randomization-probabilities-and-interim-analysis
+be-simulation
+real-world-study
+iseiss-pooling
+diagnostic-test
+statistical-modeling

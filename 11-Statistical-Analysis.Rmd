@@ -1,5 +1,3 @@
- 
-
 # Statistical Analysis Execution  
 
 *From Numbers to Evidence*
@@ -11,7 +9,7 @@ The responsibility here extends beyond computational correctness to **analytical
 
 ---
 
-## 11.1 The Nature of Statistical Execution
+## The Nature of Statistical Execution
 
 Statistical execution is often mistaken for:
 - Running predefined programs
@@ -24,9 +22,9 @@ In reality, execution requires continuous professional judgment to answer:
 
 ---
 
-## 11.2 Generation of Primary Analysis Results
+## Generation of Primary Analysis Results
 
-### 11.2.1 Primary Analysis as the Anchor
+### Primary Analysis as the Anchor
 
 The primary analysis is the **center of gravity** for:
 - Regulatory conclusions
@@ -37,7 +35,7 @@ All other analyses exist to support, contextualize, or stress-test this result.
 
 ---
 
-### 11.2.2 Execution Discipline for the Primary Analysis
+### Execution Discipline for the Primary Analysis
 
 Statisticians must ensure that the primary analysis:
 - Strictly follows the SAP finalized prior to database lock
@@ -54,9 +52,9 @@ A critical rule:
 
 ---
 
-## 11.3 Secondary and Sensitivity Analyses
+## Secondary and Sensitivity Analyses
 
-### 11.3.1 Role of Secondary Analyses
+### Role of Secondary Analyses
 
 Secondary analyses:
 - Address additional endpoints
@@ -68,7 +66,7 @@ Interpretation must reflect their inferential status and any multiplicity contro
 
 ---
 
-### 11.3.2 Sensitivity Analyses as Stress Tests
+### Sensitivity Analyses as Stress Tests
 
 Sensitivity analyses answer one question:
 
@@ -84,9 +82,9 @@ A strong primary result should be robust to reasonable sensitivities; a weak res
 
 ---
 
-## 11.4 Subgroup Analyses
+## Subgroup Analyses
 
-### 11.4.1 Purpose and Limitations
+### Purpose and Limitations
 
 Subgroup analyses aim to:
 - Assess consistency of treatment effects
@@ -97,7 +95,7 @@ Unless explicitly powered and controlled, subgroup analyses are **exploratory**.
 
 ---
 
-### 11.4.2 Statistical Responsibilities in Subgroup Analysis
+### Statistical Responsibilities in Subgroup Analysis
 
 Statisticians must:
 - Ensure subgroup definitions align with the SAP
@@ -111,9 +109,9 @@ Forest plots should communicate patterns, not promises.
 
 ---
 
-## 11.5 Supporting Interpretation of Unexpected Results
+## Supporting Interpretation of Unexpected Results
 
-### 11.5.1 Technical Validation First
+### Technical Validation First
 
 When results conflict with expectations, statisticians should first assess:
 - Data integrity and completeness
@@ -124,7 +122,7 @@ Only after technical validation should scientific interpretation begin.
 
 ---
 
-### 11.5.2 Explaining Without Over-Explaining
+### Explaining Without Over-Explaining
 
 Statisticians support interpretation by:
 - Quantifying uncertainty
@@ -136,9 +134,9 @@ A key discipline:
 
 ---
 
-## 11.6 Joint Interpretation with Medical Experts
+## Joint Interpretation with Medical Experts
 
-### 11.6.1 Complementary Roles
+### Complementary Roles
 
 Medical experts contribute:
 - Clinical context and biological plausibility
@@ -154,7 +152,7 @@ Neither role is sufficient alone.
 
 ---
 
-### 11.6.2 Effective Statistical Communication
+### Effective Statistical Communication
 
 Statisticians should:
 - Translate numerical outputs into clear, accurate statements
@@ -166,7 +164,7 @@ An experienced statistician knows when to say:
 
 ---
 
-## 11.7 Common Risks During Analysis Execution
+## Common Risks During Analysis Execution
 
 Experienced statisticians remain alert to:
 - Quiet deviations from the SAP
@@ -178,7 +176,7 @@ Once results are generated, **analytical shortcuts become credibility risks**.
 
 ---
 
-## 11.8 Chapter Summary: Execution as Professional Judgment
+## Chapter Summary: Execution as Professional Judgment
 
 Statistical analysis execution is where:
 - Technical rigor meets scientific judgment
@@ -193,5 +191,3 @@ The statistician’s value in this phase lies in:
 **Key takeaway:**
 
 > **Statistical execution is not about producing results—it is about producing results that deserve to be believed.**
-
----

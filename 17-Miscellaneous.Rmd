@@ -1,0 +1,29 @@
+# Miscellaneous
+
+## Adaptive randomization probabilities and Interim Analysis
+
+This [report](https://rpubs.com/Daniel_He/1361412) simulates an FDA-style adaptive clinical trial in R, combining response-adaptive randomization, a single interim sample-size re-estimation, and stopping rules to estimate the treatment effect and empirical power across 500 simulated trials.
+
+## BE Simulation
+
+This BE simulation [script](https://rpubs.com/Daniel_He/1360859) uses Monte Carlo–generated concentration–time profiles with between-subject and residual variability to estimate the probability that AUC and Cmax jointly meet the 90% CI bioequivalence limits (0.80–1.25) across scenarios of true GMR, sample size, and uncertainty in variability assumptions. 
+
+## Real-World Study
+
+This real-world study [workflow](https://rpubs.com/Daniel_He/1360810) simulates an observational dataset, summarizes baseline covariates, uses propensity-score matching (plus balance diagnostics) and an IPTW sensitivity analysis, then fits Cox/KM survival models showing that age and comorbidity strongly increase event risk while the exposure group has no statistically significant association with time-to-event after adjustment.
+
+## ISE/ISS pooling
+
+This ISE/ISS simulation [project](https://rpubs.com/Daniel_He/1361337) generates multi-trial patient-level efficacy and safety data, computes study-specific treatment effects, and applies REML random-effects meta-analysis to estimate pooled efficacy (mean difference ≈ 1.44) and safety risk difference (≈ 2.4%) across studies with negligible heterogeneity.
+
+
+## Diagnostic test
+
+This diagnostic test [workflow](https://rpubs.com/Daniel_He/1321453) demonstrates how to compute and interpret 2×2 table metrics (sensitivity, specificity, predictive values, likelihood ratios), update post-test probability via Bayes’ theorem, and compare binary and multi-class ROC/AUC performance—including paired, unpaired, and partial AUC tests—using multiple R packages.
+
+
+## Statistical modeling
+Led end-to-end [statistical modeling](https://rpubs.com/Daniel_He/1361503) initiatives spanning adaptive trial simulation, bioequivalence and power analysis, real-world causal inference, ISE/ISS meta-analysis, Bayesian joint modeling, and machine-learning–enhanced treatment effect estimation, delivering reproducible R-based pipelines and regulatory-ready analytical solutions across clinical research domains.
+
+
+

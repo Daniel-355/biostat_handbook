@@ -1,7 +1,6 @@
- 
 # Public Registration and Publication Support
 
-## 14.1 Why This Stage Matters: From Compliance to Public Scrutiny
+## Why This Stage Matters: From Compliance to Public Scrutiny
 
 The statistical work of a clinical trial does not end at CSR delivery. Public disclosure and scientific publication represent the point at which trial results become visible to the outside world—clinicians, researchers, competitors, patients, and the broader scientific community.
 
@@ -14,9 +13,9 @@ This is often the phase where statistical rigor is tested under the most “neut
 
 ---
 
-## 14.2 Statistical Support for ClinicalTrials.gov Results Reporting
+## Statistical Support for ClinicalTrials.gov Results Reporting
 
-### 14.2.1 How ClinicalTrials.gov Reporting Differs From CSR
+### How ClinicalTrials.gov Reporting Differs From CSR
 
 Compared with CSR, results reporting on ClinicalTrials.gov is:
 - Highly structured (fixed fields and formats)
@@ -28,7 +27,7 @@ A key practical implication is that ClinicalTrials.gov reporting must be aligned
 
 ---
 
-### 14.2.2 Core Statistical Responsibilities
+### Core Statistical Responsibilities
 
 The Project Biostatistician typically supports or reviews:
 
@@ -45,7 +44,7 @@ The statistical priority is ensuring that:
 
 ---
 
-### 14.2.3 Common High-Risk Issues (Practical Pitfalls)
+### Common High-Risk Issues (Practical Pitfalls)
 
 Frequent issues that trigger questions or rework include:
 - Subject counts on ClinicalTrials.gov not matching CSR/TFL counts
@@ -57,9 +56,9 @@ A useful mindset is: ClinicalTrials.gov is not a marketing channel—it is a com
 
 ---
 
-## 14.3 Statistical Methods Support for Medical Publications
+## Statistical Methods Support for Medical Publications
 
-### 14.3.1 How Journal Reporting Differs From CSR
+### How Journal Reporting Differs From CSR
 
 Journal articles require statistical methods to be:
 - Concise and focused on the message of the paper
@@ -70,7 +69,7 @@ While CSR aims for completeness, journal manuscripts aim for clarity and focus. 
 
 ---
 
-### 14.3.2 What the Biostatistician Must Ensure
+### What the Biostatistician Must Ensure
 
 The biostatistician should ensure the manuscript clearly describes:
 
@@ -85,7 +84,7 @@ A simple quality bar is: another qualified statistician should be able to reprod
 
 ---
 
-### 14.3.3 Common Statistical Writing Problems in Manuscripts
+### Common Statistical Writing Problems in Manuscripts
 
 Issues that frequently lead to reviewer concerns include:
 - Vague statements such as “standard methods were used”
@@ -98,9 +97,9 @@ These problems are preventable through early statistical review and alignment wi
 
 ---
 
-## 14.4 Responding to Reviewer Statistical Comments
+## Responding to Reviewer Statistical Comments
 
-### 14.4.1 Common Types of Reviewer Questions
+### Common Types of Reviewer Questions
 
 Statistical reviewer comments commonly focus on:
 - Robustness of the primary endpoint conclusion
@@ -114,7 +113,7 @@ These questions often target the most sensitive areas of interpretation rather t
 
 ---
 
-### 14.4.2 The Biostatistician’s Role in the Response Process
+### The Biostatistician’s Role in the Response Process
 
 The biostatistician is typically:
 - The primary drafter of statistical responses
@@ -125,7 +124,7 @@ Reviewer responses are public-facing scientific arguments. They must remain fact
 
 ---
 
-### 14.4.3 Practical Principles for Effective Responses
+### Practical Principles for Effective Responses
 
 Strong statistical responses generally:
 - Address each comment directly and neutrally
@@ -138,9 +137,9 @@ Common mistakes include defensive language, avoiding the core question, or intro
 
 ---
 
-## 14.5 Decision Boundaries for Additional Analyses
+## Decision Boundaries for Additional Analyses
 
-### 14.5.1 When Additional Analyses Are Appropriate
+### When Additional Analyses Are Appropriate
 
 Additional analyses are often reasonable when:
 - The planned method is sound but not sufficiently explained
@@ -151,7 +150,7 @@ In such cases, the goal is usually clarification and robustness demonstration, n
 
 ---
 
-### 14.5.2 When Additional Analyses Should Be Avoided
+### When Additional Analyses Should Be Avoided
 
 Additional analyses should be avoided or carefully constrained when:
 - They shift the interpretation of the primary endpoint beyond the registered and planned strategy
@@ -162,7 +161,7 @@ Not every reviewer request should be accepted. The biostatistician must protect 
 
 ---
 
-## 14.6 Key Takeaways for Project Biostatisticians
+## Key Takeaways for Project Biostatisticians
 
 1. Public registry disclosure is a compliance baseline; publication is a credibility test.
 2. Statistical reporting must withstand scrutiny from independent readers with no project context.

@@ -1,5 +1,3 @@
- 
-
 # Pre-Database Lock Activities  
 
 *The Statistician’s Final Accountability Before Results Are Frozen*
@@ -13,7 +11,7 @@ Once the database is locked, unresolved issues become explanation problems rathe
 
 ---
 
-## 10.1 Why the Pre-Lock Phase Is Statistically Critical
+## Why the Pre-Lock Phase Is Statistically Critical
 
 The pre-lock phase is often misinterpreted as an administrative checkpoint.  
 From a statistical perspective, it is a **decision boundary**.
@@ -32,9 +30,9 @@ For the biostatistician, this is the **last point at which technical authority c
 
 ---
 
-## 10.2 Final Review of TFL Shells
+## Final Review of TFL Shells
 
-### 10.2.1 Why TFL Shells Must Be Finalized Before Lock
+### Why TFL Shells Must Be Finalized Before Lock
 
 TFL shells are not formatting artifacts.  
 They formally define:
@@ -47,7 +45,7 @@ If a shell cannot be populated cleanly using existing analysis datasets, the iss
 
 ---
 
-### 10.2.2 Statistical Verification of TFL Shells
+### Statistical Verification of TFL Shells
 
 During final TFL shell review, statisticians must confirm that:
 - Titles, footnotes, and population labels align with the SAP
@@ -60,9 +58,9 @@ A practical rule:
 
 ---
 
-## 10.3 Confirming Consistency Between SAP and Actual Data
+## Confirming Consistency Between SAP and Actual Data
 
-### 10.3.1 The Required Reality Check
+### The Required Reality Check
 
 The SAP defines an idealized analytical framework.  
 The collected data reflect operational reality.
@@ -76,7 +74,7 @@ This assessment focuses on **material consistency**, not perfection.
 
 ---
 
-### 10.3.2 Common Sources of Misalignment
+### Common Sources of Misalignment
 
 Frequent discrepancies include:
 - Planned visits that rarely occurred
@@ -93,9 +91,9 @@ Silence at this stage constitutes implicit endorsement.
 
 ---
 
-## 10.4 Confirmation of Analysis Dataset Definitions
+## Confirmation of Analysis Dataset Definitions
 
-### 10.4.1 Transition to Lock-Ready Analysis Datasets
+### Transition to Lock-Ready Analysis Datasets
 
 By the pre-lock phase, analysis datasets (typically ADaM) must be:
 - Fully specified
@@ -110,7 +108,7 @@ This includes finalization of:
 
 ---
 
-### 10.4.2 Statistical Confirmation Responsibilities
+### Statistical Confirmation Responsibilities
 
 Statisticians should explicitly verify that:
 - Each analysis dataset aligns with SAP specifications
@@ -123,9 +121,9 @@ A guiding principle:
 
 ---
 
-## 10.5 Statistical Sign-Off Prior to Database Lock
+## Statistical Sign-Off Prior to Database Lock
 
-### 10.5.1 Meaning of Statistical Sign-Off
+### Meaning of Statistical Sign-Off
 
 Statistical sign-off is not a procedural formality.  
 It represents a professional assertion:
@@ -144,7 +142,7 @@ It confirms that analyses will be:
 
 ---
 
-### 10.5.2 Scope of Statistical Accountability
+### Scope of Statistical Accountability
 
 By providing sign-off, the statistician confirms that:
 - TFL shells are executable and SAP-consistent
@@ -156,7 +154,7 @@ Concerns not documented before lock will be assumed **not to exist**.
 
 ---
 
-## 10.6 Common Pitfalls in the Pre-Lock Phase
+## Common Pitfalls in the Pre-Lock Phase
 
 Experienced statisticians remain alert to:
 - Deferring issues with “we will explain it in the CSR”
@@ -169,7 +167,7 @@ A critical lesson:
 
 ---
 
-## 10.7 Chapter Summary: Database Lock as a Line of No Return
+## Chapter Summary: Database Lock as a Line of No Return
 
 Database lock marks a definitive boundary.  
 Before it, statisticians can prevent analytical failure.  
@@ -183,5 +181,3 @@ The statistician’s value at this stage lies in:
 **Key takeaway:**
 
 > **Database lock freezes not only the data, but every statistical decision left unchallenged.**
-
----
